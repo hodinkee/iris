@@ -71,7 +71,7 @@
 		4E76DD531BF392B3008D2FF3 /* Iris */ = {
 			isa = PBXGroup;
 			children = (
-				4E76DD6B1BF39430008D2FF3 /* Targets */,
+				4E76DD6B1BF39430008D2FF3 /* Configuration */,
 			);
 			path = Iris;
 			sourceTree = "<group>";
@@ -80,17 +80,17 @@
 			isa = PBXGroup;
 			children = (
 				4E76DD601BF392B3008D2FF3 /* IrisTests.swift */,
-				4E76DD6D1BF3950F008D2FF3 /* Targets */,
+				4E76DD6D1BF3950F008D2FF3 /* Configuration */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		4E76DD6B1BF39430008D2FF3 /* Targets */ = {
+		4E76DD6B1BF39430008D2FF3 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
 				4E76DD6C1BF39464008D2FF3 /* iOS */,
 			);
-			path = Targets;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		4E76DD6C1BF39464008D2FF3 /* iOS */ = {
@@ -102,12 +102,12 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		4E76DD6D1BF3950F008D2FF3 /* Targets */ = {
+		4E76DD6D1BF3950F008D2FF3 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
 				4E76DD6E1BF39515008D2FF3 /* iOS */,
 			);
-			path = Targets;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		4E76DD6E1BF39515008D2FF3 /* iOS */ = {
@@ -344,7 +344,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Iris/Targets/iOS/Info.plist;
+				INFOPLIST_FILE = Iris/Configuration/iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
@@ -360,7 +360,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Iris/Targets/iOS/Info.plist;
+				INFOPLIST_FILE = Iris/Configuration/iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
@@ -372,7 +372,7 @@
 		4E76DD691BF392B3008D2FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Tests/Targets/iOS/Info.plist;
+				INFOPLIST_FILE = Tests/Configuration/iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.IrisTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -382,7 +382,7 @@
 		4E76DD6A1BF392B3008D2FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Tests/Targets/iOS/Info.plist;
+				INFOPLIST_FILE = Tests/Configuration/iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.IrisTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
