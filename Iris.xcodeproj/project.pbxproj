@@ -10,6 +10,7 @@
 		4E76DD551BF392B3008D2FF3 /* Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E76DD541BF392B3008D2FF3 /* Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E76DD5C1BF392B3008D2FF3 /* Iris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E76DD511BF392B3008D2FF3 /* Iris.framework */; };
 		4E76DD611BF392B3008D2FF3 /* IrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD601BF392B3008D2FF3 /* IrisTests.swift */; };
+		4E76DD721BF39E3A008D2FF3 /* ImageOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		4E76DD5B1BF392B3008D2FF3 /* Iris iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Iris iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E76DD601BF392B3008D2FF3 /* IrisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrisTests.swift; sourceTree = "<group>"; };
 		4E76DD621BF392B3008D2FF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		4E76DD531BF392B3008D2FF3 /* Iris */ = {
 			isa = PBXGroup;
 			children = (
+				4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */,
 				4E76DD6B1BF39430008D2FF3 /* Configuration */,
 			);
 			path = Iris;
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E76DD721BF39E3A008D2FF3 /* ImageOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +344,7 @@
 		4E76DD661BF392B3008D2FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -350,12 +355,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4E76DD671BF392B3008D2FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
