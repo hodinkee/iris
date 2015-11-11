@@ -61,7 +61,7 @@ public struct ImageOptions: Equatable {
         var items = [NSURLQueryItem]()
 
         if let value = format {
-            items.append( NSURLQueryItem(name: "fm", value: value.rawValue))
+            items.append(NSURLQueryItem(name: "fm", value: value.rawValue))
         }
 
         if let value = width {
