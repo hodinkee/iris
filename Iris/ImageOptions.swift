@@ -29,6 +29,10 @@ public struct ImageOptions: Equatable {
     }
 
     public enum Crop: String {
+        case Top = "top"
+        case Bottom = "bottom"
+        case Left = "left"
+        case Right = "right"
         case Faces = "faces"
         case Entropy = "entropy"
     }
