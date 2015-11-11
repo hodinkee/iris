@@ -69,5 +69,4 @@ final class IrisTests: XCTestCase {
         imageOptions.colorQuantization = 512
         XCTAssertEqual(imageOptions.colorQuantization, 256)
     }
-
 }
