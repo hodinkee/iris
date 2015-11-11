@@ -12,6 +12,8 @@
 		4E76DD611BF392B3008D2FF3 /* IrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD601BF392B3008D2FF3 /* IrisTests.swift */; };
 		4E76DD721BF39E3A008D2FF3 /* ImageOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */; };
 		4E76DD741BF3A042008D2FF3 /* SigningOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */; };
+		4E76DD7B1BF3A361008D2FF3 /* MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E76DD791BF3A361008D2FF3 /* MD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E76DD7C1BF3A361008D2FF3 /* MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD7A1BF3A361008D2FF3 /* MD5.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		4E76DD621BF392B3008D2FF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOptions.swift; sourceTree = "<group>"; };
 		4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningOptions.swift; sourceTree = "<group>"; };
+		4E76DD791BF3A361008D2FF3 /* MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5.h; sourceTree = "<group>"; };
+		4E76DD7A1BF3A361008D2FF3 /* MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */,
 				4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */,
+				4E76DD791BF3A361008D2FF3 /* MD5.h */,
+				4E76DD7A1BF3A361008D2FF3 /* MD5.m */,
 				4E76DD6B1BF39430008D2FF3 /* Configuration */,
 			);
 			path = Iris;
@@ -132,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E76DD551BF392B3008D2FF3 /* Iris.h in Headers */,
+				4E76DD7B1BF3A361008D2FF3 /* MD5.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E76DD741BF3A042008D2FF3 /* SigningOptions.swift in Sources */,
+				4E76DD7C1BF3A361008D2FF3 /* MD5.m in Sources */,
 				4E76DD721BF39E3A008D2FF3 /* ImageOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
