@@ -17,7 +17,7 @@ public struct SigningOptions: Equatable {
     public var token: String
 
     public var secure: Bool
-    
+
 
     // MARK: - Initializers
 
