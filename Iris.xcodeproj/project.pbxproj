@@ -11,6 +11,7 @@
 		4E76DD5C1BF392B3008D2FF3 /* Iris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E76DD511BF392B3008D2FF3 /* Iris.framework */; };
 		4E76DD611BF392B3008D2FF3 /* IrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD601BF392B3008D2FF3 /* IrisTests.swift */; };
 		4E76DD721BF39E3A008D2FF3 /* ImageOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */; };
+		4E76DD741BF3A042008D2FF3 /* SigningOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		4E76DD601BF392B3008D2FF3 /* IrisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrisTests.swift; sourceTree = "<group>"; };
 		4E76DD621BF392B3008D2FF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOptions.swift; sourceTree = "<group>"; };
+		4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */,
+				4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */,
 				4E76DD6B1BF39430008D2FF3 /* Configuration */,
 			);
 			path = Iris;
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E76DD741BF3A042008D2FF3 /* SigningOptions.swift in Sources */,
 				4E76DD721BF39E3A008D2FF3 /* ImageOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
