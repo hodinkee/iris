@@ -43,16 +43,53 @@ public struct ImageOptions: Equatable {
 
     // MARK: - Properties
 
+    /**
+     The output format to convert the image to.
+
+     - seealso:
+     [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-fm)
+    */
     public var format: Format?
 
+    /**
+     The width of the output image.
+
+     - seealso:
+     [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-w)
+    */
     public var width: CGFloat?
 
+    /**
+     The height of the output image.
+
+     - seealso:
+     [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-h)
+     */
     public var height: CGFloat?
 
+    /**
+     The device pixel ratio to be used.
+     
+     - seealso:
+     [Imgix API Reference](https://www.imgix.com/docs/reference/pixeldensity)
+    */
     public var scale: CGFloat?
 
+    /**
+     Controls how the output image is fit to its target dimensions.
+
+     - seealso:
+     [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-fit)
+    */
     public var fit: FitMode?
 
+    /**
+     Controls how the input image is aligned when the `fit` property
+     is set to `FitMode.Crop`
+
+     - seealso:
+     [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-crop)
+    */
     public var crop: [CropMode]?
 
     public var lossless: Bool?
