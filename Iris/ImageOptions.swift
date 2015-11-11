@@ -20,6 +20,12 @@ public struct ImageOptions: Equatable {
     public enum Fit: String {
         case Crop = "crop"
         case Clip = "clip"
+        case Clamp = "clamp"
+        case FaceArea = "facearea"
+        case Fill = "fill"
+        case Max = "max"
+        case Min = "min"
+        case Scale = "scale"
     }
 
     public enum Crop: String {
