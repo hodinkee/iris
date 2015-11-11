@@ -19,6 +19,7 @@ final class IrisTests: XCTestCase {
         var imageOptions = ImageOptions(format: .JPEG, width: 320, height: 200, scale: 2.0, fit: .Crop, crop: [.Faces])
         imageOptions.lossless = true
         imageOptions.quality = 75
+        imageOptions.colorQuantization = 16
 
         let queryItems = imageOptions.queryItems
 
@@ -30,6 +31,7 @@ final class IrisTests: XCTestCase {
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "crop", value: "faces")))
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "lossless", value: "true")))
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "q", value: "75")))
+        XCTAssert(queryItems.contains(NSURLQueryItem(name: "colorquant", value: "16")))
     }
 
     func testImgixURL() {
@@ -57,4 +59,15 @@ final class IrisTests: XCTestCase {
         imageOptions.quality = 200
         XCTAssertEqual(imageOptions.quality, 100)
     }
+
+    func testImageOptionsColorQuantization() {
+        var imageOptions = ImageOptions()
+
+        imageOptions.colorQuantization = 0
+        XCTAssertEqual(imageOptions.colorQuantization, 2)
+
+        imageOptions.colorQuantization = 512
+        XCTAssertEqual(imageOptions.colorQuantization, 256)
+    }
+
 }

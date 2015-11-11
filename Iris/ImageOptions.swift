@@ -66,7 +66,14 @@ public struct ImageOptions: Equatable {
         }
     }
 
+    public var colorQuantization: Int? {
+        get { return _colorQuantization }
+        set { _colorQuantization = newValue?.clamp(min: 2, max: 256) }
+    }
+
     private var _quality: Int?
+
+    private var _colorQuantization: Int?
 
 
     // MARK: - Initializers
@@ -116,6 +123,10 @@ public struct ImageOptions: Equatable {
 
         if let value = quality {
             items.append(NSURLQueryItem(name: "q", value: String(value)))
+        }
+
+        if let value = colorQuantization {
+            items.append(NSURLQueryItem(name: "colorquant", value: String(value)))
         }
 
         return items
