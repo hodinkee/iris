@@ -55,6 +55,8 @@ public struct ImageOptions: Equatable {
 
     public var crop: [Crop]?
 
+    public var lossless: Bool?
+
 
     // MARK: - Initializers
 
@@ -96,7 +98,11 @@ public struct ImageOptions: Equatable {
         if let value = crop {
             items.append(NSURLQueryItem(name: "crop", value: value.map({ $0.rawValue }).joinWithSeparator(",")))
         }
-        
+
+        if let value = lossless {
+            items.append(NSURLQueryItem(name: "lossless", value: String(value)))
+        }
+
         return items
     }
 }

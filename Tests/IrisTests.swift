@@ -16,7 +16,10 @@ final class IrisTests: XCTestCase {
     func testImageOptionsQueryItems() {
         XCTAssert(ImageOptions().queryItems.isEmpty, "Default ImageOptions should return empty query items.")
 
-        let queryItems = ImageOptions(format: .JPEG, width: 320, height: 200, scale: 2.0, fit: .Crop, crop: [.Faces]).queryItems
+        var imageOptions = ImageOptions(format: .JPEG, width: 320, height: 200, scale: 2.0, fit: .Crop, crop: [.Faces])
+        imageOptions.lossless = true
+
+        let queryItems = imageOptions.queryItems
 
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "fm", value: "jpg")))
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "w", value: "320.0")))
@@ -24,6 +27,7 @@ final class IrisTests: XCTestCase {
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "dpr", value: "2.0")))
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "fit", value: "crop")))
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "crop", value: "faces")))
+        XCTAssert(queryItems.contains(NSURLQueryItem(name: "lossless", value: "true")))
     }
 
     func testImgixURL() {
