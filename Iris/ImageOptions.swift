@@ -58,12 +58,8 @@ public struct ImageOptions: Equatable {
     public var lossless: Bool?
 
     public var quality: Int? {
-        get {
-            return _quality
-        }
-        set {
-            _quality = newValue?.clamp(min: 0, max: 100)
-        }
+        get { return _quality }
+        set { _quality = newValue?.clamp(min: 0, max: 100) }
     }
 
     public var colorQuantization: Int? {
