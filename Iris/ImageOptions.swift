@@ -20,7 +20,7 @@ public struct ImageOptions: Equatable {
         case WebP = "webp"
     }
 
-    public enum Fit: String {
+    public enum FitMode: String {
         case Crop = "crop"
         case Clip = "clip"
         case Clamp = "clamp"
@@ -31,7 +31,7 @@ public struct ImageOptions: Equatable {
         case Scale = "scale"
     }
 
-    public enum Crop: String {
+    public enum CropMode: String {
         case Top = "top"
         case Bottom = "bottom"
         case Left = "left"
@@ -51,9 +51,9 @@ public struct ImageOptions: Equatable {
 
     public var scale: CGFloat?
 
-    public var fit: Fit?
+    public var fit: FitMode?
 
-    public var crop: [Crop]?
+    public var crop: [CropMode]?
 
     public var lossless: Bool?
 
@@ -74,7 +74,7 @@ public struct ImageOptions: Equatable {
 
     // MARK: - Initializers
 
-    public init(format: Format? = nil, width: CGFloat? = nil, height: CGFloat? = nil, scale: CGFloat? = nil, fit: Fit? = nil, crop: [Crop]? = nil) {
+    public init(format: Format? = nil, width: CGFloat? = nil, height: CGFloat? = nil, scale: CGFloat? = nil, fit: FitMode? = nil, crop: [CropMode]? = nil) {
         self.format = format
         self.width = width
         self.height = height
