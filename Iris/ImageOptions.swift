@@ -15,6 +15,9 @@ public struct ImageOptions: Equatable {
     public enum Format: String {
         case JPEG = "jpg"
         case PNG = "png"
+        case JSON = "json"
+        case MP4 = "mp4"
+        case WebP = "webp"
     }
 
     public enum Fit: String {
