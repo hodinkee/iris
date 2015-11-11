@@ -57,6 +57,17 @@ public struct ImageOptions: Equatable {
 
     public var lossless: Bool?
 
+    public var quality: Int? {
+        get {
+            return _quality
+        }
+        set {
+            _quality = newValue?.clamp(min: 0, max: 100)
+        }
+    }
+
+    private var _quality: Int?
+
 
     // MARK: - Initializers
 
@@ -103,10 +114,20 @@ public struct ImageOptions: Equatable {
             items.append(NSURLQueryItem(name: "lossless", value: String(value)))
         }
 
+        if let value = quality {
+            items.append(NSURLQueryItem(name: "q", value: String(value)))
+        }
+
         return items
     }
 }
 
 public func ==(lhs: ImageOptions, rhs: ImageOptions) -> Bool {
     return lhs.queryItems == rhs.queryItems
+}
+
+extension Comparable {
+    func clamp(min min: Self, max: Self) -> Self {
+        return Swift.max(min, Swift.min(max, self))
+    }
 }

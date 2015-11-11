@@ -18,6 +18,7 @@ final class IrisTests: XCTestCase {
 
         var imageOptions = ImageOptions(format: .JPEG, width: 320, height: 200, scale: 2.0, fit: .Crop, crop: [.Faces])
         imageOptions.lossless = true
+        imageOptions.quality = 75
 
         let queryItems = imageOptions.queryItems
 
@@ -28,6 +29,7 @@ final class IrisTests: XCTestCase {
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "fit", value: "crop")))
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "crop", value: "faces")))
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "lossless", value: "true")))
+        XCTAssert(queryItems.contains(NSURLQueryItem(name: "q", value: "75")))
     }
 
     func testImgixURL() {
@@ -44,5 +46,15 @@ final class IrisTests: XCTestCase {
         let resultURL1 = NSURL(string: "https://example.imgix.net/http%3A%2F%2Favatars.com%2Fjohn-smith.png?s=493a52f008c91416351f8b33d4883135")
 
         XCTAssertEqual(resultURL1, sourceURL1?.imgixURL(imageOptions: imageOptions, signingOptions: signingOptions))
+    }
+
+    func testImageOptionsQuality() {
+        var imageOptions = ImageOptions()
+
+        imageOptions.quality = -50
+        XCTAssertEqual(imageOptions.quality, 0)
+
+        imageOptions.quality = 200
+        XCTAssertEqual(imageOptions.quality, 100)
     }
 }
