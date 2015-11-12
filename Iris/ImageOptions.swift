@@ -84,6 +84,14 @@ public struct ImageOptions: Equatable {
     */
     public var crop: [CropMode]?
 
+    /**
+     Selects a sub-region (rect) of the source image to use for processing.
+     
+     - seealso:
+     [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-rect)
+    */
+    public var cropRect: CGRect?
+
 
     // MARK: - Format Properties
 
@@ -176,6 +184,11 @@ public struct ImageOptions: Equatable {
 
         if let value = crop {
             items.append(NSURLQueryItem(name: "crop", value: value.map({ $0.rawValue }).joinWithSeparator(",")))
+        }
+
+        if let value = cropRect where value != CGRect.zero {
+            let serialized = "\(value.origin.x),\(value.origin.y),\(value.width),\(value.height)"
+            items.append(NSURLQueryItem(name: "rect", value: serialized))
         }
 
         // Format Properties

@@ -20,6 +20,7 @@ final class IrisTests: XCTestCase {
         imageOptions.lossless = true
         imageOptions.quality = 75
         imageOptions.colorQuantization = 16
+        imageOptions.cropRect = CGRect(x: 10, y: 20, width: 30, height: 40)
 
         let queryItems = imageOptions.queryItems
 
@@ -32,6 +33,7 @@ final class IrisTests: XCTestCase {
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "lossless", value: "true")))
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "q", value: "75")))
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "colorquant", value: "16")))
+        XCTAssert(queryItems.contains(NSURLQueryItem(name: "rect", value: "10.0,20.0,30.0,40.0")))
     }
 
     func testImgixURL() {
