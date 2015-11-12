@@ -427,9 +427,3 @@ public struct ImageOptions: Equatable {
 public func ==(lhs: ImageOptions, rhs: ImageOptions) -> Bool {
     return lhs.queryItems == rhs.queryItems
 }
-
-extension Comparable {
-    func clamp(min min: Self, max: Self) -> Self {
-        return Swift.max(min, Swift.min(max, self))
-    }
-}
