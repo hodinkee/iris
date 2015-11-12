@@ -1,4 +1,5 @@
 language: objective-c
 osx_image: xcode7.1
-xcode_project: Iris.xcodeproj
 xcode_sdk: iphonesimulator9.1
+xcode_project: Iris.xcodeproj
+xcode_scheme: "Iris iOS"
