@@ -1,6 +1,6 @@
 # Iris
 
-A Swift micro-framework for working with Imgix.
+A Swift framework for working with Imgix.
 
 ## Requirements
 
