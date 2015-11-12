@@ -240,10 +240,24 @@ public struct ImageOptions: Equatable {
     /**
      Selects a sub-region (rect) of the source image to use for processing.
      
+     Value is set equal to `nil` if `CGRect.isNull`, `CGRect.isEmpty`, or `CGRect.isInfinite`
+     returns true.
+     
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-rect)
     */
-    public var cropRect: CGRect?
+    public var cropRect: CGRect? {
+        get { return _cropRect }
+        set {
+            if let rect = newValue where !rect.isNull && !rect.isEmpty && !rect.isInfinite {
+                _cropRect = rect
+            }
+            else {
+                _cropRect = nil
+            }
+        }
+    }
+    private var _cropRect: CGRect?
 
 
     // MARK: - Format Properties
@@ -393,7 +407,7 @@ public struct ImageOptions: Equatable {
             items.append(NSURLQueryItem(name: "crop", value: value.map({ $0.rawValue }).joinWithSeparator(",")))
         }
 
-        if let value = cropRect where value != CGRect.zero {
+        if let value = cropRect {
             let serialized = "\(value.origin.x),\(value.origin.y),\(value.width),\(value.height)"
             items.append(NSURLQueryItem(name: "rect", value: serialized))
         }
