@@ -64,7 +64,7 @@ public struct ImageOptions: Equatable {
 
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-h)
-     */
+    */
     public var height: CGFloat?
 
     /**
@@ -92,13 +92,38 @@ public struct ImageOptions: Equatable {
     */
     public var crop: [CropMode]?
 
+    /**
+     Enables or disables lossless compression. Only available when using
+     certain formats.
+     
+     - seealso:
+     [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-lossless)
+    */
     public var lossless: Bool?
 
+    /**
+     Controls the output quality of lossy file formats. 
+     
+     Values are clamped to the range of `0...100`.
+
+     - seealso:
+     [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-q)
+    */
     public var quality: Int? {
         get { return _quality }
         set { _quality = newValue?.clamp(min: 0, max: 100) }
     }
 
+    /**
+     Limits the amount of colors in a picture using color quantization, which 
+     is a process that reduces the amount of distinct colors in an image while 
+     maintaining a visually-similar image. 
+
+     Values are clamped to the range of `2...256`.
+
+     - seealso:
+     [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-colorquant)
+    */
     public var colorQuantization: Int? {
         get { return _colorQuantization }
         set { _colorQuantization = newValue?.clamp(min: 2, max: 256) }
@@ -123,6 +148,10 @@ public struct ImageOptions: Equatable {
 
     // MARK: - Public
 
+    /**
+     The configured options as `[NSURLQueryItem]`, suitable for use
+     with `NSURLComponents`.
+    */
     public var queryItems: [NSURLQueryItem] {
         var items = [NSURLQueryItem]()
 
