@@ -1,5 +1,7 @@
 # Iris
 
+[![Build Status](https://travis-ci.org/hodinkee/iris.svg?branch=master)](https://travis-ci.org/hodinkee/iris)
+
 A Swift framework for working with Imgix.
 
 ## Requirements
