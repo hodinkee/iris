@@ -41,15 +41,7 @@ public struct ImageOptions: Equatable {
     }
 
 
-    // MARK: - Properties
-
-    /**
-     The output format to convert the image to.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-fm)
-    */
-    public var format: Format?
+    // MARK: - Size Properties
 
     /**
      The width of the output image.
@@ -91,6 +83,17 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-crop)
     */
     public var crop: [CropMode]?
+
+
+    // MARK: - Format Properties
+
+    /**
+     The output format to convert the image to.
+
+     - seealso:
+     [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-fm)
+     */
+    public var format: Format?
 
     /**
      Enables or disables lossless compression. Only available when using
