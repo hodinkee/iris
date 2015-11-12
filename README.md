@@ -34,6 +34,6 @@ let resizedImageURL = myImageURL.imgixURL(imageOptions: imageOptions)
 Want to ensure the resized image is in the JPEG file format with a quality of 50? Just configure the options!
 
 ```swift
-imageOptions.format = Format.JPEG
+imageOptions.format = .JPEG
 imageOptions.quality = 50
 ```
