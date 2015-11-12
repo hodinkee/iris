@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E0E1B171BF505A5002943D0 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B161BF505A5002943D0 /* Defines.swift */; };
+		4E0E1B1A1BF507D5002943D0 /* SigningOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */; };
 		4E76DD551BF392B3008D2FF3 /* Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E76DD541BF392B3008D2FF3 /* Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E76DD5C1BF392B3008D2FF3 /* Iris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E76DD511BF392B3008D2FF3 /* Iris.framework */; };
 		4E76DD721BF39E3A008D2FF3 /* ImageOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		4E0E1B161BF505A5002943D0 /* Defines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
+		4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningOptionsTests.swift; sourceTree = "<group>"; };
 		4E76DD511BF392B3008D2FF3 /* Iris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Iris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E76DD541BF392B3008D2FF3 /* Iris.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iris.h; sourceTree = "<group>"; };
 		4E76DD561BF392B3008D2FF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				4E76DD841BF4E319008D2FF3 /* ImgixURLTests.swift */,
 				4E76DD821BF4E2B8008D2FF3 /* ImageOptionsTests.swift */,
+				4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */,
 				4E76DD6D1BF3950F008D2FF3 /* Configuration */,
 			);
 			path = Tests;
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E76DD831BF4E2B8008D2FF3 /* ImageOptionsTests.swift in Sources */,
+				4E0E1B1A1BF507D5002943D0 /* SigningOptionsTests.swift in Sources */,
 				4E76DD851BF4E319008D2FF3 /* ImgixURLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

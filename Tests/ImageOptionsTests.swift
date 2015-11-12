@@ -27,9 +27,17 @@ final class ImageOptionsTests: XCTestCase {
 
     // MARK: - Initializer Tests
 
-    func testDefaultImageOptions() {
+    func testImageOptionsInit() {
         let queryItems = imageOptions.queryItems
         XCTAssert(queryItems.isEmpty, "Default ImageOptions should return empty query items.")
+    }
+
+    // MARK: - Equatable Tests
+
+    func testImageOptionsEquatable() {
+        let imageOptionsOne = ImageOptions(format: .JPEG, width: 320, height: 250)
+        let imageOptionsTwo = ImageOptions(format: .JPEG, width: 320, height: 250)
+        XCTAssertEqual(imageOptionsOne, imageOptionsTwo)
     }
 
     // MARK: - Adjustment Properties
