@@ -21,6 +21,7 @@ final class IrisTests: XCTestCase {
         imageOptions.quality = 75
         imageOptions.colorQuantization = 16
         imageOptions.cropRect = CGRect(x: 10, y: 20, width: 30, height: 40)
+        imageOptions.DPI = 300
 
         let queryItems = imageOptions.queryItems
 
@@ -34,6 +35,7 @@ final class IrisTests: XCTestCase {
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "q", value: "75")))
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "colorquant", value: "16")))
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "rect", value: "10.0,20.0,30.0,40.0")))
+        XCTAssert(queryItems.contains(NSURLQueryItem(name: "dpi", value: "300")))
     }
 
     func testImgixURL() {

@@ -100,8 +100,16 @@ public struct ImageOptions: Equatable {
 
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-fm)
-     */
+    */
     public var format: Format?
+
+    /**
+     The DPI value in the Exif header of the resulting image.
+
+     - seealso:
+     [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-dpi)
+    */
+    public var DPI: Int?
 
     /**
      Enables or disables lossless compression. Only available when using
@@ -195,6 +203,10 @@ public struct ImageOptions: Equatable {
 
         if let value = format {
             items.append(NSURLQueryItem(name: "fm", value: value.rawValue))
+        }
+
+        if let value = DPI {
+            items.append(NSURLQueryItem(name: "dpi", value: String(value)))
         }
 
         if let value = lossless {
