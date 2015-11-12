@@ -12,10 +12,23 @@ public struct SigningOptions: Equatable {
 
     // MARK: - Properties
 
+    /**
+     The host pertaining to an Imgix source.
+    
+     Example: `hodinkee.imgix.net`
+    */
     public var host: String
 
+    /**
+     The alphanumeric "Secure URL Token" pertaining to an Imgix source.
+
+     Example: `hodinkee.imgix.net`
+    */
     public var token: String
 
+    /**
+     Controls whether or not to use HTTPS when requesting the image.
+    */
     public var secure: Bool
 
 
