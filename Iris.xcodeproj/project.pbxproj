@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		4E76DD551BF392B3008D2FF3 /* Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E76DD541BF392B3008D2FF3 /* Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E76DD5C1BF392B3008D2FF3 /* Iris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E76DD511BF392B3008D2FF3 /* Iris.framework */; };
-		4E76DD611BF392B3008D2FF3 /* IrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD601BF392B3008D2FF3 /* IrisTests.swift */; };
 		4E76DD721BF39E3A008D2FF3 /* ImageOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */; };
 		4E76DD741BF3A042008D2FF3 /* SigningOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */; };
 		4E76DD761BF3A10E008D2FF3 /* NSURL+Iris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD751BF3A10E008D2FF3 /* NSURL+Iris.swift */; };
 		4E76DD7B1BF3A361008D2FF3 /* NSString+Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E76DD791BF3A361008D2FF3 /* NSString+Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E76DD7C1BF3A361008D2FF3 /* NSString+Iris.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD7A1BF3A361008D2FF3 /* NSString+Iris.m */; };
+		4E76DD831BF4E2B8008D2FF3 /* ImageOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD821BF4E2B8008D2FF3 /* ImageOptionsTests.swift */; };
+		4E76DD851BF4E319008D2FF3 /* ImgixURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD841BF4E319008D2FF3 /* ImgixURLTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,13 +33,14 @@
 		4E76DD541BF392B3008D2FF3 /* Iris.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iris.h; sourceTree = "<group>"; };
 		4E76DD561BF392B3008D2FF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E76DD5B1BF392B3008D2FF3 /* Iris iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Iris iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E76DD601BF392B3008D2FF3 /* IrisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrisTests.swift; sourceTree = "<group>"; };
 		4E76DD621BF392B3008D2FF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOptions.swift; sourceTree = "<group>"; };
 		4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningOptions.swift; sourceTree = "<group>"; };
 		4E76DD751BF3A10E008D2FF3 /* NSURL+Iris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Iris.swift"; sourceTree = "<group>"; };
 		4E76DD791BF3A361008D2FF3 /* NSString+Iris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Iris.h"; sourceTree = "<group>"; };
 		4E76DD7A1BF3A361008D2FF3 /* NSString+Iris.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Iris.m"; sourceTree = "<group>"; };
+		4E76DD821BF4E2B8008D2FF3 /* ImageOptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOptionsTests.swift; sourceTree = "<group>"; };
+		4E76DD841BF4E319008D2FF3 /* ImgixURLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgixURLTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +96,8 @@
 		4E76DD5F1BF392B3008D2FF3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4E76DD601BF392B3008D2FF3 /* IrisTests.swift */,
+				4E76DD841BF4E319008D2FF3 /* ImgixURLTests.swift */,
+				4E76DD821BF4E2B8008D2FF3 /* ImageOptionsTests.swift */,
 				4E76DD6D1BF3950F008D2FF3 /* Configuration */,
 			);
 			path = Tests;
@@ -253,7 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E76DD611BF392B3008D2FF3 /* IrisTests.swift in Sources */,
+				4E76DD831BF4E2B8008D2FF3 /* ImageOptionsTests.swift in Sources */,
+				4E76DD851BF4E319008D2FF3 /* ImgixURLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
