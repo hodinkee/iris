@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Iris/MD5.h>
+#import <Iris/NSString+Iris.h>
 
 FOUNDATION_EXPORT double IrisVersionNumber;
 FOUNDATION_EXPORT const unsigned char IrisVersionString[];
