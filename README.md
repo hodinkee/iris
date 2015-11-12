@@ -7,7 +7,7 @@ A Swift framework for working with Imgix.
 ## Requirements
 
 - Swift 2.1
-- iOS 8.0 or later
+- iOS 8.0, tvOS 9.0, or OS X 10.10
 
 ## Installation
 
