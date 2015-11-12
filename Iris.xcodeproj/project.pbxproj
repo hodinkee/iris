@@ -744,6 +744,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -784,6 +785,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -861,6 +863,7 @@
 				3A807DE41BF50B5E0083685D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A807DE81BF50B5E0083685D /* Build configuration list for PBXNativeTarget "Iris tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -869,6 +872,7 @@
 				3A807DE61BF50B5E0083685D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A807DFF1BF50B6A0083685D /* Build configuration list for PBXNativeTarget "Iris macOS" */ = {
 			isa = XCConfigurationList;
@@ -877,6 +881,7 @@
 				3A807E011BF50B6A0083685D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A807E021BF50B6A0083685D /* Build configuration list for PBXNativeTarget "Iris macOSTests" */ = {
 			isa = XCConfigurationList;
@@ -885,6 +890,7 @@
 				3A807E041BF50B6A0083685D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E76DD4B1BF392B3008D2FF3 /* Build configuration list for PBXProject "Iris" */ = {
 			isa = XCConfigurationList;

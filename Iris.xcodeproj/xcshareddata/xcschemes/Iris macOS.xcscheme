@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3A807DED1BF50B690083685D"
-               BuildableName = "Iris macOS.framework"
+               BuildableName = "Iris.framework"
                BlueprintName = "Iris macOS"
                ReferencedContainer = "container:Iris.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A807DED1BF50B690083685D"
-            BuildableName = "Iris macOS.framework"
+            BuildableName = "Iris.framework"
             BlueprintName = "Iris macOS"
             ReferencedContainer = "container:Iris.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A807DED1BF50B690083685D"
-            BuildableName = "Iris macOS.framework"
+            BuildableName = "Iris.framework"
             BlueprintName = "Iris macOS"
             ReferencedContainer = "container:Iris.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A807DED1BF50B690083685D"
-            BuildableName = "Iris macOS.framework"
+            BuildableName = "Iris.framework"
             BlueprintName = "Iris macOS"
             ReferencedContainer = "container:Iris.xcodeproj">
          </BuildableReference>

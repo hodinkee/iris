@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3A807DD11BF50B5E0083685D"
-               BuildableName = "Iris tvOS.framework"
+               BuildableName = "Iris.framework"
                BlueprintName = "Iris tvOS"
                ReferencedContainer = "container:Iris.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A807DD11BF50B5E0083685D"
-            BuildableName = "Iris tvOS.framework"
+            BuildableName = "Iris.framework"
             BlueprintName = "Iris tvOS"
             ReferencedContainer = "container:Iris.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A807DD11BF50B5E0083685D"
-            BuildableName = "Iris tvOS.framework"
+            BuildableName = "Iris.framework"
             BlueprintName = "Iris tvOS"
             ReferencedContainer = "container:Iris.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A807DD11BF50B5E0083685D"
-            BuildableName = "Iris tvOS.framework"
+            BuildableName = "Iris.framework"
             BlueprintName = "Iris tvOS"
             ReferencedContainer = "container:Iris.xcodeproj">
          </BuildableReference>
