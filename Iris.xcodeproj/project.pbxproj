@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A807DDC1BF50B5E0083685D /* Iris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A807DD21BF50B5E0083685D /* Iris.framework */; };
+		3A807DF81BF50B6A0083685D /* Iris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A807DEE1BF50B690083685D /* Iris.framework */; };
+		3A807E0F1BF50C350083685D /* Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A807E0E1BF50C030083685D /* Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A807E111BF50C4A0083685D /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B161BF505A5002943D0 /* Defines.swift */; };
+		3A807E121BF50C4A0083685D /* ImageOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */; };
+		3A807E131BF50C4A0083685D /* SigningOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */; };
+		3A807E141BF50C4A0083685D /* NSURL+Iris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD751BF3A10E008D2FF3 /* NSURL+Iris.swift */; };
+		3A807E151BF50C4A0083685D /* NSString+Iris.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD7A1BF3A361008D2FF3 /* NSString+Iris.m */; };
+		3A807E161BF50C4B0083685D /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B161BF505A5002943D0 /* Defines.swift */; };
+		3A807E171BF50C4B0083685D /* ImageOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */; };
+		3A807E181BF50C4B0083685D /* SigningOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */; };
+		3A807E191BF50C4B0083685D /* NSURL+Iris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD751BF3A10E008D2FF3 /* NSURL+Iris.swift */; };
+		3A807E1A1BF50C4B0083685D /* NSString+Iris.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD7A1BF3A361008D2FF3 /* NSString+Iris.m */; };
+		3A807E1B1BF50C4F0083685D /* NSString+Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E76DD791BF3A361008D2FF3 /* NSString+Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A807E1C1BF50C500083685D /* NSString+Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E76DD791BF3A361008D2FF3 /* NSString+Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A807E1D1BF50C570083685D /* ImgixURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD841BF4E319008D2FF3 /* ImgixURLTests.swift */; };
+		3A807E1E1BF50C570083685D /* ImageOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD821BF4E2B8008D2FF3 /* ImageOptionsTests.swift */; };
+		3A807E1F1BF50C570083685D /* SigningOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */; };
+		3A807E201BF50C580083685D /* ImgixURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD841BF4E319008D2FF3 /* ImgixURLTests.swift */; };
+		3A807E211BF50C580083685D /* ImageOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD821BF4E2B8008D2FF3 /* ImageOptionsTests.swift */; };
+		3A807E221BF50C580083685D /* SigningOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */; };
+		3A807E231BF50CF10083685D /* Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A807E0B1BF50C030083685D /* Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E0E1B171BF505A5002943D0 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B161BF505A5002943D0 /* Defines.swift */; };
 		4E0E1B1A1BF507D5002943D0 /* SigningOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */; };
 		4E76DD551BF392B3008D2FF3 /* Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E76DD541BF392B3008D2FF3 /* Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,6 +43,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3A807DDD1BF50B5E0083685D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E76DD481BF392B3008D2FF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A807DD11BF50B5E0083685D;
+			remoteInfo = "Iris tvOS";
+		};
+		3A807DF91BF50B6A0083685D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E76DD481BF392B3008D2FF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A807DED1BF50B690083685D;
+			remoteInfo = "Iris macOS";
+		};
 		4E76DD5D1BF392B3008D2FF3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4E76DD481BF392B3008D2FF3 /* Project object */;
@@ -31,6 +67,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A807DD21BF50B5E0083685D /* Iris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Iris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A807DDB1BF50B5E0083685D /* Iris tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Iris tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A807DEE1BF50B690083685D /* Iris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Iris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A807DF71BF50B6A0083685D /* Iris macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Iris macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A807E061BF50BE30083685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A807E081BF50BEB0083685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A807E0A1BF50C030083685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A807E0B1BF50C030083685D /* Iris.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iris.h; sourceTree = "<group>"; };
+		3A807E0D1BF50C030083685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A807E0E1BF50C030083685D /* Iris.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iris.h; sourceTree = "<group>"; };
 		4E0E1B161BF505A5002943D0 /* Defines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
 		4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningOptionsTests.swift; sourceTree = "<group>"; };
 		4E76DD511BF392B3008D2FF3 /* Iris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Iris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +94,36 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3A807DCE1BF50B5E0083685D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A807DD81BF50B5E0083685D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A807DDC1BF50B5E0083685D /* Iris.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A807DEA1BF50B690083685D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A807DF41BF50B6A0083685D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A807DF81BF50B6A0083685D /* Iris.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E76DD4D1BF392B3008D2FF3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,6 +142,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A807E051BF50BE30083685D /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A807E061BF50BE30083685D /* Info.plist */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		3A807E071BF50BEB0083685D /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A807E081BF50BEB0083685D /* Info.plist */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
+		3A807E091BF50C030083685D /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A807E0B1BF50C030083685D /* Iris.h */,
+				3A807E0A1BF50C030083685D /* Info.plist */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		3A807E0C1BF50C030083685D /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A807E0E1BF50C030083685D /* Iris.h */,
+				3A807E0D1BF50C030083685D /* Info.plist */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
 		4E76DD471BF392B3008D2FF3 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +190,10 @@
 			children = (
 				4E76DD511BF392B3008D2FF3 /* Iris.framework */,
 				4E76DD5B1BF392B3008D2FF3 /* Iris iOS Tests.xctest */,
+				3A807DD21BF50B5E0083685D /* Iris.framework */,
+				3A807DDB1BF50B5E0083685D /* Iris tvOSTests.xctest */,
+				3A807DEE1BF50B690083685D /* Iris.framework */,
+				3A807DF71BF50B6A0083685D /* Iris macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				4E76DD6C1BF39464008D2FF3 /* iOS */,
+				3A807E0C1BF50C030083685D /* tvOS */,
+				3A807E091BF50C030083685D /* macOS */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -130,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				4E76DD6E1BF39515008D2FF3 /* iOS */,
+				3A807E071BF50BEB0083685D /* tvOS */,
+				3A807E051BF50BE30083685D /* macOS */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -145,6 +263,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3A807DCF1BF50B5E0083685D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A807E0F1BF50C350083685D /* Iris.h in Headers */,
+				3A807E1B1BF50C4F0083685D /* NSString+Iris.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A807DEB1BF50B690083685D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A807E1C1BF50C500083685D /* NSString+Iris.h in Headers */,
+				3A807E231BF50CF10083685D /* Iris.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E76DD4E1BF392B3008D2FF3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,6 +293,78 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3A807DD11BF50B5E0083685D /* Iris tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A807DE71BF50B5E0083685D /* Build configuration list for PBXNativeTarget "Iris tvOS" */;
+			buildPhases = (
+				3A807DCD1BF50B5E0083685D /* Sources */,
+				3A807DCE1BF50B5E0083685D /* Frameworks */,
+				3A807DCF1BF50B5E0083685D /* Headers */,
+				3A807DD01BF50B5E0083685D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Iris tvOS";
+			productName = "Iris tvOS";
+			productReference = 3A807DD21BF50B5E0083685D /* Iris.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3A807DDA1BF50B5E0083685D /* Iris tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A807DE81BF50B5E0083685D /* Build configuration list for PBXNativeTarget "Iris tvOSTests" */;
+			buildPhases = (
+				3A807DD71BF50B5E0083685D /* Sources */,
+				3A807DD81BF50B5E0083685D /* Frameworks */,
+				3A807DD91BF50B5E0083685D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A807DDE1BF50B5E0083685D /* PBXTargetDependency */,
+			);
+			name = "Iris tvOSTests";
+			productName = "Iris tvOSTests";
+			productReference = 3A807DDB1BF50B5E0083685D /* Iris tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A807DED1BF50B690083685D /* Iris macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A807DFF1BF50B6A0083685D /* Build configuration list for PBXNativeTarget "Iris macOS" */;
+			buildPhases = (
+				3A807DE91BF50B690083685D /* Sources */,
+				3A807DEA1BF50B690083685D /* Frameworks */,
+				3A807DEB1BF50B690083685D /* Headers */,
+				3A807DEC1BF50B690083685D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Iris macOS";
+			productName = "Iris macOS";
+			productReference = 3A807DEE1BF50B690083685D /* Iris.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3A807DF61BF50B6A0083685D /* Iris macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A807E021BF50B6A0083685D /* Build configuration list for PBXNativeTarget "Iris macOSTests" */;
+			buildPhases = (
+				3A807DF31BF50B6A0083685D /* Sources */,
+				3A807DF41BF50B6A0083685D /* Frameworks */,
+				3A807DF51BF50B6A0083685D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A807DFA1BF50B6A0083685D /* PBXTargetDependency */,
+			);
+			name = "Iris macOSTests";
+			productName = "Iris macOSTests";
+			productReference = 3A807DF71BF50B6A0083685D /* Iris macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4E76DD501BF392B3008D2FF3 /* Iris iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E76DD651BF392B3008D2FF3 /* Build configuration list for PBXNativeTarget "Iris iOS" */;
@@ -203,6 +411,18 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = HODINKEE;
 				TargetAttributes = {
+					3A807DD11BF50B5E0083685D = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					3A807DDA1BF50B5E0083685D = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					3A807DED1BF50B690083685D = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					3A807DF61BF50B6A0083685D = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 					4E76DD501BF392B3008D2FF3 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
@@ -225,11 +445,43 @@
 			targets = (
 				4E76DD501BF392B3008D2FF3 /* Iris iOS */,
 				4E76DD5A1BF392B3008D2FF3 /* Iris iOS Tests */,
+				3A807DD11BF50B5E0083685D /* Iris tvOS */,
+				3A807DDA1BF50B5E0083685D /* Iris tvOSTests */,
+				3A807DED1BF50B690083685D /* Iris macOS */,
+				3A807DF61BF50B6A0083685D /* Iris macOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3A807DD01BF50B5E0083685D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A807DD91BF50B5E0083685D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A807DEC1BF50B690083685D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A807DF51BF50B6A0083685D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E76DD4F1BF392B3008D2FF3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,6 +499,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3A807DCD1BF50B5E0083685D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A807E151BF50C4A0083685D /* NSString+Iris.m in Sources */,
+				3A807E121BF50C4A0083685D /* ImageOptions.swift in Sources */,
+				3A807E141BF50C4A0083685D /* NSURL+Iris.swift in Sources */,
+				3A807E111BF50C4A0083685D /* Defines.swift in Sources */,
+				3A807E131BF50C4A0083685D /* SigningOptions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A807DD71BF50B5E0083685D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A807E1E1BF50C570083685D /* ImageOptionsTests.swift in Sources */,
+				3A807E1F1BF50C570083685D /* SigningOptionsTests.swift in Sources */,
+				3A807E1D1BF50C570083685D /* ImgixURLTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A807DE91BF50B690083685D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A807E1A1BF50C4B0083685D /* NSString+Iris.m in Sources */,
+				3A807E171BF50C4B0083685D /* ImageOptions.swift in Sources */,
+				3A807E191BF50C4B0083685D /* NSURL+Iris.swift in Sources */,
+				3A807E161BF50C4B0083685D /* Defines.swift in Sources */,
+				3A807E181BF50C4B0083685D /* SigningOptions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A807DF31BF50B6A0083685D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A807E211BF50C580083685D /* ImageOptionsTests.swift in Sources */,
+				3A807E221BF50C580083685D /* SigningOptionsTests.swift in Sources */,
+				3A807E201BF50C580083685D /* ImgixURLTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E76DD4C1BF392B3008D2FF3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +568,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3A807DDE1BF50B5E0083685D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A807DD11BF50B5E0083685D /* Iris tvOS */;
+			targetProxy = 3A807DDD1BF50B5E0083685D /* PBXContainerItemProxy */;
+		};
+		3A807DFA1BF50B6A0083685D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A807DED1BF50B690083685D /* Iris macOS */;
+			targetProxy = 3A807DF91BF50B6A0083685D /* PBXContainerItemProxy */;
+		};
 		4E76DD5E1BF392B3008D2FF3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4E76DD501BF392B3008D2FF3 /* Iris iOS */;
@@ -280,6 +586,124 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3A807DE31BF50B5E0083685D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Iris/Configuration/tvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
+				PRODUCT_NAME = Iris;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3A807DE41BF50B5E0083685D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Iris/Configuration/tvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
+				PRODUCT_NAME = Iris;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3A807DE51BF50B5E0083685D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/Configuration/tvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+			};
+			name = Debug;
+		};
+		3A807DE61BF50B5E0083685D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/Configuration/tvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+			};
+			name = Release;
+		};
+		3A807E001BF50B6A0083685D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Iris/Configuration/macOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
+				PRODUCT_NAME = Iris;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3A807E011BF50B6A0083685D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Iris/Configuration/macOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
+				PRODUCT_NAME = Iris;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3A807E031BF50B6A0083685D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tests/Configuration/macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3A807E041BF50B6A0083685D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tests/Configuration/macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		4E76DD631BF392B3008D2FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -297,9 +721,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -317,12 +740,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -345,9 +769,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -359,10 +782,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -372,36 +796,35 @@
 		4E76DD661BF392B3008D2FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Iris/Configuration/iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4E76DD671BF392B3008D2FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Iris/Configuration/iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -409,26 +832,66 @@
 		4E76DD691BF392B3008D2FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Tests/Configuration/iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.IrisTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		4E76DD6A1BF392B3008D2FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Tests/Configuration/iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.IrisTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3A807DE71BF50B5E0083685D /* Build configuration list for PBXNativeTarget "Iris tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A807DE31BF50B5E0083685D /* Debug */,
+				3A807DE41BF50B5E0083685D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A807DE81BF50B5E0083685D /* Build configuration list for PBXNativeTarget "Iris tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A807DE51BF50B5E0083685D /* Debug */,
+				3A807DE61BF50B5E0083685D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A807DFF1BF50B6A0083685D /* Build configuration list for PBXNativeTarget "Iris macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A807E001BF50B6A0083685D /* Debug */,
+				3A807E011BF50B6A0083685D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A807E021BF50B6A0083685D /* Build configuration list for PBXNativeTarget "Iris macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A807E031BF50B6A0083685D /* Debug */,
+				3A807E041BF50B6A0083685D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4E76DD4B1BF392B3008D2FF3 /* Build configuration list for PBXProject "Iris" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
