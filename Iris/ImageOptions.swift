@@ -113,6 +113,7 @@ public struct ImageOptions: Equatable {
         get { return _quality }
         set { _quality = newValue?.clamp(min: 0, max: 100) }
     }
+    private var _quality: Int?
 
     /**
      Limits the amount of colors in a picture using color quantization, which 
@@ -128,9 +129,6 @@ public struct ImageOptions: Equatable {
         get { return _colorQuantization }
         set { _colorQuantization = newValue?.clamp(min: 2, max: 256) }
     }
-
-    private var _quality: Int?
-
     private var _colorQuantization: Int?
 
 
