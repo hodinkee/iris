@@ -156,9 +156,7 @@ public struct ImageOptions: Equatable {
     public var queryItems: [NSURLQueryItem] {
         var items = [NSURLQueryItem]()
 
-        if let value = format {
-            items.append(NSURLQueryItem(name: "fm", value: value.rawValue))
-        }
+        // Size Properties
 
         if let value = width {
             items.append(NSURLQueryItem(name: "w", value: String(value)))
@@ -178,6 +176,12 @@ public struct ImageOptions: Equatable {
 
         if let value = crop {
             items.append(NSURLQueryItem(name: "crop", value: value.map({ $0.rawValue }).joinWithSeparator(",")))
+        }
+
+        // Format Properties
+
+        if let value = format {
+            items.append(NSURLQueryItem(name: "fm", value: value.rawValue))
         }
 
         if let value = lossless {
