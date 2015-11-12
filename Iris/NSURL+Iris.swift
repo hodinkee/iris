@@ -12,6 +12,9 @@ extension NSURL {
 
     /**
      Applies the given image and signing options to receiver.
+     
+     If `signingOptions` are not supplied, it is assumed that the receiver is
+     already a valid Imgix URL that does not require signing.
 
      - parameters:
         - imageOptions: An instance of `ImageOptions` to apply to the
