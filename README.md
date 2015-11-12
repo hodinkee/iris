@@ -37,3 +37,11 @@ Want to ensure the resized image is in the JPEG file format with a quality of 50
 imageOptions.format = .JPEG
 imageOptions.quality = 50
 ```
+
+If you need to sign your Imgix URLs, whether just for security's sake or because you're using a [Web Proxy Source](https://www.imgix.com/docs/tutorials/creating-sources#source-web-proxy), there's a way to do that too!
+
+```swift
+let signingOptions = SigningOptions(host: "my-source.imgix.net", token: "FOObar123")
+let signedImageURL = myImageURL.imgixURL(imageOptions: imageOptions, signingOptions: signingOptions)
+```
+
