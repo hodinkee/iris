@@ -13,7 +13,7 @@ final class ImgixURLTests: XCTestCase {
 
     func testImgixURL() {
         let baseURL = NSURL(string: "https://www.example.com?foo=bar")
-        let passURL = NSURL(string: "https://www.example.com?foo=bar&fm=jpg")
+        let passURL = NSURL(string: "https://www.example.com?fm=jpg&foo=bar")
         XCTAssertEqual(passURL, baseURL?.imgixURL(imageOptions: ImageOptions(format: .JPEG)))
     }
 
@@ -28,8 +28,8 @@ final class ImgixURLTests: XCTestCase {
     }
 
     func testImgixURLWithDuplicateQueryItems() {
-        let baseURL = NSURL(string: "https://www.example.com?width=400")
-        let passURL = NSURL(string: "https://www.example.com?width=500&fm=jpg")
+        let baseURL = NSURL(string: "https://www.example.com?w=400")
+        let passURL = NSURL(string: "https://www.example.com?fm=jpg&w=500.0")
         XCTAssertEqual(passURL, baseURL?.imgixURL(imageOptions: ImageOptions(format: .JPEG, width: 500)))
     }
 }
