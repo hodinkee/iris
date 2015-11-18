@@ -45,8 +45,14 @@ extension NSURL {
             return nil
         }
 
-        let existingQueryItems = components.queryItems ?? []
-        components.queryItems = existingQueryItems + imageOptions.queryItems
+        let combinedQueryItems = imageOptions.queryItems + (components.queryItems ?? [])
+
+        components.queryItems = combinedQueryItems
+            .reduce([NSURLQueryItem](), combine: { array, element in
+                if array.contains({ $0.name == element.name }) { return array }
+                return array + CollectionOfOne(element)
+            })
+            .sort({ $0.name < $1.name })
 
         return components.URL
     }
