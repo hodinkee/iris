@@ -26,4 +26,10 @@ final class ImgixURLTests: XCTestCase {
 
         XCTAssertEqual(resultURL1, sourceURL1?.imgixURL(imageOptions: imageOptions, signingOptions: signingOptions))
     }
+
+    func testImgixURLWithDuplicateQueryItems() {
+        let baseURL = NSURL(string: "https://www.example.com?width=400")
+        let passURL = NSURL(string: "https://www.example.com?width=500&fm=jpg")
+        XCTAssertEqual(passURL, baseURL?.imgixURL(imageOptions: ImageOptions(format: .JPEG, width: 500)))
+    }
 }
