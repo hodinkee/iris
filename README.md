@@ -1,8 +1,8 @@
 # Iris
 
 [![Build Status](https://travis-ci.org/hodinkee/iris.svg?branch=master)](https://travis-ci.org/hodinkee/iris)
-[![Cocoapods Compatible](https://img.shields.io/badge/pod-1.0.2-60a2da.svg?style=flat)](https://cocoapods.org/?q=Iris)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Cocoapods Compatible](https://img.shields.io/badge/pod-1.0.1-60a2da.svg?style=flat)](https://cocoapods.org/?q=Iris)
 
 A Swift framework for working with Imgix.
 
@@ -17,6 +17,12 @@ A Swift framework for working with Imgix.
 
 ```
 github "hodinkee/iris"
+```
+
+[CocoaPods](https://github.com/cocoapods/cocoapods)
+
+```
+pod 'Iris'
 ```
 
 ## Usage
