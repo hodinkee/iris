@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/hodinkee/iris.git', :tag => "v#{s.version}" }
 
   s.social_media_url = 'http://twitter.com/cocoahero'
-  s.authors = { 'Jonathan Baker' => 'http://twitter.com/cocoahero' }
+  s.authors = { 'Jonathan Baker' => 'jonathan@jonathanbaker.me', 'Caleb Davenport' => 'caleb@calebd.me' }
   s.homepage = 'https://github.com/hodinkee/iris'
 
   s.ios.deployment_target = '8.0'
