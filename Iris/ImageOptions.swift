@@ -202,7 +202,7 @@ public struct ImageOptions: Equatable {
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-w)
     */
-    public var width: CGFloat?
+    public var width: Int?
 
     /**
      The height of the output image.
@@ -210,7 +210,7 @@ public struct ImageOptions: Equatable {
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-h)
     */
-    public var height: CGFloat?
+    public var height: Int?
 
     /**
      The device pixel ratio to be used.
@@ -320,7 +320,7 @@ public struct ImageOptions: Equatable {
 
     // MARK: - Initializers
 
-    public init(format: Format? = nil, width: CGFloat? = nil, height: CGFloat? = nil, scale: CGFloat? = nil, fit: FitMode? = nil, crop: [CropMode]? = nil) {
+    public init(format: Format? = nil, width: Int? = nil, height: Int? = nil, scale: CGFloat? = nil, fit: FitMode? = nil, crop: [CropMode]? = nil) {
         self.format = format
         self.width = width
         self.height = height
