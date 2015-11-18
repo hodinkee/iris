@@ -91,6 +91,7 @@
 		4E76DD7A1BF3A361008D2FF3 /* NSString+Iris.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Iris.m"; sourceTree = "<group>"; };
 		4E76DD821BF4E2B8008D2FF3 /* ImageOptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOptionsTests.swift; sourceTree = "<group>"; };
 		4E76DD841BF4E319008D2FF3 /* ImgixURLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgixURLTests.swift; sourceTree = "<group>"; };
+		FE4F6D361BFC530200314206 /* Iris.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Iris.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +180,7 @@
 		4E76DD471BF392B3008D2FF3 = {
 			isa = PBXGroup;
 			children = (
+				FE4F6D361BFC530200314206 /* Iris.podspec */,
 				4E76DD531BF392B3008D2FF3 /* Iris */,
 				4E76DD5F1BF392B3008D2FF3 /* Tests */,
 				4E76DD521BF392B3008D2FF3 /* Products */,
