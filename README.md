@@ -1,7 +1,7 @@
 # Iris
 
 [![Build Status](https://travis-ci.org/hodinkee/iris.svg?branch=master)](https://travis-ci.org/hodinkee/iris)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Carthage Compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/Iris.svg)](https://cocoapods.org/?q=Iris)
 
 A Swift framework for working with Imgix.
