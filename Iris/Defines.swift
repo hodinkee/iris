@@ -8,14 +8,13 @@
 
 import Foundation
 
-extension Comparable {
-    func clamp(min min: Self, max: Self) -> Self {
-        return Swift.max(min, Swift.min(max, self))
-    }
+public protocol HexadecimalColorStringConvertable {
+    var hexadecimalColorString: String? { get }
 }
 
-extension UIColor {
-    var hexString: String? {
+#if os(iOS)
+extension UIColor: HexadecimalColorStringConvertable {
+    public var hexadecimalColorString: String? {
         var a: CGFloat = 0
         var r: CGFloat = 0
         var g: CGFloat = 0
@@ -26,5 +25,12 @@ extension UIColor {
         }
 
         return String(format: "%02X%02X%02X%02X", ((Int)(a * 255.0)), ((Int)(r * 255.0)), ((Int)(g * 255.0)), ((Int)(b * 255.0)))
+    }
+}
+#endif
+
+extension Comparable {
+    func clamp(min min: Self, max: Self) -> Self {
+        return Swift.max(min, Swift.min(max, self))
     }
 }
