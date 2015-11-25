@@ -9,6 +9,12 @@
 import Foundation
 
 public protocol HexadecimalColorStringConvertable {
+    /**
+    Returns a color in hexadecimal string notation. (7F336699)
+
+    Valid values are 3-value (rgb), 4-value (argb), 6-value (rgb), 
+    or 8-value (argb) hexadecimal colors.
+    */
     var hexadecimalColorString: String? { get }
 }
 
