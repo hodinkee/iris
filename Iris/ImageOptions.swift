@@ -318,6 +318,18 @@ public struct ImageOptions: Equatable {
     private var _colorQuantization: Int?
 
 
+    // MARK: - Background Properties
+
+    /**
+    The background color to use when transparency is encountered. This color is
+    also used when using `FitMode.Fill`.
+
+    - seealso:
+    [Imgix API Reference](https://www.imgix.com/docs/reference/background#param-bg)
+    */
+    public var backgroundColor: UIColor?
+
+
     // MARK: - Initializers
 
     public init(format: Format? = nil, width: CGFloat? = nil, height: CGFloat? = nil, scale: CGFloat? = nil, fit: FitMode? = nil, crop: [CropMode]? = nil) {
@@ -432,6 +444,12 @@ public struct ImageOptions: Equatable {
 
         if let value = colorQuantization {
             items.append(NSURLQueryItem(name: "colorquant", value: String(value)))
+        }
+
+        // Background Properties
+
+        if let value = backgroundColor, let hex = value.hexString {
+            items.append(NSURLQueryItem(name: "bg", value: hex))
         }
 
         return items
