@@ -322,8 +322,9 @@ final class ImageOptionsTests: XCTestCase {
     // MARK: - Background Properties
 
     func testImageOptionsBackgroundColor() {
-        imageOptions.backgroundColor = UIColor.redColor()
-        XCTAssertEqual(imageOptions.backgroundColor, UIColor.redColor())
-        XCTAssert(queryItems.contains(NSURLQueryItem(name: "bg", value: "FFFF0000")))
+        let color = UIColor(red: 51.0/255.0, green: 102.0/255.0, blue: 153.0/255.0, alpha: 0.5)
+        imageOptions.backgroundColor = color
+        XCTAssertEqual(imageOptions.backgroundColor, color)
+        XCTAssert(queryItems.contains(NSURLQueryItem(name: "bg", value: "7F336699")))
     }
 }
