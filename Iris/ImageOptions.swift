@@ -323,6 +323,9 @@ public struct ImageOptions: Equatable {
     /**
     The background color to use when transparency is encountered. This color is
     also used when using `FitMode.Fill`.
+    
+    - important:
+    The given color must be in the RGB color space, otherwise it is ignored.
 
     - seealso:
     [Imgix API Reference](https://www.imgix.com/docs/reference/background#param-bg)
