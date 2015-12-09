@@ -321,7 +321,7 @@ final class ImageOptionsTests: XCTestCase {
 
     // MARK: - Background Properties
 
-    #if os(iOS)
+    #if os(iOS) || os(tvOS)
     func testImageOptionsBackgroundColor() {
         let color = UIColor(red: 51.0/255.0, green: 102.0/255.0, blue: 153.0/255.0, alpha: 0.5)
         imageOptions.backgroundColor = color

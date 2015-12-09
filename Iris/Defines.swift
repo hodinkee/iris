@@ -18,7 +18,7 @@ public protocol HexadecimalColorStringConvertable {
     var hexadecimalColorString: String? { get }
 }
 
-#if os(iOS)
+#if os(iOS) || os(tvOS)
 extension UIColor: HexadecimalColorStringConvertable {
     public var hexadecimalColorString: String? {
         var a: CGFloat = 0
