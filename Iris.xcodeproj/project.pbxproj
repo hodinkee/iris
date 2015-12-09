@@ -709,6 +709,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A08E42E1C18AFCB00D655D6 /* tvOS-Framework.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvsimulator*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				INFOPLIST_FILE = Iris/Configuration/tvOS/Info.plist;
@@ -720,6 +721,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A08E42E1C18AFCB00D655D6 /* tvOS-Framework.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvsimulator*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				INFOPLIST_FILE = Iris/Configuration/tvOS/Info.plist;
@@ -731,6 +733,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A08E42C1C18AFCB00D655D6 /* tvOS-Application.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvsimulator*]" = "";
 				INFOPLIST_FILE = Tests/Configuration/tvOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -741,6 +744,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A08E42C1C18AFCB00D655D6 /* tvOS-Application.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvsimulator*]" = "";
 				INFOPLIST_FILE = Tests/Configuration/tvOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -853,7 +857,7 @@
 			baseConfigurationReference = 3A08E4201C18AFCB00D655D6 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "";
 				INFOPLIST_FILE = Tests/Configuration/iOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -865,7 +869,7 @@
 			baseConfigurationReference = 3A08E4201C18AFCB00D655D6 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "";
 				INFOPLIST_FILE = Tests/Configuration/iOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
