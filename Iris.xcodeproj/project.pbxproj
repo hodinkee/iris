@@ -67,10 +67,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A08E4131C18AFCB00D655D6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		3A08E4151C18AFCB00D655D6 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		3A08E4171C18AFCB00D655D6 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		3A08E4181C18AFCB00D655D6 /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
+		3A08E4191C18AFCB00D655D6 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		3A08E41A1C18AFCB00D655D6 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
+		3A08E41C1C18AFCB00D655D6 /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		3A08E41D1C18AFCB00D655D6 /* Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
+		3A08E41E1C18AFCB00D655D6 /* StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticLibrary.xcconfig; sourceTree = "<group>"; };
+		3A08E4201C18AFCB00D655D6 /* iOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
+		3A08E4211C18AFCB00D655D6 /* iOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
+		3A08E4221C18AFCB00D655D6 /* iOS-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Framework.xcconfig"; sourceTree = "<group>"; };
+		3A08E4231C18AFCB00D655D6 /* iOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		3A08E4251C18AFCB00D655D6 /* Mac-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Application.xcconfig"; sourceTree = "<group>"; };
+		3A08E4261C18AFCB00D655D6 /* Mac-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Base.xcconfig"; sourceTree = "<group>"; };
+		3A08E4271C18AFCB00D655D6 /* Mac-DynamicLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-DynamicLibrary.xcconfig"; sourceTree = "<group>"; };
+		3A08E4281C18AFCB00D655D6 /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
+		3A08E4291C18AFCB00D655D6 /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		3A08E42A1C18AFCB00D655D6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3A08E42C1C18AFCB00D655D6 /* tvOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "tvOS-Application.xcconfig"; sourceTree = "<group>"; };
+		3A08E42D1C18AFCB00D655D6 /* tvOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "tvOS-Base.xcconfig"; sourceTree = "<group>"; };
+		3A08E42E1C18AFCB00D655D6 /* tvOS-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "tvOS-Framework.xcconfig"; sourceTree = "<group>"; };
+		3A08E42F1C18AFCB00D655D6 /* tvOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "tvOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		3A08E4311C18AFCB00D655D6 /* watchOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Application.xcconfig"; sourceTree = "<group>"; };
+		3A08E4321C18AFCB00D655D6 /* watchOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Base.xcconfig"; sourceTree = "<group>"; };
+		3A08E4331C18AFCB00D655D6 /* watchOS-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Framework.xcconfig"; sourceTree = "<group>"; };
+		3A08E4341C18AFCB00D655D6 /* watchOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
 		3A807DD21BF50B5E0083685D /* Iris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Iris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A807DDB1BF50B5E0083685D /* Iris tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Iris tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A807DDB1BF50B5E0083685D /* Iris tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Iris tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A807DEE1BF50B690083685D /* Iris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Iris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A807DF71BF50B6A0083685D /* Iris macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Iris macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A807DF71BF50B6A0083685D /* Iris macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Iris macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A807E061BF50BE30083685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A807E081BF50BEB0083685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A807E0A1BF50C030083685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,6 +169,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A08E4121C18AFCB00D655D6 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				3A08E4131C18AFCB00D655D6 /* .gitignore */,
+				3A08E4141C18AFCB00D655D6 /* Base */,
+				3A08E41F1C18AFCB00D655D6 /* iOS */,
+				3A08E4241C18AFCB00D655D6 /* Mac OS X */,
+				3A08E42A1C18AFCB00D655D6 /* README.md */,
+				3A08E42B1C18AFCB00D655D6 /* tvOS */,
+				3A08E4301C18AFCB00D655D6 /* watchOS */,
+			);
+			name = Configuration;
+			path = Submosules/xcconfigs;
+			sourceTree = "<group>";
+		};
+		3A08E4141C18AFCB00D655D6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3A08E4151C18AFCB00D655D6 /* Common.xcconfig */,
+				3A08E4161C18AFCB00D655D6 /* Configurations */,
+				3A08E41B1C18AFCB00D655D6 /* Targets */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3A08E4161C18AFCB00D655D6 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				3A08E4171C18AFCB00D655D6 /* Debug.xcconfig */,
+				3A08E4181C18AFCB00D655D6 /* Profile.xcconfig */,
+				3A08E4191C18AFCB00D655D6 /* Release.xcconfig */,
+				3A08E41A1C18AFCB00D655D6 /* Test.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		3A08E41B1C18AFCB00D655D6 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				3A08E41C1C18AFCB00D655D6 /* Application.xcconfig */,
+				3A08E41D1C18AFCB00D655D6 /* Framework.xcconfig */,
+				3A08E41E1C18AFCB00D655D6 /* StaticLibrary.xcconfig */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		3A08E41F1C18AFCB00D655D6 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A08E4201C18AFCB00D655D6 /* iOS-Application.xcconfig */,
+				3A08E4211C18AFCB00D655D6 /* iOS-Base.xcconfig */,
+				3A08E4221C18AFCB00D655D6 /* iOS-Framework.xcconfig */,
+				3A08E4231C18AFCB00D655D6 /* iOS-StaticLibrary.xcconfig */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		3A08E4241C18AFCB00D655D6 /* Mac OS X */ = {
+			isa = PBXGroup;
+			children = (
+				3A08E4251C18AFCB00D655D6 /* Mac-Application.xcconfig */,
+				3A08E4261C18AFCB00D655D6 /* Mac-Base.xcconfig */,
+				3A08E4271C18AFCB00D655D6 /* Mac-DynamicLibrary.xcconfig */,
+				3A08E4281C18AFCB00D655D6 /* Mac-Framework.xcconfig */,
+				3A08E4291C18AFCB00D655D6 /* Mac-StaticLibrary.xcconfig */,
+			);
+			path = "Mac OS X";
+			sourceTree = "<group>";
+		};
+		3A08E42B1C18AFCB00D655D6 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A08E42C1C18AFCB00D655D6 /* tvOS-Application.xcconfig */,
+				3A08E42D1C18AFCB00D655D6 /* tvOS-Base.xcconfig */,
+				3A08E42E1C18AFCB00D655D6 /* tvOS-Framework.xcconfig */,
+				3A08E42F1C18AFCB00D655D6 /* tvOS-StaticLibrary.xcconfig */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
+		3A08E4301C18AFCB00D655D6 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A08E4311C18AFCB00D655D6 /* watchOS-Application.xcconfig */,
+				3A08E4321C18AFCB00D655D6 /* watchOS-Base.xcconfig */,
+				3A08E4331C18AFCB00D655D6 /* watchOS-Framework.xcconfig */,
+				3A08E4341C18AFCB00D655D6 /* watchOS-StaticLibrary.xcconfig */,
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
 		3A807E051BF50BE30083685D /* macOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +299,7 @@
 			children = (
 				4E76DD531BF392B3008D2FF3 /* Iris */,
 				4E76DD5F1BF392B3008D2FF3 /* Tests */,
+				3A08E4121C18AFCB00D655D6 /* Configuration */,
 				4E76DD521BF392B3008D2FF3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -191,9 +310,9 @@
 				4E76DD511BF392B3008D2FF3 /* Iris.framework */,
 				4E76DD5B1BF392B3008D2FF3 /* Iris iOS Tests.xctest */,
 				3A807DD21BF50B5E0083685D /* Iris.framework */,
-				3A807DDB1BF50B5E0083685D /* Iris tvOSTests.xctest */,
+				3A807DDB1BF50B5E0083685D /* Iris tvOS Tests.xctest */,
 				3A807DEE1BF50B690083685D /* Iris.framework */,
-				3A807DF71BF50B6A0083685D /* Iris macOSTests.xctest */,
+				3A807DF71BF50B6A0083685D /* Iris macOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -311,9 +430,9 @@
 			productReference = 3A807DD21BF50B5E0083685D /* Iris.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3A807DDA1BF50B5E0083685D /* Iris tvOSTests */ = {
+		3A807DDA1BF50B5E0083685D /* Iris tvOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A807DE81BF50B5E0083685D /* Build configuration list for PBXNativeTarget "Iris tvOSTests" */;
+			buildConfigurationList = 3A807DE81BF50B5E0083685D /* Build configuration list for PBXNativeTarget "Iris tvOS Tests" */;
 			buildPhases = (
 				3A807DD71BF50B5E0083685D /* Sources */,
 				3A807DD81BF50B5E0083685D /* Frameworks */,
@@ -324,9 +443,9 @@
 			dependencies = (
 				3A807DDE1BF50B5E0083685D /* PBXTargetDependency */,
 			);
-			name = "Iris tvOSTests";
+			name = "Iris tvOS Tests";
 			productName = "Iris tvOSTests";
-			productReference = 3A807DDB1BF50B5E0083685D /* Iris tvOSTests.xctest */;
+			productReference = 3A807DDB1BF50B5E0083685D /* Iris tvOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3A807DED1BF50B690083685D /* Iris macOS */ = {
@@ -347,9 +466,9 @@
 			productReference = 3A807DEE1BF50B690083685D /* Iris.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3A807DF61BF50B6A0083685D /* Iris macOSTests */ = {
+		3A807DF61BF50B6A0083685D /* Iris macOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A807E021BF50B6A0083685D /* Build configuration list for PBXNativeTarget "Iris macOSTests" */;
+			buildConfigurationList = 3A807E021BF50B6A0083685D /* Build configuration list for PBXNativeTarget "Iris macOS Tests" */;
 			buildPhases = (
 				3A807DF31BF50B6A0083685D /* Sources */,
 				3A807DF41BF50B6A0083685D /* Frameworks */,
@@ -360,9 +479,9 @@
 			dependencies = (
 				3A807DFA1BF50B6A0083685D /* PBXTargetDependency */,
 			);
-			name = "Iris macOSTests";
+			name = "Iris macOS Tests";
 			productName = "Iris macOSTests";
-			productReference = 3A807DF71BF50B6A0083685D /* Iris macOSTests.xctest */;
+			productReference = 3A807DF71BF50B6A0083685D /* Iris macOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		4E76DD501BF392B3008D2FF3 /* Iris iOS */ = {
@@ -446,9 +565,9 @@
 				4E76DD501BF392B3008D2FF3 /* Iris iOS */,
 				4E76DD5A1BF392B3008D2FF3 /* Iris iOS Tests */,
 				3A807DD11BF50B5E0083685D /* Iris tvOS */,
-				3A807DDA1BF50B5E0083685D /* Iris tvOSTests */,
+				3A807DDA1BF50B5E0083685D /* Iris tvOS Tests */,
 				3A807DED1BF50B690083685D /* Iris macOS */,
-				3A807DF61BF50B6A0083685D /* Iris macOSTests */,
+				3A807DF61BF50B6A0083685D /* Iris macOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -588,164 +707,100 @@
 /* Begin XCBuildConfiguration section */
 		3A807DE31BF50B5E0083685D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E42E1C18AFCB00D655D6 /* tvOS-Framework.xcconfig */;
 			buildSettings = {
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Iris/Configuration/tvOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
-				PRODUCT_NAME = Iris;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Debug;
 		};
 		3A807DE41BF50B5E0083685D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E42E1C18AFCB00D655D6 /* tvOS-Framework.xcconfig */;
 			buildSettings = {
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Iris/Configuration/tvOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
-				PRODUCT_NAME = Iris;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Release;
 		};
 		3A807DE51BF50B5E0083685D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E42C1C18AFCB00D655D6 /* tvOS-Application.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/Configuration/tvOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
 			};
 			name = Debug;
 		};
 		3A807DE61BF50B5E0083685D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E42C1C18AFCB00D655D6 /* tvOS-Application.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/Configuration/tvOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
 			};
 			name = Release;
 		};
 		3A807E001BF50B6A0083685D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E4281C18AFCB00D655D6 /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Iris/Configuration/macOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
-				PRODUCT_NAME = Iris;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Debug;
 		};
 		3A807E011BF50B6A0083685D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E4281C18AFCB00D655D6 /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Iris/Configuration/macOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
-				PRODUCT_NAME = Iris;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Release;
 		};
 		3A807E031BF50B6A0083685D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E4251C18AFCB00D655D6 /* Mac-Application.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tests/Configuration/macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		3A807E041BF50B6A0083685D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E4251C18AFCB00D655D6 /* Mac-Application.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tests/Configuration/macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		4E76DD631BF392B3008D2FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E4171C18AFCB00D655D6 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 5;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -754,40 +809,14 @@
 		};
 		4E76DD641BF392B3008D2FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E4191C18AFCB00D655D6 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 5;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = NO;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -795,61 +824,51 @@
 		};
 		4E76DD661BF392B3008D2FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E4221C18AFCB00D655D6 /* iOS-Framework.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEFINES_MODULE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Iris/Configuration/iOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
-				PRODUCT_NAME = Iris;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Debug;
 		};
 		4E76DD671BF392B3008D2FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E4221C18AFCB00D655D6 /* iOS-Framework.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEFINES_MODULE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Iris/Configuration/iOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
-				PRODUCT_NAME = Iris;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Release;
 		};
 		4E76DD691BF392B3008D2FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E4201C18AFCB00D655D6 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "";
 				INFOPLIST_FILE = Tests/Configuration/iOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.IrisTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		4E76DD6A1BF392B3008D2FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A08E4201C18AFCB00D655D6 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "";
 				INFOPLIST_FILE = Tests/Configuration/iOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.IrisTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -865,7 +884,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A807DE81BF50B5E0083685D /* Build configuration list for PBXNativeTarget "Iris tvOSTests" */ = {
+		3A807DE81BF50B5E0083685D /* Build configuration list for PBXNativeTarget "Iris tvOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A807DE51BF50B5E0083685D /* Debug */,
@@ -883,7 +902,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A807E021BF50B6A0083685D /* Build configuration list for PBXNativeTarget "Iris macOSTests" */ = {
+		3A807E021BF50B6A0083685D /* Build configuration list for PBXNativeTarget "Iris macOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A807E031BF50B6A0083685D /* Debug */,
