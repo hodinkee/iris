@@ -1,0 +1,3 @@
+[submodule "Submosules/xcconfigs"]
+	path = Submosules/xcconfigs
+	url = https://github.com/jspahrsummers/xcconfigs.git

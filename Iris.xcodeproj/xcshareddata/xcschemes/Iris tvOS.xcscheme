@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3A807DDA1BF50B5E0083685D"
-               BuildableName = "Iris tvOSTests.xctest"
-               BlueprintName = "Iris tvOSTests"
+               BuildableName = "Iris tvOS Tests.xctest"
+               BlueprintName = "Iris tvOS Tests"
                ReferencedContainer = "container:Iris.xcodeproj">
             </BuildableReference>
          </TestableReference>

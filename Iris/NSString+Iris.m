@@ -20,7 +20,7 @@
 
     NSMutableString *builder = [[NSMutableString alloc] init];
     const unsigned char *buffer = digest.bytes;
-    for (NSInteger i = 0; i < digest.length; i++) {
+    for (NSUInteger i = 0; i < digest.length; i++) {
         [builder appendFormat:@"%02x", buffer[i]];
     }
     return builder;

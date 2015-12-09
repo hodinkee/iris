@@ -11,12 +11,19 @@ A Swift framework for working with Imgix.
 - Swift 2.1
 - iOS 8.0, tvOS 9.0, or OS X 10.10
 
-## Installation
+## Building
+
+```sh
+$ git submodule update --init --recursive
+$ open Iris.xcodeproj
+```
+
+## Installing
 
 - [Carthage](https://github.com/carthage/carthage): `github "hodinkee/iris"`
 - [CocoaPods](https://github.com/cocoapods/cocoapods): `pod 'Iris'`
 
-## Usage
+## Using
 
 Let's say you have an Imgix [Web Folder](https://www.imgix.com/docs/tutorials/creating-sources#source-web-folder) or [Amazon S3](https://www.imgix.com/docs/tutorials/creating-sources#source-amazon-s3) source setup. You then have a plain URL to an image resource like the one below.
 
