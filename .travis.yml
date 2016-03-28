@@ -1,5 +1,9 @@
 language: objective-c
-osx_image: xcode7.1
-xcode_sdk: iphonesimulator9.1
-xcode_project: Iris.xcodeproj
-xcode_scheme: "Iris iOS"
+osx_image: xcode7.3
+install:
+  - carthage bootstrap --no-use-binaries
+  - git clone https://github.com/facebook/xctool.git
+script:
+  - xctool/xctool.sh -project "Iris.xcodeproj" -scheme "Iris-iOS" -sdk "iphonesimulator" build test
+  - xctool/xctool.sh -project "Iris.xcodeproj" -scheme "Iris-macOS" -sdk "macosx" build test
+  - pod spec lint
