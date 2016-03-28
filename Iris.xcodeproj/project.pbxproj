@@ -729,7 +729,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Iris/Configuration/tvOS/Info.plist;
+				INFOPLIST_FILE = Iris/Platforms/tvOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
@@ -747,7 +747,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Iris/Configuration/tvOS/Info.plist;
+				INFOPLIST_FILE = Iris/Platforms/tvOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
@@ -761,7 +761,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E71BDC11CA9A6E000725B30 /* tvOS-Application.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = Tests/Configuration/tvOS/Info.plist;
+				INFOPLIST_FILE = Tests/Platforms/tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -773,7 +773,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E71BDC11CA9A6E000725B30 /* tvOS-Application.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = Tests/Configuration/tvOS/Info.plist;
+				INFOPLIST_FILE = Tests/Platforms/tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -791,7 +791,7 @@
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Iris/Configuration/macOS/Info.plist;
+				INFOPLIST_FILE = Iris/Platforms/macOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
@@ -811,7 +811,7 @@
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Iris/Configuration/macOS/Info.plist;
+				INFOPLIST_FILE = Iris/Platforms/macOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
@@ -826,7 +826,7 @@
 			baseConfigurationReference = 4E71BDBA1CA9A6E000725B30 /* Mac-Application.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Tests/Configuration/macOS/Info.plist;
+				INFOPLIST_FILE = Tests/Platforms/macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -839,7 +839,7 @@
 			baseConfigurationReference = 4E71BDBA1CA9A6E000725B30 /* Mac-Application.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Tests/Configuration/macOS/Info.plist;
+				INFOPLIST_FILE = Tests/Platforms/macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -947,7 +947,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Iris/Configuration/iOS/Info.plist;
+				INFOPLIST_FILE = Iris/Platforms/iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
@@ -966,7 +966,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Iris/Configuration/iOS/Info.plist;
+				INFOPLIST_FILE = Iris/Platforms/iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
@@ -981,7 +981,7 @@
 			baseConfigurationReference = 4E71BDB51CA9A6E000725B30 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Tests/Configuration/iOS/Info.plist;
+				INFOPLIST_FILE = Tests/Platforms/iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.IrisTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -994,7 +994,7 @@
 			baseConfigurationReference = 4E71BDB51CA9A6E000725B30 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Tests/Configuration/iOS/Info.plist;
+				INFOPLIST_FILE = Tests/Platforms/iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.IrisTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
