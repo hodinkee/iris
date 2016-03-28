@@ -723,6 +723,7 @@
 /* Begin XCBuildConfiguration section */
 		3A807DE31BF50B5E0083685D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDC31CA9A6E000725B30 /* tvOS-Framework.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -740,6 +741,7 @@
 		};
 		3A807DE41BF50B5E0083685D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDC31CA9A6E000725B30 /* tvOS-Framework.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -757,6 +759,7 @@
 		};
 		3A807DE51BF50B5E0083685D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDC11CA9A6E000725B30 /* tvOS-Application.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/Configuration/tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -768,6 +771,7 @@
 		};
 		3A807DE61BF50B5E0083685D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDC11CA9A6E000725B30 /* tvOS-Application.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/Configuration/tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -779,6 +783,7 @@
 		};
 		3A807E001BF50B6A0083685D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDBD1CA9A6E000725B30 /* Mac-Framework.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -798,6 +803,7 @@
 		};
 		3A807E011BF50B6A0083685D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDBD1CA9A6E000725B30 /* Mac-Framework.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -817,6 +823,7 @@
 		};
 		3A807E031BF50B6A0083685D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDBA1CA9A6E000725B30 /* Mac-Application.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tests/Configuration/macOS/Info.plist;
@@ -829,6 +836,7 @@
 		};
 		3A807E041BF50B6A0083685D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDBA1CA9A6E000725B30 /* Mac-Application.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tests/Configuration/macOS/Info.plist;
@@ -841,6 +849,7 @@
 		};
 		4E76DD631BF392B3008D2FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDAA1CA9A6E000725B30 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -889,6 +898,7 @@
 		};
 		4E76DD641BF392B3008D2FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDAC1CA9A6E000725B30 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -930,6 +940,7 @@
 		};
 		4E76DD661BF392B3008D2FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDB71CA9A6E000725B30 /* iOS-Framework.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
@@ -948,6 +959,7 @@
 		};
 		4E76DD671BF392B3008D2FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDB71CA9A6E000725B30 /* iOS-Framework.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
@@ -966,6 +978,7 @@
 		};
 		4E76DD691BF392B3008D2FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDB51CA9A6E000725B30 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Tests/Configuration/iOS/Info.plist;
@@ -978,6 +991,7 @@
 		};
 		4E76DD6A1BF392B3008D2FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E71BDB51CA9A6E000725B30 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Tests/Configuration/iOS/Info.plist;
