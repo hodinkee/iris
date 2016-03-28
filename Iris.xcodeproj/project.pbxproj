@@ -207,7 +207,7 @@
 				4E76DD751BF3A10E008D2FF3 /* NSURL+Iris.swift */,
 				4E76DD791BF3A361008D2FF3 /* NSString+Iris.h */,
 				4E76DD7A1BF3A361008D2FF3 /* NSString+Iris.m */,
-				4E76DD6B1BF39430008D2FF3 /* Configuration */,
+				4E76DD6B1BF39430008D2FF3 /* Platforms */,
 			);
 			path = Iris;
 			sourceTree = "<group>";
@@ -218,19 +218,19 @@
 				4E76DD841BF4E319008D2FF3 /* ImgixURLTests.swift */,
 				4E76DD821BF4E2B8008D2FF3 /* ImageOptionsTests.swift */,
 				4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */,
-				4E76DD6D1BF3950F008D2FF3 /* Configuration */,
+				4E76DD6D1BF3950F008D2FF3 /* Platforms */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		4E76DD6B1BF39430008D2FF3 /* Configuration */ = {
+		4E76DD6B1BF39430008D2FF3 /* Platforms */ = {
 			isa = PBXGroup;
 			children = (
 				4E76DD6C1BF39464008D2FF3 /* iOS */,
 				3A807E0C1BF50C030083685D /* tvOS */,
 				3A807E091BF50C030083685D /* macOS */,
 			);
-			path = Configuration;
+			path = Platforms;
 			sourceTree = "<group>";
 		};
 		4E76DD6C1BF39464008D2FF3 /* iOS */ = {
@@ -242,14 +242,14 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		4E76DD6D1BF3950F008D2FF3 /* Configuration */ = {
+		4E76DD6D1BF3950F008D2FF3 /* Platforms */ = {
 			isa = PBXGroup;
 			children = (
 				4E76DD6E1BF39515008D2FF3 /* iOS */,
 				3A807E071BF50BEB0083685D /* tvOS */,
 				3A807E051BF50BE30083685D /* macOS */,
 			);
-			path = Configuration;
+			path = Platforms;
 			sourceTree = "<group>";
 		};
 		4E76DD6E1BF39515008D2FF3 /* iOS */ = {
