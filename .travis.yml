@@ -6,4 +6,5 @@ install:
 script:
   - xctool/xctool.sh -project "Iris.xcodeproj" -scheme "Iris-iOS" -sdk "iphonesimulator" build test
   - xctool/xctool.sh -project "Iris.xcodeproj" -scheme "Iris-macOS" -sdk "macosx" build test
+  - xctool/xctool.sh -project "Iris.xcodeproj" -scheme "Iris-tvOS" -sdk "appletvsimulator" build test
   - pod spec lint
