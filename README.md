@@ -14,8 +14,11 @@ A Swift framework for working with Imgix.
 
 ## Installation
 
-- [Carthage](https://github.com/carthage/carthage): `github "hodinkee/iris"`
-- [CocoaPods](https://github.com/cocoapods/cocoapods): `pod 'Iris'`
+##### [Carthage](https://github.com/carthage/carthage)
+> `github "hodinkee/iris"`
+
+#####[CocoaPods](https://github.com/cocoapods/cocoapods)
+> `pod 'Iris'`
 
 ## Usage
 
