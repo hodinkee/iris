@@ -543,7 +543,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = HODINKEE;
 				TargetAttributes = {
 					3A807DD11BF50B5E0083685D = {
@@ -729,7 +729,6 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvsimulator*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
-				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = Iris/Platforms/tvOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
@@ -780,7 +779,6 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
-				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Iris/Platforms/macOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
@@ -826,6 +824,7 @@
 			baseConfigurationReference = 4E71BDAA1CA9A6E000725B30 /* Debug.xcconfig */;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 5;
+				ENABLE_TESTABILITY = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -855,7 +854,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
-				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = Iris/Platforms/iOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
