@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0710"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A807DED1BF50B690083685D"
+               BlueprintIdentifier = "3A807DD11BF50B5E0083685D"
                BuildableName = "Iris.framework"
-               BlueprintName = "Iris macOS"
+               BlueprintName = "Iris-tvOS"
                ReferencedContainer = "container:Iris.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,9 +33,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A807DF61BF50B6A0083685D"
-               BuildableName = "Iris macOSTests.xctest"
-               BlueprintName = "Iris macOSTests"
+               BlueprintIdentifier = "3A807DDA1BF50B5E0083685D"
+               BuildableName = "Iris-tvOS-Tests.xctest"
+               BlueprintName = "Iris-tvOS-Tests"
                ReferencedContainer = "container:Iris.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,9 +43,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A807DED1BF50B690083685D"
+            BlueprintIdentifier = "3A807DD11BF50B5E0083685D"
             BuildableName = "Iris.framework"
-            BlueprintName = "Iris macOS"
+            BlueprintName = "Iris-tvOS"
             ReferencedContainer = "container:Iris.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A807DED1BF50B690083685D"
+            BlueprintIdentifier = "3A807DD11BF50B5E0083685D"
             BuildableName = "Iris.framework"
-            BlueprintName = "Iris macOS"
+            BlueprintName = "Iris-tvOS"
             ReferencedContainer = "container:Iris.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,9 +83,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A807DED1BF50B690083685D"
+            BlueprintIdentifier = "3A807DD11BF50B5E0083685D"
             BuildableName = "Iris.framework"
-            BlueprintName = "Iris macOS"
+            BlueprintName = "Iris-tvOS"
             ReferencedContainer = "container:Iris.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
