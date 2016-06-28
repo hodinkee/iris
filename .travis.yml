@@ -2,9 +2,8 @@ language: objective-c
 osx_image: xcode7.3
 install:
   - carthage bootstrap --no-use-binaries
-  - git clone https://github.com/facebook/xctool.git
 script:
-  - xctool/xctool.sh -project "Iris.xcodeproj" -scheme "Iris-iOS" -sdk "iphonesimulator" build test
-  - xctool/xctool.sh -project "Iris.xcodeproj" -scheme "Iris-macOS" -sdk "macosx" build test
-  - xctool/xctool.sh -project "Iris.xcodeproj" -scheme "Iris-tvOS" -sdk "appletvsimulator" build test
+  - xctool -project "Iris.xcodeproj" -scheme "Iris-iOS" -sdk "iphonesimulator" build test
+  - xctool -project "Iris.xcodeproj" -scheme "Iris-macOS" -sdk "macosx" build test
+  - xctool -project "Iris.xcodeproj" -scheme "Iris-tvOS" -sdk "appletvsimulator" build test
   - pod lib lint
