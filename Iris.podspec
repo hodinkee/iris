@@ -8,10 +8,15 @@ Pod::Spec.new do |s|
 
   s.authors = { 'Jonathan Baker' => 'jonathan@jonathanbaker.me', 'Caleb Davenport' => 'caleb@calebd.me' }
 
-  s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.10'
-  s.tvos.deployment_target = '9.0'
-  s.framework = 'Foundation'
   s.requires_arc = true
   s.source_files = 'Iris/*.{h,m,swift}'
+
+  s.ios.deployment_target = "8.0"
+  s.ios.frameworks = "UIKit"
+
+  s.osx.deployment_target = "10.10"
+  s.osx.frameworks = "Cocoa"
+
+  s.tvos.deployment_target = "9.0"
+  s.tvos.frameworks = "UIKit"
 end
