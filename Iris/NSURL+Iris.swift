@@ -10,33 +10,12 @@ import Foundation
 
 extension NSURL {
 
-    /**
-     Applies the given image and signing options to receiver.
-     
-     If `signingOptions` are not supplied, it is assumed that the receiver is
-     already a valid Imgix URL that does not require signing.
-
-     - parameters:
-        - imageOptions: An instance of `ImageOptions` to apply to the
-     receiver.
-        - signingOptions: An optional instance of `SigningOptions` to apply to
-     the receiver.
-
-     - returns: An NSURL with the given options applied.
-     */
-    public func imgixURL(imageOptions imageOptions: ImageOptions, signingOptions: SigningOptions? = nil) -> NSURL? {
-        if let signingOptions = signingOptions {
-            return signedImgixURL(imageOptions: imageOptions, signingOptions: signingOptions)
-        }
-        else {
-            return plainImgixURL(imageOptions: imageOptions)
-        }
-    }
-
-
-    // MARK: - Private
-
-    private func plainImgixURL(imageOptions imageOptions: ImageOptions) -> NSURL? {
+    /// Applies the given image options to the receiver.
+    ///
+    /// - parameter imageOptions: An instance of `ImageOptions`.
+    ///
+    /// - returns: A valid imgix URL or `nil`.
+    public func imgixURL(imageOptions imageOptions: ImageOptions) -> NSURL? {
         if imageOptions.queryItems.isEmpty {
             return self
         }
@@ -57,7 +36,13 @@ extension NSURL {
         return components.URL
     }
 
-    private func signedImgixURL(imageOptions imageOptions: ImageOptions, signingOptions: SigningOptions) -> NSURL? {
+    /// Applies the given image options to the receiver.
+    ///
+    /// - parameter imageOptions: An instance of `ImageOptions`.
+    /// - parameter signingOptions: An instance of `SigningOptions`.
+    ///
+    /// - returns: A valid imgix URL or `nil`.
+    public func imgixURL(imageOptions imageOptions: ImageOptions, signingOptions: SigningOptions) -> NSURL? {
         func encodedPath() -> String? {
             return iris_absoluteString?.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()).map({
                 return "/" + $0
