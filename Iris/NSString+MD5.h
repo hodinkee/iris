@@ -1,5 +1,5 @@
 //
-//  NSString+Iris.h
+//  NSString+MD5
 //  Iris
 //
 //  Created by Jonathan Baker on 11/11/15.
@@ -8,8 +8,8 @@
 
 @import Foundation;
 
-@interface NSString (Iris)
+@interface NSString (IrisMD5)
 
-@property (nonatomic, readonly, nullable) NSString * __iris_MD5Digest;
+@property (nonatomic, readonly, nullable) NSString *iris_MD5;
 
 @end

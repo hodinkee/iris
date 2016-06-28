@@ -65,7 +65,7 @@ extension NSURL {
                 }
             }
 
-            return signatureBase.__iris_MD5Digest
+            return signatureBase.iris_MD5
         }
 
         let components = NSURLComponents()
