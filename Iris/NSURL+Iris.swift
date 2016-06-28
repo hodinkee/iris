@@ -59,7 +59,7 @@ extension NSURL {
 
     private func signedImgixURL(imageOptions imageOptions: ImageOptions, signingOptions: SigningOptions) -> NSURL? {
         func encodedPath() -> String? {
-            return absoluteString.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()).map({
+            return iris_absoluteString?.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()).map({
                 return "/" + $0
             })
         }
@@ -95,5 +95,10 @@ extension NSURL {
         components.queryItems = imageOptions.queryItems + CollectionOfOne(NSURLQueryItem(name: "s", value: sig))
         
         return components.URL
+    }
+
+    /// This allows Iris to compile on both iOS 9 and iOS 10.
+    private var iris_absoluteString: String? {
+        return absoluteString
     }
 }
