@@ -1,9 +1,16 @@
 language: objective-c
-osx_image: xcode7.3
+osx_image: xcode8
+before_install:
+  - gem uninstall cocoapods -a
+  - gem install cocoapods --pre
 install:
   - carthage bootstrap --no-use-binaries
+before_script:
+  - instruments -s devices
+  - xcodebuild -version
+  - xcodebuild -showsdks
 script:
-  - xctool -project "Iris.xcodeproj" -scheme "Iris-iOS" -sdk "iphonesimulator" build test
-  - xctool -project "Iris.xcodeproj" -scheme "Iris-macOS" -sdk "macosx" build test
-  - xctool -project "Iris.xcodeproj" -scheme "Iris-tvOS" -sdk "appletvsimulator" build test
+  - xcodebuild test -project Iris.xcodeproj -scheme Iris-iOS -sdk iphonesimulator  -destination 'platform=iOS Simulator,name=iPhone 7' build test | xcpretty
+  - xcodebuild test -project Iris.xcodeproj -scheme Iris-macOS -sdk macosx build test | xcpretty
+  - xcodebuild test -project Iris.xcodeproj -scheme Iris-tvOS -sdk appletvsimulator -destination 'name=Apple TV 1080p' build test | xcpretty
   - pod lib lint
