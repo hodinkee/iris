@@ -7,7 +7,7 @@ before_script:
   - xcodebuild -version
   - xcodebuild -showsdks
 script:
-  - xcodebuild test -project Iris.xcodeproj -scheme Iris-iOS -sdk iphonesimulator  -destination 'platform=iOS Simulator,name=iPhone 7' build test
-  - xcodebuild test -project Iris.xcodeproj -scheme Iris-macOS -sdk macosx build test
-  - xcodebuild test -project Iris.xcodeproj -scheme Iris-tvOS -sdk appletvsimulator -destination 'name=Apple TV 1080p' build test
+  - xcodebuild test -project Iris.xcodeproj -scheme Iris-iOS -sdk iphonesimulator  -destination 'platform=iOS Simulator,name=iPhone 7' build test | xcpretty
+  - xcodebuild test -project Iris.xcodeproj -scheme Iris-macOS -sdk macosx build test | xcpretty
+  - xcodebuild test -project Iris.xcodeproj -scheme Iris-tvOS -sdk appletvsimulator -destination 'name=Apple TV 1080p' build test | xcpretty
   - pod lib lint
