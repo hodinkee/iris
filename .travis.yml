@@ -1,5 +1,8 @@
 language: objective-c
 osx_image: xcode8
+before_install:
+  - gem uninstall cocoapods -a
+  - gem install cocoapods --pre
 install:
   - carthage bootstrap --no-use-binaries
 before_script:
