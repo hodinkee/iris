@@ -22,7 +22,7 @@ final class ImgixURLTests: XCTestCase {
         let signingOptions = SigningOptions(host: "example.imgix.net", token: "FOO123bar")
 
         let sourceURL1 = URL(string: "http://avatars.com/john-smith.png")
-        let resultURL1 = URL(string: "https://example.imgix.net/http%3A%2F%2Favatars.com%2Fjohn-smith.png?s=493a52f008c91416351f8b33d4883135")
+        let resultURL1 = URL(string: "https://example.imgix.net/http:%2F%2Favatars.com%2Fjohn-smith.png?s=5837485941857dcad7a2bb1887e9dcc1")
 
         XCTAssertEqual(resultURL1, sourceURL1?.imgixURL(imageOptions: imageOptions, signingOptions: signingOptions))
     }
