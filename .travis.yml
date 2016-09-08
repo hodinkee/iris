@@ -2,6 +2,10 @@ language: objective-c
 osx_image: xcode8
 install:
   - carthage bootstrap --no-use-binaries
+before_script:
+  - instruments -s devices
+  - xcodebuild -version
+  - xcodebuild -showsdks
 script:
   - xcodebuild test -project Iris.xcodeproj -scheme Iris-iOS -sdk iphonesimulator  -destination 'platform=iOS Simulator,name=iPhone 7' build test
   - xcodebuild test -project Iris.xcodeproj -scheme Iris-macOS -sdk macosx build test
