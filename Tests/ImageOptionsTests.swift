@@ -339,9 +339,9 @@ final class ImageOptionsTests: XCTestCase {
     #if os(iOS) || os(tvOS)
     func testImageOptionsTextColor() {
         let color = UIColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
-        imageOptions.backgroundColor = color
-        XCTAssertEqual(imageOptions.backgroundColor as? UIColor, color)
-        XCTAssert(queryItems.contains(NSURLQueryItem(name: "bg", value: "7F336699")))
+        imageOptions.textColor = color
+        XCTAssertEqual(imageOptions.textColor as? UIColor, color)
+        XCTAssert(queryItems.contains(NSURLQueryItem(name: "txtclr", value: "7F336699")))
     }
     #endif
 }
