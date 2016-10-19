@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Iris
+import Iris
 
 final class ImageOptionsTests: XCTestCase {
 
