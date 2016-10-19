@@ -52,7 +52,7 @@ public struct ImageOptions: Equatable {
     */
     public var brightness: Int? {
         get { return _brightness }
-        set { _brightness = newValue?.clamp(min: -100, max: 100) }
+        set { _brightness = newValue?.clamp(-100...100) }
     }
     private var _brightness: Int?
 
@@ -66,7 +66,7 @@ public struct ImageOptions: Equatable {
     */
     public var contrast: Int? {
         get { return _contrast }
-        set { _contrast = newValue?.clamp(min: -100, max: 100) }
+        set { _contrast = newValue?.clamp(-100...100) }
     }
     private var _contrast: Int?
 
@@ -80,7 +80,7 @@ public struct ImageOptions: Equatable {
     */
     public var exposure: Int? {
         get { return _exposure }
-        set { _exposure = newValue?.clamp(min: -100, max: 100) }
+        set { _exposure = newValue?.clamp(-100...100) }
     }
     private var _exposure: Int?
 
@@ -94,7 +94,7 @@ public struct ImageOptions: Equatable {
     */
     public var gamma: Int? {
         get { return _gamma }
-        set { _gamma = newValue?.clamp(min: -100, max: 100) }
+        set { _gamma = newValue?.clamp(-100...100) }
     }
     private var _gamma: Int?
 
@@ -109,7 +109,7 @@ public struct ImageOptions: Equatable {
     */
     public var highlight: Int? {
         get { return _highlight }
-        set { _highlight = newValue?.clamp(min: -100, max: 100) }
+        set { _highlight = newValue?.clamp(-100...100) }
     }
     private var _highlight: Int?
 
@@ -123,7 +123,7 @@ public struct ImageOptions: Equatable {
     */
     public var hue: Int? {
         get { return _hue }
-        set { _hue = newValue?.clamp(min: 0, max: 359) }
+        set { _hue = newValue?.clamp(0...359) }
     }
     private var _hue: Int?
 
@@ -146,7 +146,7 @@ public struct ImageOptions: Equatable {
     */
     public var saturation: Int? {
         get { return _saturation }
-        set { _saturation = newValue?.clamp(min: -100, max: 100) }
+        set { _saturation = newValue?.clamp(-100...100) }
     }
     private var _saturation: Int?
 
@@ -161,7 +161,7 @@ public struct ImageOptions: Equatable {
     */
     public var shadow: Int? {
         get { return _shadow }
-        set { _shadow = newValue?.clamp(min: -100, max: 100) }
+        set { _shadow = newValue?.clamp(-100...100) }
     }
     private var _shadow: Int?
 
@@ -175,7 +175,7 @@ public struct ImageOptions: Equatable {
     */
     public var sharpen: Int? {
         get { return _sharpen }
-        set { _sharpen = newValue?.clamp(min: 0, max: 100) }
+        set { _sharpen = newValue?.clamp(0...100) }
     }
     private var _sharpen: Int?
 
@@ -189,7 +189,7 @@ public struct ImageOptions: Equatable {
     */
     public var vibrance: Int? {
         get { return _vibrance }
-        set { _vibrance = newValue?.clamp(min: -100, max: 100) }
+        set { _vibrance = newValue?.clamp(-100...100) }
     }
     private var _vibrance: Int?
 
@@ -297,7 +297,7 @@ public struct ImageOptions: Equatable {
     */
     public var quality: Int? {
         get { return _quality }
-        set { _quality = newValue?.clamp(min: 0, max: 100) }
+        set { _quality = newValue?.clamp(0...100) }
     }
     private var _quality: Int?
 
@@ -313,7 +313,7 @@ public struct ImageOptions: Equatable {
     */
     public var colorQuantization: Int? {
         get { return _colorQuantization }
-        set { _colorQuantization = newValue?.clamp(min: 2, max: 256) }
+        set { _colorQuantization = newValue?.clamp(2...256) }
     }
     private var _colorQuantization: Int?
 

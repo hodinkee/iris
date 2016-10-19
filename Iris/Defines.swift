@@ -34,9 +34,3 @@ extension UIColor: HexadecimalColorStringConvertable {
     }
 }
 #endif
-
-extension Comparable {
-    func clamp(min min: Self, max: Self) -> Self {
-        return Swift.max(min, Swift.min(max, self))
-    }
-}
