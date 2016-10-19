@@ -13,7 +13,7 @@ final class ImageOptionsTests: XCTestCase {
 
     // MARK: - Test Case Properties
 
-    private var imageOptions: ImageOptions = ImageOptions()
+    private var imageOptions = ImageOptions()
 
     private var queryItems: [NSURLQueryItem] {
         return imageOptions.queryItems
@@ -323,7 +323,22 @@ final class ImageOptionsTests: XCTestCase {
 
     #if os(iOS) || os(tvOS)
     func testImageOptionsBackgroundColor() {
-        let color = UIColor(red: 51.0/255.0, green: 102.0/255.0, blue: 153.0/255.0, alpha: 0.5)
+        let color = UIColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
+        imageOptions.backgroundColor = color
+        XCTAssertEqual(imageOptions.backgroundColor as? UIColor, color)
+        XCTAssert(queryItems.contains(NSURLQueryItem(name: "bg", value: "7F336699")))
+    }
+    #endif
+
+    func testImageOptionsTextSize() {
+        imageOptions.textSize = 16.0
+        XCTAssertEqual(imageOptions.textSize, 16.0)
+        XCTAssert(queryItems.contains(NSURLQueryItem(name: "txtsize", value: "16.0")))
+    }
+
+    #if os(iOS) || os(tvOS)
+    func testImageOptionsTextColor() {
+        let color = UIColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
         imageOptions.backgroundColor = color
         XCTAssertEqual(imageOptions.backgroundColor as? UIColor, color)
         XCTAssert(queryItems.contains(NSURLQueryItem(name: "bg", value: "7F336699")))

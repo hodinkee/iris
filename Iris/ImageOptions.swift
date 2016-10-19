@@ -329,6 +329,16 @@ public struct ImageOptions: Equatable {
     */
     public var backgroundColor: HexadecimalColorStringConvertable?
 
+    /// Sets the color of the text.
+    ///
+    /// - seealso: [Imgix Reference](https://docs.imgix.com/apis/url/text/txtclr)
+    public var textColor: HexadecimalColorStringConvertable?
+
+    /// Sets the font size of the text.
+    ///
+    /// - seealso: [Imgix Reference](https://docs.imgix.com/apis/url/text/txtsize)
+    public var textSize: CGFloat?
+
 
     // MARK: - Initializers
 
@@ -450,6 +460,16 @@ public struct ImageOptions: Equatable {
 
         if let value = backgroundColor, let hex = value.hexadecimalColorString {
             items.append(NSURLQueryItem(name: "bg", value: hex))
+        }
+
+        // Text properties
+
+        if let value = textColor, let hexadecimalString = value.hexadecimalColorString {
+            items.append(NSURLQueryItem(name: "txtclr", value: hexadecimalString))
+        }
+
+        if let value = textSize {
+            items.append(NSURLQueryItem(name: "txtsize", value: String(value)))
         }
 
         return items
