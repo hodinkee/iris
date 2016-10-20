@@ -249,7 +249,7 @@ public struct ImageOptions: Equatable {
     public var cropRect: CGRect? {
         get { return _cropRect }
         set {
-            if let rect = newValue where !rect.isNull && !rect.isEmpty && !rect.isInfinite {
+            if let rect = newValue , !rect.isNull && !rect.isEmpty && !rect.isInfinite {
                 _cropRect = rect
             }
             else {
@@ -358,118 +358,118 @@ public struct ImageOptions: Equatable {
      The configured options as `[NSURLQueryItem]`, suitable for use
      with `NSURLComponents`.
     */
-    public var queryItems: [NSURLQueryItem] {
-        var items = [NSURLQueryItem]()
+    public var queryItems: [URLQueryItem] {
+        var items = [URLQueryItem]()
 
         // Adjustment Properties
 
         if let value = brightness {
-            items.append(NSURLQueryItem(name: "bri", value: String(value)))
+            items.append(URLQueryItem(name: "bri", value: String(value)))
         }
 
         if let value = contrast {
-            items.append(NSURLQueryItem(name: "con", value: String(value)))
+            items.append(URLQueryItem(name: "con", value: String(value)))
         }
 
         if let value = exposure {
-            items.append(NSURLQueryItem(name: "exp", value: String(value)))
+            items.append(URLQueryItem(name: "exp", value: String(value)))
         }
 
         if let value = gamma {
-            items.append(NSURLQueryItem(name: "gam", value: String(value)))
+            items.append(URLQueryItem(name: "gam", value: String(value)))
         }
 
         if let value = highlight {
-            items.append(NSURLQueryItem(name: "high", value: String(value)))
+            items.append(URLQueryItem(name: "high", value: String(value)))
         }
 
         if let value = hue {
-            items.append(NSURLQueryItem(name: "hue", value: String(value)))
+            items.append(URLQueryItem(name: "hue", value: String(value)))
         }
 
         if let value = invert {
-            items.append(NSURLQueryItem(name: "invert", value: String(value)))
+            items.append(URLQueryItem(name: "invert", value: String(value)))
         }
 
         if let value = saturation {
-            items.append(NSURLQueryItem(name: "sat", value: String(value)))
+            items.append(URLQueryItem(name: "sat", value: String(value)))
         }
 
         if let value = shadow {
-            items.append(NSURLQueryItem(name: "shad", value: String(value)))
+            items.append(URLQueryItem(name: "shad", value: String(value)))
         }
 
         if let value = sharpen {
-            items.append(NSURLQueryItem(name: "sharp", value: String(value)))
+            items.append(URLQueryItem(name: "sharp", value: String(value)))
         }
 
         if let value = vibrance {
-            items.append(NSURLQueryItem(name: "vib", value: String(value)))
+            items.append(URLQueryItem(name: "vib", value: String(value)))
         }
 
         // Size Properties
 
         if let value = width {
-            items.append(NSURLQueryItem(name: "w", value: String(value)))
+            items.append(URLQueryItem(name: "w", value: String(describing: value)))
         }
 
         if let value = height {
-            items.append(NSURLQueryItem(name: "h", value: String(value)))
+            items.append(URLQueryItem(name: "h", value: String(describing: value)))
         }
 
         if let value = fit {
-            items.append(NSURLQueryItem(name: "fit", value: value.rawValue))
+            items.append(URLQueryItem(name: "fit", value: value.rawValue))
         }
 
         if let value = scale {
-            items.append(NSURLQueryItem(name: "dpr", value: String(value)))
+            items.append(URLQueryItem(name: "dpr", value: String(describing: value)))
         }
 
         if let value = crop {
-            items.append(NSURLQueryItem(name: "crop", value: value.map({ $0.rawValue }).joinWithSeparator(",")))
+            items.append(URLQueryItem(name: "crop", value: value.map({ $0.rawValue }).joined(separator: ",")))
         }
 
         if let value = cropRect {
             let serialized = "\(value.origin.x),\(value.origin.y),\(value.width),\(value.height)"
-            items.append(NSURLQueryItem(name: "rect", value: serialized))
+            items.append(URLQueryItem(name: "rect", value: serialized))
         }
 
         // Format Properties
 
         if let value = format {
-            items.append(NSURLQueryItem(name: "fm", value: value.rawValue))
+            items.append(URLQueryItem(name: "fm", value: value.rawValue))
         }
 
         if let value = DPI {
-            items.append(NSURLQueryItem(name: "dpi", value: String(value)))
+            items.append(URLQueryItem(name: "dpi", value: String(value)))
         }
 
         if let value = lossless {
-            items.append(NSURLQueryItem(name: "lossless", value: String(value)))
+            items.append(URLQueryItem(name: "lossless", value: String(value)))
         }
 
         if let value = quality {
-            items.append(NSURLQueryItem(name: "q", value: String(value)))
+            items.append(URLQueryItem(name: "q", value: String(value)))
         }
 
         if let value = colorQuantization {
-            items.append(NSURLQueryItem(name: "colorquant", value: String(value)))
+            items.append(URLQueryItem(name: "colorquant", value: String(value)))
         }
 
         // Background Properties
 
         if let value = backgroundColor, let hex = value.hexadecimalColorString {
-            items.append(NSURLQueryItem(name: "bg", value: hex))
+            items.append(URLQueryItem(name: "bg", value: hex))
         }
 
         // Text properties
 
         if let value = textColor, let hexadecimalString = value.hexadecimalColorString {
-            items.append(NSURLQueryItem(name: "txtclr", value: hexadecimalString))
+            items.append(URLQueryItem(name: "txtclr", value: hexadecimalString))
         }
 
         if let value = textSize {
-            items.append(NSURLQueryItem(name: "txtsize", value: String(value)))
+            items.append(URLQueryItem(name: "txtsize", value: String(describing: value)))
         }
 
         return items

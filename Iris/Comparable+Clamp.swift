@@ -9,7 +9,7 @@
 extension Comparable {
 
     /// Clamp the receiver to the given interval.
-    func clamp(interval: ClosedInterval<Self>) -> Self {
-        return max(interval.start, min(interval.end, self))
+    func clamp(_ interval: ClosedRange<Self>) -> Self {
+        return max(interval.lowerBound, min(interval.upperBound, self))
     }
 }
