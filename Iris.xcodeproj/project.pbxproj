@@ -29,6 +29,8 @@
 		3A807E211BF50C580083685D /* ImageOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD821BF4E2B8008D2FF3 /* ImageOptionsTests.swift */; };
 		3A807E221BF50C580083685D /* SigningOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */; };
 		3A807E231BF50CF10083685D /* Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A807E0B1BF50C030083685D /* Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BAC16021DB91250007A9CDD /* Comparable+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB8CBC21DB8112F001496EB /* Comparable+Clamp.swift */; };
+		3BAC16031DB91250007A9CDD /* Comparable+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB8CBC21DB8112F001496EB /* Comparable+Clamp.swift */; };
 		3BB8CBC31DB8112F001496EB /* Comparable+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB8CBC21DB8112F001496EB /* Comparable+Clamp.swift */; };
 		4E0E1B171BF505A5002943D0 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B161BF505A5002943D0 /* Defines.swift */; };
 		4E0E1B1A1BF507D5002943D0 /* SigningOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */; };
@@ -650,6 +652,7 @@
 				3A807E151BF50C4A0083685D /* NSString+MD5.m in Sources */,
 				3A807E121BF50C4A0083685D /* ImageOptions.swift in Sources */,
 				3A807E141BF50C4A0083685D /* NSURL+Iris.swift in Sources */,
+				3BAC16021DB91250007A9CDD /* Comparable+Clamp.swift in Sources */,
 				3A807E111BF50C4A0083685D /* Defines.swift in Sources */,
 				3A807E131BF50C4A0083685D /* SigningOptions.swift in Sources */,
 			);
@@ -672,6 +675,7 @@
 				3A807E1A1BF50C4B0083685D /* NSString+MD5.m in Sources */,
 				3A807E171BF50C4B0083685D /* ImageOptions.swift in Sources */,
 				3A807E191BF50C4B0083685D /* NSURL+Iris.swift in Sources */,
+				3BAC16031DB91250007A9CDD /* Comparable+Clamp.swift in Sources */,
 				3A807E161BF50C4B0083685D /* Defines.swift in Sources */,
 				3A807E181BF50C4B0083685D /* SigningOptions.swift in Sources */,
 			);

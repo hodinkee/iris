@@ -14,7 +14,7 @@ matrix:
         -scheme Iris-iOS
         -sdk iphonesimulator
         -destination "platform=iOS Simulator,name=iPhone 6s,OS=9.3"
-        -configuration Release | xcpretty
+        -configuration Release
 
     # iOS 10.0
     - script:
@@ -25,7 +25,7 @@ matrix:
         -scheme Iris-iOS
         -sdk iphonesimulator
         -destination "platform=iOS Simulator,name=iPhone 7,OS=10.0"
-        -configuration Release | xcpretty
+        -configuration Release
 
     # tvOS 9.2
     - script:
@@ -36,7 +36,7 @@ matrix:
         -scheme Iris-tvOS
         -sdk appletvsimulator
         -destination "platform=tvOS Simulator,name=Apple TV 1080p,OS=9.2"
-        -configuration Release | xcpretty
+        -configuration Release
 
     # tvOS 10.0
     - script:
@@ -47,7 +47,7 @@ matrix:
         -scheme Iris-tvOS
         -sdk appletvsimulator
         -destination "platform=tvOS Simulator,name=Apple TV 1080p,OS=10.0"
-        -configuration Release | xcpretty
+        -configuration Release
 
     # macOS
     - script:
@@ -58,8 +58,4 @@ matrix:
         -scheme Iris-macOS
         -sdk macosx
         -destination "arch=x86_64"
-        -configuration Release | xcpretty
-
-    # CocoaPods
-    - script:
-      - pod lib lint
+        -configuration Release
