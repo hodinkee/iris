@@ -8,16 +8,18 @@ A Swift framework for working with Imgix.
 
 ## Requirements
 
-|  Xcode  |  Swift  |  iOS  |  tvOS  |  OS X  |
-| :-----: | :-----: | :---: | :----: | :----: |
-| 7.3     | 2.2     | 8.0   | 9.0    | 10.10  |
+| Xcode  | Swift  | iOS    | tvOS   | macOS  |
+| :---:  | :---:  | :---:  | :---:  | :---:  |
+| 8.0    | 2.3    | 8.0    | 9.0    | 10.10  |
 
 ## Installation
 
-##### [Carthage](https://github.com/carthage/carthage)
+### [Carthage](https://github.com/carthage/carthage)
+
 > `github "hodinkee/iris"`
 
-#####[CocoaPods](https://github.com/cocoapods/cocoapods)
+### [CocoaPods](https://github.com/cocoapods/cocoapods)
+
 > `pod 'Iris'`
 
 ## Usage
@@ -49,4 +51,3 @@ If you need to sign your Imgix URLs, whether just for security's sake or because
 let signingOptions = SigningOptions(host: "my-source.imgix.net", token: "FOObar123")
 let signedImageURL = imageURL?.imgixURL(imageOptions: imageOptions, signingOptions: signingOptions)
 ```
-
