@@ -20,12 +20,12 @@ extension URL {
             return self
         }
 
-        guard let components = URLComponents(url: self, resolvingAgainstBaseURL: true) else {
-            return nil
-        }
+        var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
 
-        let combinedQueryItems = imageOptions.queryItems + (components.queryItems ?? [])
+        components?.queryItems = imageOptions.queryItems
+            .sorted(by: { $0.name < $1.name })
 
+//        let combinedQueryItems = imageOptions.queryItems + (components.queryItems ?? [])
 //        components.queryItems = combinedQueryItems
 //            .reduce([URLQueryItem](), { array, element in
 //                if array.contains(where: { $0.name == element.name }) { return array }
@@ -33,7 +33,7 @@ extension URL {
 //            })
 //            .sorted(by: { $0.name < $1.name })
 
-        return components.url
+        return components?.url
     }
 
     /// Applies the given image options to the receiver.
