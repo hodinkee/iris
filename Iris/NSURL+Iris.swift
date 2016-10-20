@@ -22,16 +22,16 @@ extension URL {
 
         var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
 
-        components?.queryItems = imageOptions.queryItems
-            .sorted(by: { $0.name < $1.name })
+        let combinedQueryItems = imageOptions.queryItems + (components?.queryItems ?? [])
 
-//        let combinedQueryItems = imageOptions.queryItems + (components.queryItems ?? [])
-//        components.queryItems = combinedQueryItems
-//            .reduce([URLQueryItem](), { array, element in
-//                if array.contains(where: { $0.name == element.name }) { return array }
-//                return array + CollectionOfOne(element)
-//            })
-//            .sorted(by: { $0.name < $1.name })
+        components?.queryItems = combinedQueryItems
+            .reduce([URLQueryItem](), { result, element in
+                if result.contains(where: { $0.name == element.name }) {
+                    return result
+                }
+                return result + CollectionOfOne(element)
+            })
+            .sorted(by: { $0.name < $1.name })
 
         return components?.url
     }
