@@ -43,18 +43,17 @@ extension URL {
     ///
     /// - returns: A valid imgix URL or `nil`.
     public func imgixURL(imageOptions: ImageOptions, signingOptions: SigningOptions) -> URL? {
-        func encodedPath() -> String? {
-//            return absoluteString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed()).map({
-//                return "/" + $0
-//            })
-            return ""
+        func makeEncodedPath() -> String? {
+            return absoluteString
+                .addingPercentEncoding(withAllowedCharacters: .imgixEncodedPath)
+                .map({ "/" + $0 })
         }
 
-        func signature() -> String? {
-            guard let encodedPath = encodedPath() else {
-                return nil
-            }
+        guard let encodedPath = makeEncodedPath() else {
+            return nil
+        }
 
+        func makeSignature() -> String? {
             let queryItems = imageOptions.queryItems
             var signatureBase = signingOptions.token + encodedPath
 
@@ -69,17 +68,23 @@ extension URL {
             return signatureBase.iris_MD5
         }
 
-        var components = URLComponents()
-        components.scheme = signingOptions.secure ? "https" : "http"
-        components.host = signingOptions.host
-        components.percentEncodedPath = encodedPath()!
-
-        guard let sig = signature() else {
+        guard let signature = makeSignature() else {
             return nil
         }
 
-        components.queryItems = imageOptions.queryItems + CollectionOfOne(URLQueryItem(name: "s", value: sig))
-        
+        var components = URLComponents()
+        components.scheme = signingOptions.secure ? "https" : "http"
+        components.host = signingOptions.host
+        components.percentEncodedPath = encodedPath
+        components.queryItems = imageOptions.queryItems + CollectionOfOne(URLQueryItem(name: "s", value: signature))
         return components.url
+    }
+}
+
+extension CharacterSet {
+    fileprivate static var imgixEncodedPath: CharacterSet {
+        var set = CharacterSet.alphanumerics
+        set.insert(charactersIn: "-_.!~*'()")
+        return set
     }
 }
