@@ -14,7 +14,7 @@ final class ImgixURLTests: XCTestCase {
     func testImgixURL() {
         let baseURL = URL(string: "https://www.example.com?foo=bar")
         let passURL = URL(string: "https://www.example.com?fm=jpg&foo=bar")
-        XCTAssertEqual(passURL, baseURL?.imgixURL(imageOptions: ImageOptions(format: .JPEG)))
+        XCTAssertEqual(passURL, baseURL?.imgixURL(with: ImageOptions(format: .JPEG)))
     }
 
     func testImgixURLWithSigningOptions() {
@@ -24,12 +24,12 @@ final class ImgixURLTests: XCTestCase {
         let sourceURL1 = URL(string: "http://avatars.com/john-smith.png")
         let resultURL1 = URL(string: "https://example.imgix.net/http%3A%2F%2Favatars.com%2Fjohn-smith.png?s=493a52f008c91416351f8b33d4883135")
 
-        XCTAssertEqual(resultURL1, sourceURL1?.imgixURL(imageOptions: imageOptions, signingOptions: signingOptions))
+        XCTAssertEqual(resultURL1, sourceURL1?.imgixURL(with: imageOptions, signedWith: signingOptions))
     }
 
     func testImgixURLWithDuplicateQueryItems() {
         let baseURL = URL(string: "https://www.example.com?w=400")
         let passURL = URL(string: "https://www.example.com?fm=jpg&w=500.0")
-        XCTAssertEqual(passURL, baseURL?.imgixURL(imageOptions: ImageOptions(format: .JPEG, width: 500)))
+        XCTAssertEqual(passURL, baseURL?.imgixURL(with: ImageOptions(format: .JPEG, width: 500)))
     }
 }
