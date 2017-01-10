@@ -553,19 +553,21 @@
 				TargetAttributes = {
 					3A807DD11BF50B5E0083685D = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
 					3A807DDA1BF50B5E0083685D = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
 					3A807DED1BF50B690083685D = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 					3A807DF61BF50B6A0083685D = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 					4E76DD501BF392B3008D2FF3 = {
 						CreatedOnToolsVersion = 7.1.1;
