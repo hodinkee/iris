@@ -35,8 +35,8 @@ final class ImageOptionsTests: XCTestCase {
     // MARK: - Equatable Tests
 
     func testImageOptionsEquatable() {
-        let imageOptionsOne = ImageOptions(format: .JPEG, width: 320, height: 250)
-        let imageOptionsTwo = ImageOptions(format: .JPEG, width: 320, height: 250)
+        let imageOptionsOne = ImageOptions(format: .jpeg, width: 320, height: 250)
+        let imageOptionsTwo = ImageOptions(format: .jpeg, width: 320, height: 250)
         XCTAssertEqual(imageOptionsOne, imageOptionsTwo)
     }
 
@@ -44,266 +44,242 @@ final class ImageOptionsTests: XCTestCase {
 
     func testImageOptionsBrightness() {
         imageOptions.brightness = -500
-        XCTAssertEqual(imageOptions.brightness, -100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "bri", value: "-100")])
 
         imageOptions.brightness = 500
-        XCTAssertEqual(imageOptions.brightness, 100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "bri", value: "100")])
 
         imageOptions.brightness = 75
-        XCTAssertEqual(imageOptions.brightness, 75)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "bri", value: "75")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "bri", value: "75")])
     }
 
     func testImageOptionsContrast() {
         imageOptions.contrast = -500
-        XCTAssertEqual(imageOptions.contrast, -100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "con", value: "-100")])
 
         imageOptions.contrast = 500
-        XCTAssertEqual(imageOptions.contrast, 100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "con", value: "100")])
 
         imageOptions.contrast = 75
-        XCTAssertEqual(imageOptions.contrast, 75)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "con", value: "75")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "con", value: "75")])
     }
 
     func testImageOptionsExposure() {
         imageOptions.exposure = -500
-        XCTAssertEqual(imageOptions.exposure, -100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "exp", value: "-100")])
 
         imageOptions.exposure = 500
-        XCTAssertEqual(imageOptions.exposure, 100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "exp", value: "100")])
 
         imageOptions.exposure = 75
-        XCTAssertEqual(imageOptions.exposure, 75)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "exp", value: "75")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "exp", value: "75")])
     }
 
     func testImageOptionsGamma() {
         imageOptions.gamma = -500
-        XCTAssertEqual(imageOptions.gamma, -100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "gam", value: "-100")])
 
         imageOptions.gamma = 500
-        XCTAssertEqual(imageOptions.gamma, 100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "gam", value: "100")])
 
         imageOptions.gamma = 75
-        XCTAssertEqual(imageOptions.gamma, 75)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "gam", value: "75")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "gam", value: "75")])
     }
 
     func testImageOptionsHighlight() {
         imageOptions.highlight = -500
-        XCTAssertEqual(imageOptions.highlight, -100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "high", value: "-100")])
 
         imageOptions.highlight = 500
-        XCTAssertEqual(imageOptions.highlight, 100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "high", value: "100")])
 
         imageOptions.highlight = 75
-        XCTAssertEqual(imageOptions.highlight, 75)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "high", value: "75")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "high", value: "75")])
     }
 
     func testImageOptionsHue() {
         imageOptions.hue = -500
-        XCTAssertEqual(imageOptions.hue, 0)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "hue", value: "0")])
 
         imageOptions.hue = 500
-        XCTAssertEqual(imageOptions.hue, 359)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "hue", value: "359")])
 
         imageOptions.hue = 75
-        XCTAssertEqual(imageOptions.hue, 75)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "hue", value: "75")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "hue", value: "75")])
     }
 
     func testImageOptionsInvert() {
         imageOptions.invert = true
-        XCTAssertEqual(imageOptions.invert, true)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "invert", value: "true")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "invert", value: "true")])
     }
 
     func testImageOptionsSaturation() {
         imageOptions.saturation = -500
-        XCTAssertEqual(imageOptions.saturation, -100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "sat", value: "-100")])
 
         imageOptions.saturation = 500
-        XCTAssertEqual(imageOptions.saturation, 100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "sat", value: "100")])
 
         imageOptions.saturation = 75
-        XCTAssertEqual(imageOptions.saturation, 75)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "sat", value: "75")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "sat", value: "75")])
     }
 
     func testImageOptionsShadow() {
         imageOptions.shadow = -500
-        XCTAssertEqual(imageOptions.shadow, -100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "shad", value: "-100")])
 
         imageOptions.shadow = 500
-        XCTAssertEqual(imageOptions.shadow, 100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "shad", value: "100")])
 
         imageOptions.shadow = 75
-        XCTAssertEqual(imageOptions.shadow, 75)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "shad", value: "75")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "shad", value: "75")])
     }
 
     func testImageOptionsSharpen() {
         imageOptions.sharpen = -500
-        XCTAssertEqual(imageOptions.sharpen, 0)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "sharp", value: "0")])
 
         imageOptions.sharpen = 500
-        XCTAssertEqual(imageOptions.sharpen, 100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "sharp", value: "100")])
 
         imageOptions.sharpen = 75
-        XCTAssertEqual(imageOptions.sharpen, 75)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "sharp", value: "75")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "sharp", value: "75")])
     }
 
     func testImageOptionsVibrance() {
         imageOptions.vibrance = -500
-        XCTAssertEqual(imageOptions.vibrance, -100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "vib", value: "-100")])
 
         imageOptions.vibrance = 500
-        XCTAssertEqual(imageOptions.vibrance, 100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "vib", value: "100")])
 
         imageOptions.vibrance = 75
-        XCTAssertEqual(imageOptions.vibrance, 75)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "vib", value: "75")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "vib", value: "75")])
     }
 
     // MARK: - Size Properties
 
     func testImageOptionsWidth() {
         imageOptions.width = 320
-        XCTAssertEqual(imageOptions.width, 320)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "w", value: "320.0")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "w", value: "320.0")])
     }
 
     func testImageOptionsHeight() {
         imageOptions.height = 250
-        XCTAssertEqual(imageOptions.height, 250)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "h", value: "250.0")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "h", value: "250.0")])
     }
 
     func testImageOptionsFit() {
         imageOptions.fit = .crop
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "crop")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fit", value: "crop")])
 
         imageOptions.fit = .clip
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "clip")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fit", value: "clip")])
 
         imageOptions.fit = .clamp
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "clamp")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fit", value: "clamp")])
 
         imageOptions.fit = .faceArea
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "facearea")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fit", value: "facearea")])
 
         imageOptions.fit = .fill
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "fill")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fit", value: "fill")])
 
         imageOptions.fit = .max
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "max")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fit", value: "max")])
 
         imageOptions.fit = .min
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "min")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fit", value: "min")])
 
         imageOptions.fit = .scale
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "scale")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fit", value: "scale")])
     }
 
     func testImageOptionsScale() {
         imageOptions.scale = 2.0
-        XCTAssertEqual(imageOptions.scale, 2.0)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "dpr", value: "2.0")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "dpr", value: "2.0")])
     }
 
     func testImageOptionsCrop() {
         imageOptions.crop = [.top]
-        XCTAssertEqual(imageOptions.crop?.first, .top)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "top")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "crop", value: "top")])
 
         imageOptions.crop = [.bottom]
-        XCTAssertEqual(imageOptions.crop?.first, .bottom)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "bottom")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "crop", value: "bottom")])
 
         imageOptions.crop = [.left]
-        XCTAssertEqual(imageOptions.crop?.first, .left)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "left")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "crop", value: "left")])
 
         imageOptions.crop = [.right]
-        XCTAssertEqual(imageOptions.crop?.first, .right)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "right")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "crop", value: "right")])
 
         imageOptions.crop = [.faces]
-        XCTAssertEqual(imageOptions.crop?.first, .faces)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "faces")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "crop", value: "faces")])
 
         imageOptions.crop = [.entropy]
-        XCTAssertEqual(imageOptions.crop?.first, .entropy)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "entropy")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "crop", value: "entropy")])
 
         imageOptions.crop = [.top, .left]
-        XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "top,left")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "crop", value: "top,left")])
     }
 
     func testImageOptionsCropRect() {
         imageOptions.cropRect = CGRect.zero
-        XCTAssertFalse(queryItems.contains(URLQueryItem(name: "rect", value: nil)))
+        XCTAssertEqual(queryItems, [])
 
         imageOptions.cropRect = CGRect(x: 10, y: 20, width: 30, height: 40)
-        XCTAssertFalse(queryItems.contains(URLQueryItem(name: "rect", value: "10,20,30,40")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "rect", value: "10.0,20.0,30.0,40.0")])
     }
 
     // MARK: - Format Properties
 
     func testImageOptionsFormat() {
         imageOptions.format = .jpeg
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fm", value: "jpg")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fm", value: "jpg")])
 
         imageOptions.format = .png
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fm", value: "png")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fm", value: "png")])
 
         imageOptions.format = .json
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fm", value: "json")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fm", value: "json")])
 
         imageOptions.format = .mp4
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fm", value: "mp4")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fm", value: "mp4")])
 
         imageOptions.format = .webp
-        XCTAssert(queryItems.contains(URLQueryItem(name: "fm", value: "webp")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "fm", value: "webp")])
     }
 
     func testImageOptionsDPI() {
         imageOptions.DPI = 320
-        XCTAssertEqual(imageOptions.DPI, 320)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "dpi", value: "320")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "dpi", value: "320")])
     }
 
     func testImageOptionsLossless() {
         imageOptions.lossless = true
-        XCTAssertEqual(imageOptions.lossless, true)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "lossless", value: "true")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "lossless", value: "true")])
     }
 
     func testImageOptionsQuality() {
         imageOptions.quality = -50
-        XCTAssertEqual(imageOptions.quality, 0)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "q", value: "0")])
 
         imageOptions.quality = 200
-        XCTAssertEqual(imageOptions.quality, 100)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "q", value: "100")])
 
         imageOptions.quality = 75
-        XCTAssertEqual(imageOptions.quality, 75)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "q", value: "75")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "q", value: "75")])
     }
 
     func testImageOptionsColorQuantization() {
         imageOptions.colorQuantization = 0
-        XCTAssertEqual(imageOptions.colorQuantization, 2)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "colorquant", value: "2")])
 
         imageOptions.colorQuantization = 512
-        XCTAssertEqual(imageOptions.colorQuantization, 256)
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "colorquant", value: "256")])
 
         imageOptions.colorQuantization = 75
-        XCTAssertEqual(imageOptions.colorQuantization, 75)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "colorquant", value: "75")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "colorquant", value: "75")])
     }
 
     // MARK: - Background Properties
@@ -311,30 +287,29 @@ final class ImageOptionsTests: XCTestCase {
     #if os(iOS) || os(tvOS)
     func testImageOptionsBackgroundColor() {
         imageOptions.backgroundColor = UIColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "bg", value: "7F336699")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "bg", value: "7F336699")])
     }
     #else
     func testImageOptionsBackgroundColor() {
         imageOptions.backgroundColor = NSColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "bg", value: "7F336699")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "bg", value: "7F336699")])
     }
     #endif
 
     func testImageOptionsTextSize() {
         imageOptions.textSize = 16.0
-        XCTAssertEqual(imageOptions.textSize, 16.0)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "txtsize", value: "16.0")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "txtsize", value: "16.0")])
     }
 
     #if os(iOS) || os(tvOS)
     func testImageOptionsTextColor() {
         imageOptions.textColor = UIColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "txtclr", value: "7F336699")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "txtclr", value: "7F336699")])
     }
     #else
     func testImageOptionsTextColor() {
         imageOptions.textColor = NSColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
-        XCTAssert(queryItems.contains(URLQueryItem(name: "txtclr", value: "7F336699")))
+        XCTAssertEqual(queryItems, [URLQueryItem(name: "txtclr", value: "7F336699")])
     }
     #endif
 }
