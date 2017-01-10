@@ -323,9 +323,12 @@ final class ImageOptionsTests: XCTestCase {
 
     #if os(iOS) || os(tvOS)
     func testImageOptionsBackgroundColor() {
-        let color = UIColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
-        imageOptions.backgroundColor = color
-        XCTAssertEqual(imageOptions.backgroundColor as? UIColor, color)
+        imageOptions.backgroundColor = UIColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
+        XCTAssert(queryItems.contains(URLQueryItem(name: "bg", value: "7F336699")))
+    }
+    #else
+    func testImageOptionsBackgroundColor() {
+        imageOptions.backgroundColor = NSColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
         XCTAssert(queryItems.contains(URLQueryItem(name: "bg", value: "7F336699")))
     }
     #endif
@@ -338,9 +341,12 @@ final class ImageOptionsTests: XCTestCase {
 
     #if os(iOS) || os(tvOS)
     func testImageOptionsTextColor() {
-        let color = UIColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
-        imageOptions.textColor = color
-        XCTAssertEqual(imageOptions.textColor as? UIColor, color)
+        imageOptions.textColor = UIColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
+        XCTAssert(queryItems.contains(URLQueryItem(name: "txtclr", value: "7F336699")))
+    }
+    #else
+    func testImageOptionsTextColor() {
+        imageOptions.textColor = NSColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
         XCTAssert(queryItems.contains(URLQueryItem(name: "txtclr", value: "7F336699")))
     }
     #endif

@@ -320,19 +320,17 @@ public struct ImageOptions: Equatable {
 
     // MARK: - Background Properties
 
-    /**
-    The background color to use when transparency is encountered. This color is
-    also used when using `FitMode.Fill`.
+    /// The background color to use when transparency is encountered. This color
+    /// is also used when using `FitMode.Fill`.
+    ///
+    /// - seealso: [Imgix API Reference](https://www.imgix.com/docs/reference/background#param-bg)
+    public var backgroundColor: Color?
 
-    - seealso:
-    [Imgix API Reference](https://www.imgix.com/docs/reference/background#param-bg)
-    */
-    public var backgroundColor: HexadecimalColorStringConvertable?
 
     /// Sets the color of the text.
     ///
     /// - seealso: [Imgix Reference](https://docs.imgix.com/apis/url/text/txtclr)
-    public var textColor: HexadecimalColorStringConvertable?
+    public var textColor: Color?
 
     /// Sets the font size of the text.
     ///
