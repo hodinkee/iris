@@ -10,11 +10,10 @@ import XCTest
 import Iris
 
 final class ImgixURLTests: XCTestCase {
-
     func testImgixURL() {
         let baseURL = URL(string: "https://www.example.com?foo=bar")
         let passURL = URL(string: "https://www.example.com?fm=jpg&foo=bar")
-        XCTAssertEqual(passURL, baseURL?.imgixURL(with: ImageOptions(format: .JPEG)))
+        XCTAssertEqual(passURL, baseURL?.imgixURL(with: ImageOptions(format: .jpeg)))
     }
 
     func testImgixURLWithSigningOptions() {
@@ -30,6 +29,6 @@ final class ImgixURLTests: XCTestCase {
     func testImgixURLWithDuplicateQueryItems() {
         let baseURL = URL(string: "https://www.example.com?w=400")
         let passURL = URL(string: "https://www.example.com?fm=jpg&w=500.0")
-        XCTAssertEqual(passURL, baseURL?.imgixURL(with: ImageOptions(format: .JPEG, width: 500)))
+        XCTAssertEqual(passURL, baseURL?.imgixURL(with: ImageOptions(format: .jpeg, width: 500)))
     }
 }

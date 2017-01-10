@@ -13,31 +13,31 @@ public struct ImageOptions: Equatable {
     // MARK: - Types
 
     public enum Format: String {
-        case JPEG = "jpg"
-        case PNG = "png"
-        case JSON = "json"
-        case MP4 = "mp4"
-        case WebP = "webp"
+        case jpeg = "jpg"
+        case png = "png"
+        case json = "json"
+        case mp4 = "mp4"
+        case webp = "webp"
     }
 
     public enum FitMode: String {
-        case Crop = "crop"
-        case Clip = "clip"
-        case Clamp = "clamp"
-        case FaceArea = "facearea"
-        case Fill = "fill"
-        case Max = "max"
-        case Min = "min"
-        case Scale = "scale"
+        case crop = "crop"
+        case clip = "clip"
+        case clamp = "clamp"
+        case faceArea = "facearea"
+        case fill = "fill"
+        case max = "max"
+        case min = "min"
+        case scale = "scale"
     }
 
     public enum CropMode: String {
-        case Top = "top"
-        case Bottom = "bottom"
-        case Left = "left"
-        case Right = "right"
-        case Faces = "faces"
-        case Entropy = "entropy"
+        case top = "top"
+        case bottom = "bottom"
+        case left = "left"
+        case right = "right"
+        case faces = "faces"
+        case entropy = "entropy"
     }
 
     // MARK: - Adjustment Properties

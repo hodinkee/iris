@@ -11,6 +11,8 @@ import UIKit
 public typealias Color = UIColor
 
 extension UIColor {
+
+    @nonobjc
     var hexadecimalColorString: String? {
         var a: CGFloat = 0
         var r: CGFloat = 0

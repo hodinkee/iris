@@ -183,36 +183,36 @@ final class ImageOptionsTests: XCTestCase {
     }
 
     func testImageOptionsFit() {
-        imageOptions.fit = .Crop
-        XCTAssertEqual(imageOptions.fit, .Crop)
+        imageOptions.fit = .crop
+        XCTAssertEqual(imageOptions.fit, .crop)
         XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "crop")))
 
-        imageOptions.fit = .Clip
-        XCTAssertEqual(imageOptions.fit, .Clip)
+        imageOptions.fit = .clip
+        XCTAssertEqual(imageOptions.fit, .clip)
         XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "clip")))
 
-        imageOptions.fit = .Clamp
-        XCTAssertEqual(imageOptions.fit, .Clamp)
+        imageOptions.fit = .clamp
+        XCTAssertEqual(imageOptions.fit, .clamp)
         XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "clamp")))
 
-        imageOptions.fit = .FaceArea
-        XCTAssertEqual(imageOptions.fit, .FaceArea)
+        imageOptions.fit = .faceArea
+        XCTAssertEqual(imageOptions.fit, .faceArea)
         XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "facearea")))
 
-        imageOptions.fit = .Fill
-        XCTAssertEqual(imageOptions.fit, .Fill)
+        imageOptions.fit = .fill
+        XCTAssertEqual(imageOptions.fit, .fill)
         XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "fill")))
 
-        imageOptions.fit = .Max
-        XCTAssertEqual(imageOptions.fit, .Max)
+        imageOptions.fit = .max
+        XCTAssertEqual(imageOptions.fit, .max)
         XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "max")))
 
-        imageOptions.fit = .Min
-        XCTAssertEqual(imageOptions.fit, .Min)
+        imageOptions.fit = .min
+        XCTAssertEqual(imageOptions.fit, .min)
         XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "min")))
 
-        imageOptions.fit = .Scale
-        XCTAssertEqual(imageOptions.fit, .Scale)
+        imageOptions.fit = .scale
+        XCTAssertEqual(imageOptions.fit, .scale)
         XCTAssert(queryItems.contains(URLQueryItem(name: "fit", value: "scale")))
     }
 
@@ -223,31 +223,31 @@ final class ImageOptionsTests: XCTestCase {
     }
 
     func testImageOptionsCrop() {
-        imageOptions.crop = [.Top]
-        XCTAssertEqual(imageOptions.crop?.first, .Top)
+        imageOptions.crop = [.top]
+        XCTAssertEqual(imageOptions.crop?.first, .top)
         XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "top")))
 
-        imageOptions.crop = [.Bottom]
-        XCTAssertEqual(imageOptions.crop?.first, .Bottom)
+        imageOptions.crop = [.bottom]
+        XCTAssertEqual(imageOptions.crop?.first, .bottom)
         XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "bottom")))
 
-        imageOptions.crop = [.Left]
-        XCTAssertEqual(imageOptions.crop?.first, .Left)
+        imageOptions.crop = [.left]
+        XCTAssertEqual(imageOptions.crop?.first, .left)
         XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "left")))
 
-        imageOptions.crop = [.Right]
-        XCTAssertEqual(imageOptions.crop?.first, .Right)
+        imageOptions.crop = [.right]
+        XCTAssertEqual(imageOptions.crop?.first, .right)
         XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "right")))
 
-        imageOptions.crop = [.Faces]
-        XCTAssertEqual(imageOptions.crop?.first, .Faces)
+        imageOptions.crop = [.faces]
+        XCTAssertEqual(imageOptions.crop?.first, .faces)
         XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "faces")))
 
-        imageOptions.crop = [.Entropy]
-        XCTAssertEqual(imageOptions.crop?.first, .Entropy)
+        imageOptions.crop = [.entropy]
+        XCTAssertEqual(imageOptions.crop?.first, .entropy)
         XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "entropy")))
 
-        imageOptions.crop = [.Top, .Left]
+        imageOptions.crop = [.top, .left]
         XCTAssert(queryItems.contains(URLQueryItem(name: "crop", value: "top,left")))
     }
 
@@ -262,24 +262,19 @@ final class ImageOptionsTests: XCTestCase {
     // MARK: - Format Properties
 
     func testImageOptionsFormat() {
-        imageOptions.format = .JPEG
-        XCTAssertEqual(imageOptions.format, .JPEG)
+        imageOptions.format = .jpeg
         XCTAssert(queryItems.contains(URLQueryItem(name: "fm", value: "jpg")))
 
-        imageOptions.format = .PNG
-        XCTAssertEqual(imageOptions.format, .PNG)
+        imageOptions.format = .png
         XCTAssert(queryItems.contains(URLQueryItem(name: "fm", value: "png")))
 
-        imageOptions.format = .JSON
-        XCTAssertEqual(imageOptions.format, .JSON)
+        imageOptions.format = .json
         XCTAssert(queryItems.contains(URLQueryItem(name: "fm", value: "json")))
 
-        imageOptions.format = .MP4
-        XCTAssertEqual(imageOptions.format, .MP4)
+        imageOptions.format = .mp4
         XCTAssert(queryItems.contains(URLQueryItem(name: "fm", value: "mp4")))
 
-        imageOptions.format = .WebP
-        XCTAssertEqual(imageOptions.format, .WebP)
+        imageOptions.format = .webp
         XCTAssert(queryItems.contains(URLQueryItem(name: "fm", value: "webp")))
     }
 

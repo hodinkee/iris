@@ -11,6 +11,8 @@ import AppKit
 public typealias Color = NSColor
 
 extension NSColor {
+
+    @nonobjc
     var hexadecimalColorString: String? {
         guard let color = usingColorSpace(.sRGB) else {
             return nil
