@@ -59,3 +59,7 @@ matrix:
         -sdk macosx
         -destination "arch=x86_64"
         -configuration Release
+
+    # Carthage
+    - script:
+      - carthage build --no-skip-current
