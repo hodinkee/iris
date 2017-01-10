@@ -249,7 +249,7 @@ public struct ImageOptions: Equatable {
     public var cropRect: CGRect? {
         get { return _cropRect }
         set {
-            if let rect = newValue , !rect.isNull && !rect.isEmpty && !rect.isInfinite {
+            if let rect = newValue, !rect.isNull, !rect.isEmpty, !rect.isInfinite {
                 _cropRect = rect
             }
             else {
