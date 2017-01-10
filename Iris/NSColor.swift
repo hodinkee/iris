@@ -1,5 +1,5 @@
 //
-//  NScolor.swift
+//  NSColor.swift
 //  Iris
 //
 //  Created by Caleb Davenport on 1/10/17.

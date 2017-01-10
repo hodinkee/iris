@@ -29,7 +29,7 @@
 		3A807E231BF50CF10083685D /* Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A807E0B1BF50C030083685D /* Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B4FBD631E25343500042254 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD621E25343500042254 /* UIColor.swift */; };
 		3B4FBD641E25343500042254 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD621E25343500042254 /* UIColor.swift */; };
-		3B4FBD6A1E2535DC00042254 /* NScolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD691E2535DC00042254 /* NScolor.swift */; };
+		3B4FBD6A1E2535DC00042254 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD691E2535DC00042254 /* NSColor.swift */; };
 		3B4FBD6C1E25404D00042254 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD6B1E25404D00042254 /* Deprecated.swift */; };
 		3B4FBD6D1E25404D00042254 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD6B1E25404D00042254 /* Deprecated.swift */; };
 		3B4FBD6E1E25404D00042254 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD6B1E25404D00042254 /* Deprecated.swift */; };
@@ -84,7 +84,7 @@
 		3A807E0D1BF50C030083685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A807E0E1BF50C030083685D /* Iris.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iris.h; sourceTree = "<group>"; };
 		3B4FBD621E25343500042254 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		3B4FBD691E2535DC00042254 /* NScolor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NScolor.swift; sourceTree = "<group>"; };
+		3B4FBD691E2535DC00042254 /* NSColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 		3B4FBD6B1E25404D00042254 /* Deprecated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deprecated.swift; sourceTree = "<group>"; };
 		3BB8CBC21DB8112F001496EB /* Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
 		4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningOptionsTests.swift; sourceTree = "<group>"; };
@@ -352,7 +352,7 @@
 				4E76DD7A1BF3A361008D2FF3 /* NSString+MD5.m */,
 				3BB8CBC21DB8112F001496EB /* Comparable.swift */,
 				3B4FBD621E25343500042254 /* UIColor.swift */,
-				3B4FBD691E2535DC00042254 /* NScolor.swift */,
+				3B4FBD691E2535DC00042254 /* NSColor.swift */,
 				3B4FBD6B1E25404D00042254 /* Deprecated.swift */,
 				4E76DD6B1BF39430008D2FF3 /* Platforms */,
 			);
@@ -685,7 +685,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B4FBD6E1E25404D00042254 /* Deprecated.swift in Sources */,
-				3B4FBD6A1E2535DC00042254 /* NScolor.swift in Sources */,
+				3B4FBD6A1E2535DC00042254 /* NSColor.swift in Sources */,
 				3A807E1A1BF50C4B0083685D /* NSString+MD5.m in Sources */,
 				3A807E171BF50C4B0083685D /* ImageOptions.swift in Sources */,
 				3A807E191BF50C4B0083685D /* NSURL+Iris.swift in Sources */,
