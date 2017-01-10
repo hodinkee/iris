@@ -68,3 +68,6 @@ extension ImageOptions.Format {
     @available(*, deprecated, renamed: "webp")
     public static var WebP: ImageOptions.Format { return .webp }
 }
+
+@available(*, unavailable, message: "ImageOptions now only accepts UIColor on iOS and tvOS and NSColor on macOS.")
+public protocol HexadecimalColorStringConvertable {}
