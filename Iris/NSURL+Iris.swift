@@ -15,7 +15,7 @@ extension URL {
     /// - parameter imageOptions: An instance of `ImageOptions`.
     ///
     /// - returns: A valid imgix URL or `nil`.
-    public func imgixURL(with imageOptions: ImageOptions) -> URL? {
+    public func imgixURL(imageOptions: ImageOptions) -> URL? {
         if imageOptions.queryItems.isEmpty {
             return self
         }
@@ -42,7 +42,7 @@ extension URL {
     /// - parameter signingOptions: An instance of `SigningOptions`.
     ///
     /// - returns: A valid imgix URL or `nil`.
-    public func imgixURL(with imageOptions: ImageOptions, signedWith signingOptions: SigningOptions) -> URL? {
+    public func imgixURL(imageOptions: ImageOptions, signingOptions: SigningOptions) -> URL? {
         func makeEncodedPath() -> String? {
             return absoluteString
                 .addingPercentEncoding(withAllowedCharacters: .imgixEncodedPath)
