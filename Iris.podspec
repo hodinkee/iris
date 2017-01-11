@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Iris'
-  s.version = '1.2.0'
+  s.version = '2.0.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'A Swift framework for working with Imgix.'
   s.homepage = 'https://github.com/hodinkee/iris'
