@@ -8,32 +8,32 @@
 
 import Foundation
 
-extension NSURL {
+extension URL {
 
     /// Applies the given image options to the receiver.
     ///
     /// - parameter imageOptions: An instance of `ImageOptions`.
     ///
     /// - returns: A valid imgix URL or `nil`.
-    public func imgixURL(imageOptions imageOptions: ImageOptions) -> NSURL? {
+    public func imgixURL(imageOptions: ImageOptions) -> URL? {
         if imageOptions.queryItems.isEmpty {
             return self
         }
 
-        guard let components = NSURLComponents(URL: self, resolvingAgainstBaseURL: true) else {
-            return nil
-        }
+        var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
 
-        let combinedQueryItems = imageOptions.queryItems + (components.queryItems ?? [])
+        let combinedQueryItems = imageOptions.queryItems + (components?.queryItems ?? [])
 
-        components.queryItems = combinedQueryItems
-            .reduce([NSURLQueryItem](), combine: { array, element in
-                if array.contains({ $0.name == element.name }) { return array }
-                return array + CollectionOfOne(element)
+        components?.queryItems = combinedQueryItems
+            .reduce([URLQueryItem](), { result, element in
+                if result.contains(where: { $0.name == element.name }) {
+                    return result
+                }
+                return result + CollectionOfOne(element)
             })
-            .sort({ $0.name < $1.name })
+            .sorted(by: { $0.name < $1.name })
 
-        return components.URL
+        return components?.url
     }
 
     /// Applies the given image options to the receiver.
@@ -42,24 +42,24 @@ extension NSURL {
     /// - parameter signingOptions: An instance of `SigningOptions`.
     ///
     /// - returns: A valid imgix URL or `nil`.
-    public func imgixURL(imageOptions imageOptions: ImageOptions, signingOptions: SigningOptions) -> NSURL? {
-        func encodedPath() -> String? {
-            return absoluteString?.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()).map({
-                return "/" + $0
-            })
+    public func imgixURL(imageOptions: ImageOptions, signingOptions: SigningOptions) -> URL? {
+        func makeEncodedPath() -> String? {
+            return absoluteString
+                .addingPercentEncoding(withAllowedCharacters: .imgixEncodedPath)
+                .map({ "/" + $0 })
         }
 
-        func signature() -> String? {
-            guard let encodedPath = encodedPath() else {
-                return nil
-            }
+        guard let encodedPath = makeEncodedPath() else {
+            return nil
+        }
 
+        func makeSignature() -> String? {
             let queryItems = imageOptions.queryItems
             var signatureBase = signingOptions.token + encodedPath
 
             if !queryItems.isEmpty {
-                let components = NSURLComponents()
-                components.queryItems = queryItems
+                var components = URLComponents()
+                components.queryItems = queryItems as [URLQueryItem]?
                 if let query = components.query {
                     signatureBase += "?\(query)"
                 }
@@ -68,17 +68,23 @@ extension NSURL {
             return signatureBase.iris_MD5
         }
 
-        let components = NSURLComponents()
-        components.scheme = signingOptions.secure ? "https" : "http"
-        components.host = signingOptions.host
-        components.percentEncodedPath = encodedPath()
-
-        guard let sig = signature() else {
+        guard let signature = makeSignature() else {
             return nil
         }
 
-        components.queryItems = imageOptions.queryItems + CollectionOfOne(NSURLQueryItem(name: "s", value: sig))
-        
-        return components.URL
+        var components = URLComponents()
+        components.scheme = signingOptions.secure ? "https" : "http"
+        components.host = signingOptions.host
+        components.percentEncodedPath = encodedPath
+        components.queryItems = imageOptions.queryItems + CollectionOfOne(URLQueryItem(name: "s", value: signature))
+        return components.url
+    }
+}
+
+extension CharacterSet {
+    fileprivate static var imgixEncodedPath: CharacterSet {
+        var set = CharacterSet.alphanumerics
+        set.insert(charactersIn: "-_.!~*'()")
+        return set
     }
 }

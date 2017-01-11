@@ -10,7 +10,7 @@ A Swift framework for working with Imgix.
 
 | Xcode  | Swift  | iOS    | tvOS   | macOS  |
 | :---:  | :---:  | :---:  | :---:  | :---:  |
-| 8.0    | 2.3    | 8.0    | 9.0    | 10.10  |
+| 8.0    | 3.0    | 8.0    | 9.0    | 10.10  |
 
 ## Installation
 

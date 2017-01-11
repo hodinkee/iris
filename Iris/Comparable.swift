@@ -1,5 +1,5 @@
 //
-//  Comparable+Clamp.swift
+//  Comparable.swift
 //  Iris
 //
 //  Created by Caleb Davenport on 10/19/16.
@@ -9,7 +9,7 @@
 extension Comparable {
 
     /// Clamp the receiver to the given interval.
-    func clamp(interval: ClosedInterval<Self>) -> Self {
-        return max(interval.start, min(interval.end, self))
+    func clamped(to range: ClosedRange<Self>) -> Self {
+        return max(range.lowerBound, min(range.upperBound, self))
     }
 }

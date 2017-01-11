@@ -10,12 +10,10 @@
 		3A807DDC1BF50B5E0083685D /* Iris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A807DD21BF50B5E0083685D /* Iris.framework */; };
 		3A807DF81BF50B6A0083685D /* Iris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A807DEE1BF50B690083685D /* Iris.framework */; };
 		3A807E0F1BF50C350083685D /* Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A807E0E1BF50C030083685D /* Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A807E111BF50C4A0083685D /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B161BF505A5002943D0 /* Defines.swift */; };
 		3A807E121BF50C4A0083685D /* ImageOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */; };
 		3A807E131BF50C4A0083685D /* SigningOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */; };
 		3A807E141BF50C4A0083685D /* NSURL+Iris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD751BF3A10E008D2FF3 /* NSURL+Iris.swift */; };
 		3A807E151BF50C4A0083685D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD7A1BF3A361008D2FF3 /* NSString+MD5.m */; };
-		3A807E161BF50C4B0083685D /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B161BF505A5002943D0 /* Defines.swift */; };
 		3A807E171BF50C4B0083685D /* ImageOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */; };
 		3A807E181BF50C4B0083685D /* SigningOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */; };
 		3A807E191BF50C4B0083685D /* NSURL+Iris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD751BF3A10E008D2FF3 /* NSURL+Iris.swift */; };
@@ -29,10 +27,15 @@
 		3A807E211BF50C580083685D /* ImageOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76DD821BF4E2B8008D2FF3 /* ImageOptionsTests.swift */; };
 		3A807E221BF50C580083685D /* SigningOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */; };
 		3A807E231BF50CF10083685D /* Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A807E0B1BF50C030083685D /* Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BAC16021DB91250007A9CDD /* Comparable+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB8CBC21DB8112F001496EB /* Comparable+Clamp.swift */; };
-		3BAC16031DB91250007A9CDD /* Comparable+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB8CBC21DB8112F001496EB /* Comparable+Clamp.swift */; };
-		3BB8CBC31DB8112F001496EB /* Comparable+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB8CBC21DB8112F001496EB /* Comparable+Clamp.swift */; };
-		4E0E1B171BF505A5002943D0 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B161BF505A5002943D0 /* Defines.swift */; };
+		3B4FBD631E25343500042254 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD621E25343500042254 /* UIColor.swift */; };
+		3B4FBD641E25343500042254 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD621E25343500042254 /* UIColor.swift */; };
+		3B4FBD6A1E2535DC00042254 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD691E2535DC00042254 /* NSColor.swift */; };
+		3B4FBD6C1E25404D00042254 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD6B1E25404D00042254 /* Deprecated.swift */; };
+		3B4FBD6D1E25404D00042254 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD6B1E25404D00042254 /* Deprecated.swift */; };
+		3B4FBD6E1E25404D00042254 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4FBD6B1E25404D00042254 /* Deprecated.swift */; };
+		3BAC16021DB91250007A9CDD /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB8CBC21DB8112F001496EB /* Comparable.swift */; };
+		3BAC16031DB91250007A9CDD /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB8CBC21DB8112F001496EB /* Comparable.swift */; };
+		3BB8CBC31DB8112F001496EB /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB8CBC21DB8112F001496EB /* Comparable.swift */; };
 		4E0E1B1A1BF507D5002943D0 /* SigningOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */; };
 		4E76DD551BF392B3008D2FF3 /* Iris.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E76DD541BF392B3008D2FF3 /* Iris.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E76DD5C1BF392B3008D2FF3 /* Iris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E76DD511BF392B3008D2FF3 /* Iris.framework */; };
@@ -80,8 +83,10 @@
 		3A807E0B1BF50C030083685D /* Iris.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iris.h; sourceTree = "<group>"; };
 		3A807E0D1BF50C030083685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A807E0E1BF50C030083685D /* Iris.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iris.h; sourceTree = "<group>"; };
-		3BB8CBC21DB8112F001496EB /* Comparable+Clamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+Clamp.swift"; sourceTree = "<group>"; };
-		4E0E1B161BF505A5002943D0 /* Defines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Defines.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3B4FBD621E25343500042254 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		3B4FBD691E2535DC00042254 /* NSColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
+		3B4FBD6B1E25404D00042254 /* Deprecated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deprecated.swift; sourceTree = "<group>"; };
+		3BB8CBC21DB8112F001496EB /* Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
 		4E0E1B181BF507B7002943D0 /* SigningOptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningOptionsTests.swift; sourceTree = "<group>"; };
 		4E71BDA61CA9A6E000725B30 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4E71BDA81CA9A6E000725B30 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
@@ -340,13 +345,15 @@
 		4E76DD531BF392B3008D2FF3 /* Iris */ = {
 			isa = PBXGroup;
 			children = (
-				4E0E1B161BF505A5002943D0 /* Defines.swift */,
 				4E76DD711BF39E3A008D2FF3 /* ImageOptions.swift */,
 				4E76DD731BF3A042008D2FF3 /* SigningOptions.swift */,
 				4E76DD751BF3A10E008D2FF3 /* NSURL+Iris.swift */,
 				4E76DD791BF3A361008D2FF3 /* NSString+MD5.h */,
 				4E76DD7A1BF3A361008D2FF3 /* NSString+MD5.m */,
-				3BB8CBC21DB8112F001496EB /* Comparable+Clamp.swift */,
+				3BB8CBC21DB8112F001496EB /* Comparable.swift */,
+				3B4FBD621E25343500042254 /* UIColor.swift */,
+				3B4FBD691E2535DC00042254 /* NSColor.swift */,
+				3B4FBD6B1E25404D00042254 /* Deprecated.swift */,
 				4E76DD6B1BF39430008D2FF3 /* Platforms */,
 			);
 			path = Iris;
@@ -553,26 +560,30 @@
 				TargetAttributes = {
 					3A807DD11BF50B5E0083685D = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
 					3A807DDA1BF50B5E0083685D = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
 					3A807DED1BF50B690083685D = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 					3A807DF61BF50B6A0083685D = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 					4E76DD501BF392B3008D2FF3 = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Manual;
 					};
 					4E76DD5A1BF392B3008D2FF3 = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -649,11 +660,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4FBD6D1E25404D00042254 /* Deprecated.swift in Sources */,
 				3A807E151BF50C4A0083685D /* NSString+MD5.m in Sources */,
+				3B4FBD641E25343500042254 /* UIColor.swift in Sources */,
 				3A807E121BF50C4A0083685D /* ImageOptions.swift in Sources */,
 				3A807E141BF50C4A0083685D /* NSURL+Iris.swift in Sources */,
-				3BAC16021DB91250007A9CDD /* Comparable+Clamp.swift in Sources */,
-				3A807E111BF50C4A0083685D /* Defines.swift in Sources */,
+				3BAC16021DB91250007A9CDD /* Comparable.swift in Sources */,
 				3A807E131BF50C4A0083685D /* SigningOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -672,11 +684,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4FBD6E1E25404D00042254 /* Deprecated.swift in Sources */,
+				3B4FBD6A1E2535DC00042254 /* NSColor.swift in Sources */,
 				3A807E1A1BF50C4B0083685D /* NSString+MD5.m in Sources */,
 				3A807E171BF50C4B0083685D /* ImageOptions.swift in Sources */,
 				3A807E191BF50C4B0083685D /* NSURL+Iris.swift in Sources */,
-				3BAC16031DB91250007A9CDD /* Comparable+Clamp.swift in Sources */,
-				3A807E161BF50C4B0083685D /* Defines.swift in Sources */,
+				3BAC16031DB91250007A9CDD /* Comparable.swift in Sources */,
 				3A807E181BF50C4B0083685D /* SigningOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,11 +708,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4FBD6C1E25404D00042254 /* Deprecated.swift in Sources */,
 				4E76DD741BF3A042008D2FF3 /* SigningOptions.swift in Sources */,
+				3B4FBD631E25343500042254 /* UIColor.swift in Sources */,
 				4E76DD761BF3A10E008D2FF3 /* NSURL+Iris.swift in Sources */,
-				3BB8CBC31DB8112F001496EB /* Comparable+Clamp.swift in Sources */,
+				3BB8CBC31DB8112F001496EB /* Comparable.swift in Sources */,
 				4E76DD7C1BF3A361008D2FF3 /* NSString+MD5.m in Sources */,
-				4E0E1B171BF505A5002943D0 /* Defines.swift in Sources */,
 				4E76DD721BF39E3A008D2FF3 /* ImageOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -745,7 +759,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -759,7 +773,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -767,12 +781,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E71BDC11CA9A6E000725B30 /* tvOS-Application.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvsimulator*]" = "";
 				INFOPLIST_FILE = Tests/Platforms/tvOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -780,12 +792,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E71BDC11CA9A6E000725B30 /* tvOS-Application.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvsimulator*]" = "";
 				INFOPLIST_FILE = Tests/Platforms/tvOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -800,7 +810,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -815,7 +825,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -826,7 +836,7 @@
 				INFOPLIST_FILE = Tests/Platforms/macOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -837,7 +847,7 @@
 				INFOPLIST_FILE = Tests/Platforms/macOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hodinkee.Iris-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -877,7 +887,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -891,7 +901,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -899,12 +909,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E71BDB51CA9A6E000725B30 /* iOS-Application.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "";
 				INFOPLIST_FILE = Tests/Platforms/iOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.IrisTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -912,12 +920,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E71BDB51CA9A6E000725B30 /* iOS-Application.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "";
 				INFOPLIST_FILE = Tests/Platforms/iOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.IrisTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

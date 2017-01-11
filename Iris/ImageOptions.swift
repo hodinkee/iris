@@ -13,31 +13,31 @@ public struct ImageOptions: Equatable {
     // MARK: - Types
 
     public enum Format: String {
-        case JPEG = "jpg"
-        case PNG = "png"
-        case JSON = "json"
-        case MP4 = "mp4"
-        case WebP = "webp"
+        case jpeg = "jpg"
+        case png = "png"
+        case json = "json"
+        case mp4 = "mp4"
+        case webp = "webp"
     }
 
     public enum FitMode: String {
-        case Crop = "crop"
-        case Clip = "clip"
-        case Clamp = "clamp"
-        case FaceArea = "facearea"
-        case Fill = "fill"
-        case Max = "max"
-        case Min = "min"
-        case Scale = "scale"
+        case crop = "crop"
+        case clip = "clip"
+        case clamp = "clamp"
+        case faceArea = "facearea"
+        case fill = "fill"
+        case max = "max"
+        case min = "min"
+        case scale = "scale"
     }
 
     public enum CropMode: String {
-        case Top = "top"
-        case Bottom = "bottom"
-        case Left = "left"
-        case Right = "right"
-        case Faces = "faces"
-        case Entropy = "entropy"
+        case top = "top"
+        case bottom = "bottom"
+        case left = "left"
+        case right = "right"
+        case faces = "faces"
+        case entropy = "entropy"
     }
 
     // MARK: - Adjustment Properties
@@ -52,7 +52,7 @@ public struct ImageOptions: Equatable {
     */
     public var brightness: Int? {
         get { return _brightness }
-        set { _brightness = newValue?.clamp(-100...100) }
+        set { _brightness = newValue?.clamped(to: -100...100) }
     }
     private var _brightness: Int?
 
@@ -66,7 +66,7 @@ public struct ImageOptions: Equatable {
     */
     public var contrast: Int? {
         get { return _contrast }
-        set { _contrast = newValue?.clamp(-100...100) }
+        set { _contrast = newValue?.clamped(to: -100...100) }
     }
     private var _contrast: Int?
 
@@ -80,7 +80,7 @@ public struct ImageOptions: Equatable {
     */
     public var exposure: Int? {
         get { return _exposure }
-        set { _exposure = newValue?.clamp(-100...100) }
+        set { _exposure = newValue?.clamped(to: -100...100) }
     }
     private var _exposure: Int?
 
@@ -94,7 +94,7 @@ public struct ImageOptions: Equatable {
     */
     public var gamma: Int? {
         get { return _gamma }
-        set { _gamma = newValue?.clamp(-100...100) }
+        set { _gamma = newValue?.clamped(to: -100...100) }
     }
     private var _gamma: Int?
 
@@ -109,7 +109,7 @@ public struct ImageOptions: Equatable {
     */
     public var highlight: Int? {
         get { return _highlight }
-        set { _highlight = newValue?.clamp(-100...100) }
+        set { _highlight = newValue?.clamped(to: -100...100) }
     }
     private var _highlight: Int?
 
@@ -123,7 +123,7 @@ public struct ImageOptions: Equatable {
     */
     public var hue: Int? {
         get { return _hue }
-        set { _hue = newValue?.clamp(0...359) }
+        set { _hue = newValue?.clamped(to: 0...359) }
     }
     private var _hue: Int?
 
@@ -146,7 +146,7 @@ public struct ImageOptions: Equatable {
     */
     public var saturation: Int? {
         get { return _saturation }
-        set { _saturation = newValue?.clamp(-100...100) }
+        set { _saturation = newValue?.clamped(to: -100...100) }
     }
     private var _saturation: Int?
 
@@ -161,7 +161,7 @@ public struct ImageOptions: Equatable {
     */
     public var shadow: Int? {
         get { return _shadow }
-        set { _shadow = newValue?.clamp(-100...100) }
+        set { _shadow = newValue?.clamped(to: -100...100) }
     }
     private var _shadow: Int?
 
@@ -175,7 +175,7 @@ public struct ImageOptions: Equatable {
     */
     public var sharpen: Int? {
         get { return _sharpen }
-        set { _sharpen = newValue?.clamp(0...100) }
+        set { _sharpen = newValue?.clamped(to: 0...100) }
     }
     private var _sharpen: Int?
 
@@ -189,7 +189,7 @@ public struct ImageOptions: Equatable {
     */
     public var vibrance: Int? {
         get { return _vibrance }
-        set { _vibrance = newValue?.clamp(-100...100) }
+        set { _vibrance = newValue?.clamped(to: -100...100) }
     }
     private var _vibrance: Int?
 
@@ -249,7 +249,7 @@ public struct ImageOptions: Equatable {
     public var cropRect: CGRect? {
         get { return _cropRect }
         set {
-            if let rect = newValue where !rect.isNull && !rect.isEmpty && !rect.isInfinite {
+            if let rect = newValue, !rect.isNull, !rect.isEmpty, !rect.isInfinite {
                 _cropRect = rect
             }
             else {
@@ -297,7 +297,7 @@ public struct ImageOptions: Equatable {
     */
     public var quality: Int? {
         get { return _quality }
-        set { _quality = newValue?.clamp(0...100) }
+        set { _quality = newValue?.clamped(to: 0...100) }
     }
     private var _quality: Int?
 
@@ -313,26 +313,24 @@ public struct ImageOptions: Equatable {
     */
     public var colorQuantization: Int? {
         get { return _colorQuantization }
-        set { _colorQuantization = newValue?.clamp(2...256) }
+        set { _colorQuantization = newValue?.clamped(to: 2...256) }
     }
     private var _colorQuantization: Int?
 
 
     // MARK: - Background Properties
 
-    /**
-    The background color to use when transparency is encountered. This color is
-    also used when using `FitMode.Fill`.
+    /// The background color to use when transparency is encountered. This color
+    /// is also used when using `FitMode.Fill`.
+    ///
+    /// - seealso: [Imgix API Reference](https://www.imgix.com/docs/reference/background#param-bg)
+    public var backgroundColor: Color?
 
-    - seealso:
-    [Imgix API Reference](https://www.imgix.com/docs/reference/background#param-bg)
-    */
-    public var backgroundColor: HexadecimalColorStringConvertable?
 
     /// Sets the color of the text.
     ///
     /// - seealso: [Imgix Reference](https://docs.imgix.com/apis/url/text/txtclr)
-    public var textColor: HexadecimalColorStringConvertable?
+    public var textColor: Color?
 
     /// Sets the font size of the text.
     ///
@@ -358,118 +356,118 @@ public struct ImageOptions: Equatable {
      The configured options as `[NSURLQueryItem]`, suitable for use
      with `NSURLComponents`.
     */
-    public var queryItems: [NSURLQueryItem] {
-        var items = [NSURLQueryItem]()
+    public var queryItems: [URLQueryItem] {
+        var items = [URLQueryItem]()
 
         // Adjustment Properties
 
         if let value = brightness {
-            items.append(NSURLQueryItem(name: "bri", value: String(value)))
+            items.append(URLQueryItem(name: "bri", value: String(value)))
         }
 
         if let value = contrast {
-            items.append(NSURLQueryItem(name: "con", value: String(value)))
+            items.append(URLQueryItem(name: "con", value: String(value)))
         }
 
         if let value = exposure {
-            items.append(NSURLQueryItem(name: "exp", value: String(value)))
+            items.append(URLQueryItem(name: "exp", value: String(value)))
         }
 
         if let value = gamma {
-            items.append(NSURLQueryItem(name: "gam", value: String(value)))
+            items.append(URLQueryItem(name: "gam", value: String(value)))
         }
 
         if let value = highlight {
-            items.append(NSURLQueryItem(name: "high", value: String(value)))
+            items.append(URLQueryItem(name: "high", value: String(value)))
         }
 
         if let value = hue {
-            items.append(NSURLQueryItem(name: "hue", value: String(value)))
+            items.append(URLQueryItem(name: "hue", value: String(value)))
         }
 
         if let value = invert {
-            items.append(NSURLQueryItem(name: "invert", value: String(value)))
+            items.append(URLQueryItem(name: "invert", value: String(value)))
         }
 
         if let value = saturation {
-            items.append(NSURLQueryItem(name: "sat", value: String(value)))
+            items.append(URLQueryItem(name: "sat", value: String(value)))
         }
 
         if let value = shadow {
-            items.append(NSURLQueryItem(name: "shad", value: String(value)))
+            items.append(URLQueryItem(name: "shad", value: String(value)))
         }
 
         if let value = sharpen {
-            items.append(NSURLQueryItem(name: "sharp", value: String(value)))
+            items.append(URLQueryItem(name: "sharp", value: String(value)))
         }
 
         if let value = vibrance {
-            items.append(NSURLQueryItem(name: "vib", value: String(value)))
+            items.append(URLQueryItem(name: "vib", value: String(value)))
         }
 
         // Size Properties
 
         if let value = width {
-            items.append(NSURLQueryItem(name: "w", value: String(value)))
+            items.append(URLQueryItem(name: "w", value: String(describing: value)))
         }
 
         if let value = height {
-            items.append(NSURLQueryItem(name: "h", value: String(value)))
+            items.append(URLQueryItem(name: "h", value: String(describing: value)))
         }
 
         if let value = fit {
-            items.append(NSURLQueryItem(name: "fit", value: value.rawValue))
+            items.append(URLQueryItem(name: "fit", value: value.rawValue))
         }
 
         if let value = scale {
-            items.append(NSURLQueryItem(name: "dpr", value: String(value)))
+            items.append(URLQueryItem(name: "dpr", value: String(describing: value)))
         }
 
         if let value = crop {
-            items.append(NSURLQueryItem(name: "crop", value: value.map({ $0.rawValue }).joinWithSeparator(",")))
+            items.append(URLQueryItem(name: "crop", value: value.map({ $0.rawValue }).joined(separator: ",")))
         }
 
         if let value = cropRect {
             let serialized = "\(value.origin.x),\(value.origin.y),\(value.width),\(value.height)"
-            items.append(NSURLQueryItem(name: "rect", value: serialized))
+            items.append(URLQueryItem(name: "rect", value: serialized))
         }
 
         // Format Properties
 
         if let value = format {
-            items.append(NSURLQueryItem(name: "fm", value: value.rawValue))
+            items.append(URLQueryItem(name: "fm", value: value.rawValue))
         }
 
         if let value = DPI {
-            items.append(NSURLQueryItem(name: "dpi", value: String(value)))
+            items.append(URLQueryItem(name: "dpi", value: String(value)))
         }
 
         if let value = lossless {
-            items.append(NSURLQueryItem(name: "lossless", value: String(value)))
+            items.append(URLQueryItem(name: "lossless", value: String(value)))
         }
 
         if let value = quality {
-            items.append(NSURLQueryItem(name: "q", value: String(value)))
+            items.append(URLQueryItem(name: "q", value: String(value)))
         }
 
         if let value = colorQuantization {
-            items.append(NSURLQueryItem(name: "colorquant", value: String(value)))
+            items.append(URLQueryItem(name: "colorquant", value: String(value)))
         }
 
         // Background Properties
 
         if let value = backgroundColor, let hex = value.hexadecimalColorString {
-            items.append(NSURLQueryItem(name: "bg", value: hex))
+            items.append(URLQueryItem(name: "bg", value: hex))
         }
 
         // Text properties
 
         if let value = textColor, let hexadecimalString = value.hexadecimalColorString {
-            items.append(NSURLQueryItem(name: "txtclr", value: hexadecimalString))
+            items.append(URLQueryItem(name: "txtclr", value: hexadecimalString))
         }
 
         if let value = textSize {
-            items.append(NSURLQueryItem(name: "txtsize", value: String(value)))
+            items.append(URLQueryItem(name: "txtsize", value: String(describing: value)))
         }
 
         return items
