@@ -13,10 +13,13 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "8.0"
   s.ios.frameworks = "UIKit"
+  s.ios.exclude_files = "Iris/NSColor.swift"
 
   s.osx.deployment_target = "10.10"
   s.osx.frameworks = "Cocoa"
+  s.osx.exclude_files = "Iris/UIColor.swift"
 
   s.tvos.deployment_target = "9.0"
   s.tvos.frameworks = "UIKit"
+  s.tvos.exclude_files = "Iris/NSColor.swift"
 end
