@@ -6,11 +6,10 @@
 //  Copyright © 2017 HODINKEE. All rights reserved.
 //
 
-import Foundation
-
 enum ImageOptionKey: String {
 
     // MARK: - Adjustment Options
+
     case brightness = "bri"
     case contrast = "con"
     case exposure = "exp"
@@ -24,6 +23,7 @@ enum ImageOptionKey: String {
     case vibrance = "vib"
 
     // MARK: - Size Options
+
     case width = "w"
     case height = "h"
     case fit = "fit"
@@ -32,6 +32,7 @@ enum ImageOptionKey: String {
     case cropRect = "rect"
 
     // MARK: - Format Options
+
     case format = "fm"
     case dpi = "dpi"
     case lossless = "lossless"
@@ -39,9 +40,11 @@ enum ImageOptionKey: String {
     case colorQuantization = "colorquant"
 
     // MARK: - Background Options
+
     case backgroundColor = "bg"
 
     // MARK: - Text Options
+
     case textSize = "txtsize"
     case textColor = "txtclr"
 }
