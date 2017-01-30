@@ -402,6 +402,11 @@ extension ImageOptions {
         get { return storage[.backgroundColor] as? Color }
         set { storage[.backgroundColor] = newValue }
     }
+}
+
+// MARK: - Text Options
+
+extension ImageOptions {
 
     /// Sets the color of the text.
     ///

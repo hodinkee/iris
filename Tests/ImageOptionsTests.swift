@@ -301,6 +301,8 @@ final class ImageOptionsTests: XCTestCase {
         XCTAssertEqual(queryItems, [URLQueryItem(name: "txtsize", value: "16.0")])
     }
 
+    // MARK: - Text Options
+
     #if os(iOS) || os(tvOS)
     func testImageOptionsTextColor() {
         imageOptions.textColor = UIColor(red: 0.2, green: 0.4, blue: 0.6, alpha: 0.5)
