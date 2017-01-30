@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct ImageOptions: Equatable {
+public struct ImageOptions {
 
     // MARK: - Types
 
@@ -499,6 +499,8 @@ public struct ImageOptions: Equatable {
         return items
     }
 }
+
+extension ImageOptions: Equatable {}
 
 public func ==(lhs: ImageOptions, rhs: ImageOptions) -> Bool {
     return lhs.queryItems == rhs.queryItems
