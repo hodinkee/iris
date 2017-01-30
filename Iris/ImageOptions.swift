@@ -40,21 +40,24 @@ public struct ImageOptions: Equatable {
         case entropy = "entropy"
     }
 
+    // MARK: - Properties
+
+    var storage = [ImageOptionKey: Any]()
+
     // MARK: - Adjustment Properties
 
     /**
      Adjusts the brightness of the image.
-    
+
      Values are clamped to the range `-100...100`.
 
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-bri)
     */
     public var brightness: Int? {
-        get { return _brightness }
-        set { _brightness = newValue?.clamped(to: -100...100) }
+        get { return storage[.brightness] as? Int }
+        set { storage[.brightness] = newValue?.clamped(to: -100...100) }
     }
-    private var _brightness: Int?
 
     /**
      Adjusts the contrast of the image.
@@ -65,10 +68,9 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-con)
     */
     public var contrast: Int? {
-        get { return _contrast }
-        set { _contrast = newValue?.clamped(to: -100...100) }
+        get { return storage[.contrast] as? Int }
+        set { storage[.contrast] = newValue?.clamped(to: -100...100) }
     }
-    private var _contrast: Int?
 
     /**
      Adjusts the exposure of the image.
@@ -79,10 +81,9 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-exp)
     */
     public var exposure: Int? {
-        get { return _exposure }
-        set { _exposure = newValue?.clamped(to: -100...100) }
+        get { return storage[.exposure] as? Int }
+        set { storage[.exposure] = newValue?.clamped(to: -100...100) }
     }
-    private var _exposure: Int?
 
     /**
      Adjusts gamma/midtone brightness.
@@ -93,10 +94,9 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-gam)
     */
     public var gamma: Int? {
-        get { return _gamma }
-        set { _gamma = newValue?.clamped(to: -100...100) }
+        get { return storage[.gamma] as? Int }
+        set { storage[.gamma] = newValue?.clamped(to: -100...100) }
     }
-    private var _gamma: Int?
 
     /**
      Adjusts the highlight tonal mapping of an image while preserving 
@@ -108,10 +108,9 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-high)
     */
     public var highlight: Int? {
-        get { return _highlight }
-        set { _highlight = newValue?.clamped(to: -100...100) }
+        get { return storage[.highlight] as? Int }
+        set { storage[.highlight] = newValue?.clamped(to: -100...100) }
     }
-    private var _highlight: Int?
 
     /**
      Changes the overall hue, or tint, of the source pixels.
@@ -122,10 +121,9 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-hue)
     */
     public var hue: Int? {
-        get { return _hue }
-        set { _hue = newValue?.clamped(to: 0...359) }
+        get { return storage[.hue] as? Int }
+        set { storage[.hue] = newValue?.clamped(to: 0...359) }
     }
-    private var _hue: Int?
 
     /**
      Inverts all the pixel colors and brightness values within the image
@@ -134,7 +132,10 @@ public struct ImageOptions: Equatable {
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-invert)
     */
-    public var invert: Bool?
+    public var invert: Bool? {
+        get { return storage[.invert] as? Bool }
+        set { storage[.invert] = newValue }
+    }
 
     /**
      Adjusts the saturation of the image.
@@ -145,10 +146,9 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-sat)
     */
     public var saturation: Int? {
-        get { return _saturation }
-        set { _saturation = newValue?.clamped(to: -100...100) }
+        get { return storage[.saturation] as? Int }
+        set { storage[.saturation] = newValue?.clamped(to: -100...100) }
     }
-    private var _saturation: Int?
 
     /**
      Adjusts the shadow tonal mapping of an image while preserving 
@@ -160,10 +160,9 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-shad)
     */
     public var shadow: Int? {
-        get { return _shadow }
-        set { _shadow = newValue?.clamped(to: -100...100) }
+        get { return storage[.shadow] as? Int }
+        set { storage[.shadow] = newValue?.clamped(to: -100...100) }
     }
-    private var _shadow: Int?
 
     /**
      Sharpens the image details using luminance sharpening.
@@ -174,10 +173,9 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-sharp)
     */
     public var sharpen: Int? {
-        get { return _sharpen }
-        set { _sharpen = newValue?.clamped(to: 0...100) }
+        get { return storage[.sharpen] as? Int }
+        set { storage[.sharpen] = newValue?.clamped(to: 0...100) }
     }
-    private var _sharpen: Int?
 
     /**
      Adjusts the vibrance of an image while keeping pleasing skin tones.
@@ -188,10 +186,9 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-vib)
     */
     public var vibrance: Int? {
-        get { return _vibrance }
-        set { _vibrance = newValue?.clamped(to: -100...100) }
+        get { return storage[.vibrance] as? Int }
+        set { storage[.vibrance] = newValue?.clamped(to: -100...100) }
     }
-    private var _vibrance: Int?
 
 
     // MARK: - Size Properties
@@ -202,7 +199,10 @@ public struct ImageOptions: Equatable {
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-w)
     */
-    public var width: CGFloat?
+    public var width: CGFloat? {
+        get { return storage[.width] as? CGFloat }
+        set { storage[.width] = newValue }
+    }
 
     /**
      The height of the output image.
@@ -210,7 +210,10 @@ public struct ImageOptions: Equatable {
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-h)
     */
-    public var height: CGFloat?
+    public var height: CGFloat? {
+        get { return storage[.height] as? CGFloat }
+        set { storage[.height] = newValue }
+    }
 
     /**
      The device pixel ratio to be used.
@@ -218,7 +221,10 @@ public struct ImageOptions: Equatable {
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/pixeldensity)
     */
-    public var scale: CGFloat?
+    public var scale: CGFloat? {
+        get { return storage[.scale] as? CGFloat }
+        set { storage[.scale] = newValue }
+    }
 
     /**
      Controls how the output image is fit to its target dimensions.
@@ -226,7 +232,10 @@ public struct ImageOptions: Equatable {
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-fit)
     */
-    public var fit: FitMode?
+    public var fit: FitMode? {
+        get { return storage[.fit] as? FitMode }
+        set { storage[.fit] = newValue }
+    }
 
     /**
      Controls how the input image is aligned when the `fit` property
@@ -235,7 +244,10 @@ public struct ImageOptions: Equatable {
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-crop)
     */
-    public var crop: [CropMode]?
+    public var crop: [CropMode]? {
+        get { return storage[.crop] as? [CropMode] }
+        set { storage[.crop] = newValue }
+    }
 
     /**
      Selects a sub-region (rect) of the source image to use for processing.
@@ -247,17 +259,16 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-rect)
     */
     public var cropRect: CGRect? {
-        get { return _cropRect }
+        get { return storage[.cropRect] as? CGRect }
         set {
             if let rect = newValue, !rect.isNull, !rect.isEmpty, !rect.isInfinite {
-                _cropRect = rect
+                storage[.cropRect] = rect
             }
             else {
-                _cropRect = nil
+                storage[.cropRect] = nil
             }
         }
     }
-    private var _cropRect: CGRect?
 
 
     // MARK: - Format Properties
@@ -268,7 +279,10 @@ public struct ImageOptions: Equatable {
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-fm)
     */
-    public var format: Format?
+    public var format: Format? {
+        get { return storage[.format] as? Format }
+        set { storage[.format] = newValue }
+    }
 
     /**
      The DPI value in the Exif header of the resulting image.
@@ -276,7 +290,10 @@ public struct ImageOptions: Equatable {
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-dpi)
     */
-    public var DPI: Int?
+    public var DPI: Int? {
+        get { return storage[.dpi] as? Int }
+        set { storage[.dpi] = newValue }
+    }
 
     /**
      Enables or disables lossless compression. Only available when using
@@ -285,7 +302,10 @@ public struct ImageOptions: Equatable {
      - seealso:
      [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-lossless)
     */
-    public var lossless: Bool?
+    public var lossless: Bool? {
+        get { return storage[.lossless] as? Bool }
+        set { storage[.lossless] = newValue }
+    }
 
     /**
      Controls the output quality of lossy file formats. 
@@ -296,10 +316,9 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-q)
     */
     public var quality: Int? {
-        get { return _quality }
-        set { _quality = newValue?.clamped(to: 0...100) }
+        get { return storage[.quality] as? Int }
+        set { storage[.quality] = newValue?.clamped(to: 0...100) }
     }
-    private var _quality: Int?
 
     /**
      Limits the amount of colors in a picture using color quantization, which 
@@ -312,10 +331,9 @@ public struct ImageOptions: Equatable {
      [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-colorquant)
     */
     public var colorQuantization: Int? {
-        get { return _colorQuantization }
-        set { _colorQuantization = newValue?.clamped(to: 2...256) }
+        get { return storage[.colorQuantization] as? Int }
+        set { storage[.colorQuantization] = newValue?.clamped(to: 2...256) }
     }
-    private var _colorQuantization: Int?
 
 
     // MARK: - Background Properties
@@ -324,18 +342,26 @@ public struct ImageOptions: Equatable {
     /// is also used when using `FitMode.Fill`.
     ///
     /// - seealso: [Imgix API Reference](https://www.imgix.com/docs/reference/background#param-bg)
-    public var backgroundColor: Color?
-
+    public var backgroundColor: Color? {
+        get { return storage[.backgroundColor] as? Color }
+        set { storage[.backgroundColor] = newValue }
+    }
 
     /// Sets the color of the text.
     ///
     /// - seealso: [Imgix Reference](https://docs.imgix.com/apis/url/text/txtclr)
-    public var textColor: Color?
+    public var textColor: Color? {
+        get { return storage[.textColor] as? Color }
+        set { storage[.textColor] = newValue }
+    }
 
     /// Sets the font size of the text.
     ///
     /// - seealso: [Imgix Reference](https://docs.imgix.com/apis/url/text/txtsize)
-    public var textSize: CGFloat?
+    public var textSize: CGFloat? {
+        get { return storage[.textSize] as? CGFloat }
+        set { storage[.textSize] = newValue }
+    }
 
 
     // MARK: - Initializers
