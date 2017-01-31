@@ -10,6 +10,37 @@ import Foundation
 
 public struct ImageOptions {
 
+    // MARK: - Types
+
+    public enum FitMode: String {
+        case crop = "crop"
+        case clip = "clip"
+        case clamp = "clamp"
+        case faceArea = "facearea"
+        case fill = "fill"
+        case max = "max"
+        case min = "min"
+        case scale = "scale"
+    }
+
+    public enum CropMode: String {
+        case top = "top"
+        case bottom = "bottom"
+        case left = "left"
+        case right = "right"
+        case faces = "faces"
+        case entropy = "entropy"
+    }
+
+    public enum Format: String {
+        case jpeg = "jpg"
+        case png = "png"
+        case json = "json"
+        case mp4 = "mp4"
+        case webp = "webp"
+    }
+    
+
     // MARK: - Properties
 
     fileprivate var storage = [ImageOptionKey: Any]()
@@ -256,25 +287,6 @@ extension ImageOptions {
 // MARK: - Size Options
 
 extension ImageOptions {
-    public enum FitMode: String {
-        case crop = "crop"
-        case clip = "clip"
-        case clamp = "clamp"
-        case faceArea = "facearea"
-        case fill = "fill"
-        case max = "max"
-        case min = "min"
-        case scale = "scale"
-    }
-
-    public enum CropMode: String {
-        case top = "top"
-        case bottom = "bottom"
-        case left = "left"
-        case right = "right"
-        case faces = "faces"
-        case entropy = "entropy"
-    }
 
     /// The width of the output image.
     ///
@@ -337,13 +349,6 @@ extension ImageOptions {
 // MARK: - Format Options
 
 extension ImageOptions {
-    public enum Format: String {
-        case jpeg = "jpg"
-        case png = "png"
-        case json = "json"
-        case mp4 = "mp4"
-        case webp = "webp"
-    }
 
     /// The output format to convert the image to.
     ///
