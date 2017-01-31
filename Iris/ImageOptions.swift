@@ -65,115 +65,119 @@ public struct ImageOptions {
     public var queryItems: [URLQueryItem] {
         var items = [URLQueryItem]()
 
+        func queryItem(forKey key: ImageOptionKey, value: String) -> URLQueryItem {
+            return URLQueryItem(name: key.rawValue, value: value)
+        }
+
         // Adjustment Properties
 
         if let value = brightness {
-            items.append(URLQueryItem(name: "bri", value: String(value)))
+            items.append(queryItem(forKey: .brightness, value: String(value)))
         }
 
         if let value = contrast {
-            items.append(URLQueryItem(name: "con", value: String(value)))
+            items.append(queryItem(forKey: .contrast, value: String(value)))
         }
 
         if let value = exposure {
-            items.append(URLQueryItem(name: "exp", value: String(value)))
+            items.append(queryItem(forKey: .exposure, value: String(value)))
         }
 
         if let value = gamma {
-            items.append(URLQueryItem(name: "gam", value: String(value)))
+            items.append(queryItem(forKey: .gamma, value: String(value)))
         }
 
         if let value = highlight {
-            items.append(URLQueryItem(name: "high", value: String(value)))
+            items.append(queryItem(forKey: .highlight, value: String(value)))
         }
 
         if let value = hue {
-            items.append(URLQueryItem(name: "hue", value: String(value)))
+            items.append(queryItem(forKey: .hue, value: String(value)))
         }
 
         if let value = invert {
-            items.append(URLQueryItem(name: "invert", value: String(value)))
+            items.append(queryItem(forKey: .invert, value: String(value)))
         }
 
         if let value = saturation {
-            items.append(URLQueryItem(name: "sat", value: String(value)))
+            items.append(queryItem(forKey: .saturation, value: String(value)))
         }
 
         if let value = shadow {
-            items.append(URLQueryItem(name: "shad", value: String(value)))
+            items.append(queryItem(forKey: .shadow, value: String(value)))
         }
 
         if let value = sharpen {
-            items.append(URLQueryItem(name: "sharp", value: String(value)))
+            items.append(queryItem(forKey: .sharpen, value: String(value)))
         }
 
         if let value = vibrance {
-            items.append(URLQueryItem(name: "vib", value: String(value)))
+            items.append(queryItem(forKey: .vibrance, value: String(value)))
         }
 
         // Size Properties
 
         if let value = width {
-            items.append(URLQueryItem(name: "w", value: String(describing: value)))
+            items.append(queryItem(forKey: .width, value: String(describing: value)))
         }
 
         if let value = height {
-            items.append(URLQueryItem(name: "h", value: String(describing: value)))
+            items.append(queryItem(forKey: .height, value: String(describing: value)))
         }
 
         if let value = fit {
-            items.append(URLQueryItem(name: "fit", value: value.rawValue))
+            items.append(queryItem(forKey: .fit, value: value.rawValue))
         }
 
         if let value = scale {
-            items.append(URLQueryItem(name: "dpr", value: String(describing: value)))
+            items.append(queryItem(forKey: .scale, value: String(describing: value)))
         }
 
         if let value = crop {
-            items.append(URLQueryItem(name: "crop", value: value.map({ $0.rawValue }).joined(separator: ",")))
+            items.append(queryItem(forKey: .crop, value: value.map({ $0.rawValue }).joined(separator: ",")))
         }
 
         if let value = cropRect {
             let serialized = "\(value.origin.x),\(value.origin.y),\(value.width),\(value.height)"
-            items.append(URLQueryItem(name: "rect", value: serialized))
+            items.append(queryItem(forKey: .cropRect, value: serialized))
         }
 
         // Format Properties
 
         if let value = format {
-            items.append(URLQueryItem(name: "fm", value: value.rawValue))
+            items.append(queryItem(forKey: .format, value: value.rawValue))
         }
 
         if let value = DPI {
-            items.append(URLQueryItem(name: "dpi", value: String(value)))
+            items.append(queryItem(forKey: .dpi, value: String(value)))
         }
 
         if let value = lossless {
-            items.append(URLQueryItem(name: "lossless", value: String(value)))
+            items.append(queryItem(forKey: .lossless, value: String(value)))
         }
 
         if let value = quality {
-            items.append(URLQueryItem(name: "q", value: String(value)))
+            items.append(queryItem(forKey: .quality, value: String(value)))
         }
 
         if let value = colorQuantization {
-            items.append(URLQueryItem(name: "colorquant", value: String(value)))
+            items.append(queryItem(forKey: .colorQuantization, value: String(value)))
         }
 
         // Background Properties
 
         if let value = backgroundColor, let hex = value.hexadecimalColorString {
-            items.append(URLQueryItem(name: "bg", value: hex))
+            items.append(queryItem(forKey: .backgroundColor, value: hex))
         }
 
         // Text properties
 
         if let value = textColor, let hexadecimalString = value.hexadecimalColorString {
-            items.append(URLQueryItem(name: "txtclr", value: hexadecimalString))
+            items.append(queryItem(forKey: .textColor, value: hexadecimalString))
         }
 
         if let value = textSize {
-            items.append(URLQueryItem(name: "txtsize", value: String(describing: value)))
+            items.append(queryItem(forKey: .textSize, value: String(describing: value)))
         }
 
         return items
