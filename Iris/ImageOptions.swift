@@ -148,7 +148,7 @@ public struct ImageOptions {
             items.append(queryItem(forKey: .format, value: value.rawValue))
         }
 
-        if let value = DPI {
+        if let value = dpi {
             items.append(queryItem(forKey: .dpi, value: String(value)))
         }
 
@@ -365,7 +365,7 @@ extension ImageOptions {
     /// The DPI value in the Exif header of the resulting image.
     ///
     /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/format#param-dpi)
-    public var DPI: Int? {
+    public var dpi: Int? {
         get { return storage[.dpi] as? Int }
         set { storage[.dpi] = newValue }
     }

@@ -6,6 +6,14 @@
 //  Copyright © 2017 HODINKEE. All rights reserved.
 //
 
+extension ImageOptions {
+    @available(*, deprecated, renamed: "dpi")
+    public var DPI: Int? {
+        get { return dpi }
+        set { dpi = newValue }
+    }
+}
+
 extension ImageOptions.CropMode {
     @available(*, deprecated, renamed: "top")
     public static var Top: ImageOptions.CropMode { return .top }

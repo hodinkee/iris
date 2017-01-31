@@ -251,7 +251,7 @@ final class ImageOptionsTests: XCTestCase {
     }
 
     func testImageOptionsDPI() {
-        imageOptions.DPI = 320
+        imageOptions.dpi = 320
         XCTAssertEqual(queryItems, [URLQueryItem(name: "dpi", value: "320")])
     }
 
