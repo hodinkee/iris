@@ -8,8 +8,6 @@
 
 #if os(macOS)
 
-import AppKit
-
 public typealias Color = NSColor
 
 extension NSColor {

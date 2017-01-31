@@ -6,8 +6,6 @@
 //  Copyright © 2015 HODINKEE. All rights reserved.
 //
 
-import Foundation
-
 public struct SigningOptions {
 
     // MARK: - Properties

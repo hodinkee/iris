@@ -8,8 +8,6 @@
 
 #if os(iOS) || os(tvOS)
 
-import UIKit
-
 public typealias Color = UIColor
 
 extension UIColor {

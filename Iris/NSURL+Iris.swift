@@ -6,8 +6,6 @@
 //  Copyright © 2015 HODINKEE. All rights reserved.
 //
 
-import Foundation
-
 extension URL {
 
     /// Applies the given image options to the receiver.
