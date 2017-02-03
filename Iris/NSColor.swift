@@ -6,7 +6,7 @@
 //  Copyright © 2017 HODINKEE. All rights reserved.
 //
 
-import AppKit
+#if os(macOS)
 
 public typealias Color = NSColor
 
@@ -28,3 +28,5 @@ extension NSColor {
         return String(format: "%02X%02X%02X%02X", ((Int)(a * 255)), ((Int)(r * 255)), ((Int)(g * 255)), ((Int)(b * 255)))
     }
 }
+
+#endif // os(macOS)

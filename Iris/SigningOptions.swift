@@ -6,29 +6,21 @@
 //  Copyright © 2015 HODINKEE. All rights reserved.
 //
 
-import Foundation
-
-public struct SigningOptions: Equatable {
+public struct SigningOptions {
 
     // MARK: - Properties
 
-    /**
-     The host pertaining to an Imgix source.
-    
-     Example: `hodinkee.imgix.net`
-    */
+    /// The host pertaining to an Imgix source.
+    ///
+    /// Example: `hodinkee.imgix.net`
     public var host: String
 
-    /**
-     The alphanumeric "Secure URL Token" pertaining to an Imgix source.
-
-     Example: `hodinkee.imgix.net`
-    */
+    /// The alphanumeric "Secure URL Token" pertaining to an Imgix source.
+    ///
+    /// Example: `hodinkee.imgix.net`
     public var token: String
 
-    /**
-     Controls whether or not to use HTTPS when requesting the image.
-    */
+    /// Controls whether or not to use HTTPS when requesting the image.
     public var secure: Bool
 
 
@@ -41,6 +33,8 @@ public struct SigningOptions: Equatable {
     }
 }
 
-public func ==(lhs: SigningOptions, rhs: SigningOptions) -> Bool {
-    return (lhs.host == rhs.host) && (lhs.token == rhs.token) && (lhs.secure == rhs.secure)
+extension SigningOptions: Equatable {
+    public static func == (lhs: SigningOptions, rhs: SigningOptions) -> Bool {
+        return (lhs.host == rhs.host) && (lhs.token == rhs.token) && (lhs.secure == rhs.secure)
+    }
 }

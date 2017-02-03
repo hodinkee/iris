@@ -251,7 +251,7 @@ final class ImageOptionsTests: XCTestCase {
     }
 
     func testImageOptionsDPI() {
-        imageOptions.DPI = 320
+        imageOptions.dpi = 320
         XCTAssertEqual(queryItems, [URLQueryItem(name: "dpi", value: "320")])
     }
 
@@ -300,6 +300,8 @@ final class ImageOptionsTests: XCTestCase {
         imageOptions.textSize = 16.0
         XCTAssertEqual(queryItems, [URLQueryItem(name: "txtsize", value: "16.0")])
     }
+
+    // MARK: - Text Options
 
     #if os(iOS) || os(tvOS)
     func testImageOptionsTextColor() {

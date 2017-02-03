@@ -6,19 +6,9 @@
 //  Copyright © 2015 HODINKEE. All rights reserved.
 //
 
-import Foundation
-
-public struct ImageOptions: Equatable {
+public struct ImageOptions {
 
     // MARK: - Types
-
-    public enum Format: String {
-        case jpeg = "jpg"
-        case png = "png"
-        case json = "json"
-        case mp4 = "mp4"
-        case webp = "webp"
-    }
 
     public enum FitMode: String {
         case crop = "crop"
@@ -40,302 +30,18 @@ public struct ImageOptions: Equatable {
         case entropy = "entropy"
     }
 
-    // MARK: - Adjustment Properties
-
-    /**
-     Adjusts the brightness of the image.
+    public enum Format: String {
+        case jpeg = "jpg"
+        case png = "png"
+        case json = "json"
+        case mp4 = "mp4"
+        case webp = "webp"
+    }
     
-     Values are clamped to the range `-100...100`.
 
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-bri)
-    */
-    public var brightness: Int? {
-        get { return _brightness }
-        set { _brightness = newValue?.clamped(to: -100...100) }
-    }
-    private var _brightness: Int?
+    // MARK: - Properties
 
-    /**
-     Adjusts the contrast of the image.
-
-     Values are clamped to the range `-100...100`.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-con)
-    */
-    public var contrast: Int? {
-        get { return _contrast }
-        set { _contrast = newValue?.clamped(to: -100...100) }
-    }
-    private var _contrast: Int?
-
-    /**
-     Adjusts the exposure of the image.
-
-     Values are clamped to the range `-100...100`.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-exp)
-    */
-    public var exposure: Int? {
-        get { return _exposure }
-        set { _exposure = newValue?.clamped(to: -100...100) }
-    }
-    private var _exposure: Int?
-
-    /**
-     Adjusts gamma/midtone brightness.
-
-     Values are clamped to the range `-100...100`.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-gam)
-    */
-    public var gamma: Int? {
-        get { return _gamma }
-        set { _gamma = newValue?.clamped(to: -100...100) }
-    }
-    private var _gamma: Int?
-
-    /**
-     Adjusts the highlight tonal mapping of an image while preserving 
-     spatial detail.
-
-     Values are clamped to the range `-100...100`.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-high)
-    */
-    public var highlight: Int? {
-        get { return _highlight }
-        set { _highlight = newValue?.clamped(to: -100...100) }
-    }
-    private var _highlight: Int?
-
-    /**
-     Changes the overall hue, or tint, of the source pixels.
-
-     Values are clamped to the range `0...359`.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-hue)
-    */
-    public var hue: Int? {
-        get { return _hue }
-        set { _hue = newValue?.clamped(to: 0...359) }
-    }
-    private var _hue: Int?
-
-    /**
-     Inverts all the pixel colors and brightness values within the image
-     producing a negative of the image.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-invert)
-    */
-    public var invert: Bool?
-
-    /**
-     Adjusts the saturation of the image.
-
-     Values are clamped to the range `-100...100`.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-sat)
-    */
-    public var saturation: Int? {
-        get { return _saturation }
-        set { _saturation = newValue?.clamped(to: -100...100) }
-    }
-    private var _saturation: Int?
-
-    /**
-     Adjusts the shadow tonal mapping of an image while preserving 
-     spatial detail.
-
-     Values are clamped to the range `-100...100`.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-shad)
-    */
-    public var shadow: Int? {
-        get { return _shadow }
-        set { _shadow = newValue?.clamped(to: -100...100) }
-    }
-    private var _shadow: Int?
-
-    /**
-     Sharpens the image details using luminance sharpening.
-
-     Values are clamped to the range `0...100`.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-sharp)
-    */
-    public var sharpen: Int? {
-        get { return _sharpen }
-        set { _sharpen = newValue?.clamped(to: 0...100) }
-    }
-    private var _sharpen: Int?
-
-    /**
-     Adjusts the vibrance of an image while keeping pleasing skin tones.
-
-     Values are clamped to the range `-100...100`.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/adjustment#param-vib)
-    */
-    public var vibrance: Int? {
-        get { return _vibrance }
-        set { _vibrance = newValue?.clamped(to: -100...100) }
-    }
-    private var _vibrance: Int?
-
-
-    // MARK: - Size Properties
-
-    /**
-     The width of the output image.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-w)
-    */
-    public var width: CGFloat?
-
-    /**
-     The height of the output image.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-h)
-    */
-    public var height: CGFloat?
-
-    /**
-     The device pixel ratio to be used.
-     
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/pixeldensity)
-    */
-    public var scale: CGFloat?
-
-    /**
-     Controls how the output image is fit to its target dimensions.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-fit)
-    */
-    public var fit: FitMode?
-
-    /**
-     Controls how the input image is aligned when the `fit` property
-     is set to `FitMode.Crop`
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-crop)
-    */
-    public var crop: [CropMode]?
-
-    /**
-     Selects a sub-region (rect) of the source image to use for processing.
-     
-     Value is set equal to `nil` if `CGRect.isNull`, `CGRect.isEmpty`, or `CGRect.isInfinite`
-     returns true.
-     
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/size#param-rect)
-    */
-    public var cropRect: CGRect? {
-        get { return _cropRect }
-        set {
-            if let rect = newValue, !rect.isNull, !rect.isEmpty, !rect.isInfinite {
-                _cropRect = rect
-            }
-            else {
-                _cropRect = nil
-            }
-        }
-    }
-    private var _cropRect: CGRect?
-
-
-    // MARK: - Format Properties
-
-    /**
-     The output format to convert the image to.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-fm)
-    */
-    public var format: Format?
-
-    /**
-     The DPI value in the Exif header of the resulting image.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-dpi)
-    */
-    public var DPI: Int?
-
-    /**
-     Enables or disables lossless compression. Only available when using
-     certain formats.
-     
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-lossless)
-    */
-    public var lossless: Bool?
-
-    /**
-     Controls the output quality of lossy file formats. 
-     
-     Values are clamped to the range of `0...100`.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-q)
-    */
-    public var quality: Int? {
-        get { return _quality }
-        set { _quality = newValue?.clamped(to: 0...100) }
-    }
-    private var _quality: Int?
-
-    /**
-     Limits the amount of colors in a picture using color quantization, which 
-     is a process that reduces the amount of distinct colors in an image while 
-     maintaining a visually-similar image. 
-
-     Values are clamped to the range of `2...256`.
-
-     - seealso:
-     [Imgix API Reference](https://www.imgix.com/docs/reference/format#param-colorquant)
-    */
-    public var colorQuantization: Int? {
-        get { return _colorQuantization }
-        set { _colorQuantization = newValue?.clamped(to: 2...256) }
-    }
-    private var _colorQuantization: Int?
-
-
-    // MARK: - Background Properties
-
-    /// The background color to use when transparency is encountered. This color
-    /// is also used when using `FitMode.Fill`.
-    ///
-    /// - seealso: [Imgix API Reference](https://www.imgix.com/docs/reference/background#param-bg)
-    public var backgroundColor: Color?
-
-
-    /// Sets the color of the text.
-    ///
-    /// - seealso: [Imgix Reference](https://docs.imgix.com/apis/url/text/txtclr)
-    public var textColor: Color?
-
-    /// Sets the font size of the text.
-    ///
-    /// - seealso: [Imgix Reference](https://docs.imgix.com/apis/url/text/txtsize)
-    public var textSize: CGFloat?
+    fileprivate var storage = [ImageOptionKey: Any]()
 
 
     // MARK: - Initializers
@@ -352,128 +58,384 @@ public struct ImageOptions: Equatable {
 
     // MARK: - Public
 
-    /**
-     The configured options as `[NSURLQueryItem]`, suitable for use
-     with `NSURLComponents`.
-    */
+    /// An array of query items that can be used in conjunction with an instance
+    /// of `URLComponents` to generate an image URL.
     public var queryItems: [URLQueryItem] {
         var items = [URLQueryItem]()
+
+        func queryItem(forKey key: ImageOptionKey, value: String) -> URLQueryItem {
+            return URLQueryItem(name: key.rawValue, value: value)
+        }
 
         // Adjustment Properties
 
         if let value = brightness {
-            items.append(URLQueryItem(name: "bri", value: String(value)))
+            items.append(queryItem(forKey: .brightness, value: String(value)))
         }
 
         if let value = contrast {
-            items.append(URLQueryItem(name: "con", value: String(value)))
+            items.append(queryItem(forKey: .contrast, value: String(value)))
         }
 
         if let value = exposure {
-            items.append(URLQueryItem(name: "exp", value: String(value)))
+            items.append(queryItem(forKey: .exposure, value: String(value)))
         }
 
         if let value = gamma {
-            items.append(URLQueryItem(name: "gam", value: String(value)))
+            items.append(queryItem(forKey: .gamma, value: String(value)))
         }
 
         if let value = highlight {
-            items.append(URLQueryItem(name: "high", value: String(value)))
+            items.append(queryItem(forKey: .highlight, value: String(value)))
         }
 
         if let value = hue {
-            items.append(URLQueryItem(name: "hue", value: String(value)))
+            items.append(queryItem(forKey: .hue, value: String(value)))
         }
 
         if let value = invert {
-            items.append(URLQueryItem(name: "invert", value: String(value)))
+            items.append(queryItem(forKey: .invert, value: String(value)))
         }
 
         if let value = saturation {
-            items.append(URLQueryItem(name: "sat", value: String(value)))
+            items.append(queryItem(forKey: .saturation, value: String(value)))
         }
 
         if let value = shadow {
-            items.append(URLQueryItem(name: "shad", value: String(value)))
+            items.append(queryItem(forKey: .shadow, value: String(value)))
         }
 
         if let value = sharpen {
-            items.append(URLQueryItem(name: "sharp", value: String(value)))
+            items.append(queryItem(forKey: .sharpen, value: String(value)))
         }
 
         if let value = vibrance {
-            items.append(URLQueryItem(name: "vib", value: String(value)))
+            items.append(queryItem(forKey: .vibrance, value: String(value)))
         }
 
         // Size Properties
 
         if let value = width {
-            items.append(URLQueryItem(name: "w", value: String(describing: value)))
+            items.append(queryItem(forKey: .width, value: String(describing: value)))
         }
 
         if let value = height {
-            items.append(URLQueryItem(name: "h", value: String(describing: value)))
+            items.append(queryItem(forKey: .height, value: String(describing: value)))
         }
 
         if let value = fit {
-            items.append(URLQueryItem(name: "fit", value: value.rawValue))
+            items.append(queryItem(forKey: .fit, value: value.rawValue))
         }
 
         if let value = scale {
-            items.append(URLQueryItem(name: "dpr", value: String(describing: value)))
+            items.append(queryItem(forKey: .scale, value: String(describing: value)))
         }
 
         if let value = crop {
-            items.append(URLQueryItem(name: "crop", value: value.map({ $0.rawValue }).joined(separator: ",")))
+            items.append(queryItem(forKey: .crop, value: value.map({ $0.rawValue }).joined(separator: ",")))
         }
 
         if let value = cropRect {
             let serialized = "\(value.origin.x),\(value.origin.y),\(value.width),\(value.height)"
-            items.append(URLQueryItem(name: "rect", value: serialized))
+            items.append(queryItem(forKey: .cropRect, value: serialized))
         }
 
         // Format Properties
 
         if let value = format {
-            items.append(URLQueryItem(name: "fm", value: value.rawValue))
+            items.append(queryItem(forKey: .format, value: value.rawValue))
         }
 
-        if let value = DPI {
-            items.append(URLQueryItem(name: "dpi", value: String(value)))
+        if let value = dpi {
+            items.append(queryItem(forKey: .dpi, value: String(value)))
         }
 
         if let value = lossless {
-            items.append(URLQueryItem(name: "lossless", value: String(value)))
+            items.append(queryItem(forKey: .lossless, value: String(value)))
         }
 
         if let value = quality {
-            items.append(URLQueryItem(name: "q", value: String(value)))
+            items.append(queryItem(forKey: .quality, value: String(value)))
         }
 
         if let value = colorQuantization {
-            items.append(URLQueryItem(name: "colorquant", value: String(value)))
+            items.append(queryItem(forKey: .colorQuantization, value: String(value)))
         }
 
         // Background Properties
 
         if let value = backgroundColor, let hex = value.hexadecimalColorString {
-            items.append(URLQueryItem(name: "bg", value: hex))
+            items.append(queryItem(forKey: .backgroundColor, value: hex))
         }
 
         // Text properties
 
         if let value = textColor, let hexadecimalString = value.hexadecimalColorString {
-            items.append(URLQueryItem(name: "txtclr", value: hexadecimalString))
+            items.append(queryItem(forKey: .textColor, value: hexadecimalString))
         }
 
         if let value = textSize {
-            items.append(URLQueryItem(name: "txtsize", value: String(describing: value)))
+            items.append(queryItem(forKey: .textSize, value: String(describing: value)))
         }
 
         return items
     }
 }
 
-public func ==(lhs: ImageOptions, rhs: ImageOptions) -> Bool {
-    return lhs.queryItems == rhs.queryItems
+// MARK: - Adjustment Options
+
+extension ImageOptions {
+
+    /// Adjusts the brightness of the image. Values are clamped to the range
+    /// `-100...100`.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/adjustment#param-bri)
+    public var brightness: Int? {
+        get { return storage[.brightness] as? Int }
+        set { storage[.brightness] = newValue?.clamped(to: -100...100) }
+    }
+
+    /// Adjusts the contrast of the image. Values are clamped to the range
+    /// `-100...100`.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/adjustment#param-con)
+    public var contrast: Int? {
+        get { return storage[.contrast] as? Int }
+        set { storage[.contrast] = newValue?.clamped(to: -100...100) }
+    }
+
+    /// Adjusts the exposure of the image. Values are clamped to the range
+    /// `-100...100`.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/adjustment#param-exp)
+    public var exposure: Int? {
+        get { return storage[.exposure] as? Int }
+        set { storage[.exposure] = newValue?.clamped(to: -100...100) }
+    }
+
+    ///Adjusts gamma/midtone brightness. Values are clamped to the range
+    /// `-100...100`.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/adjustment#param-gam)
+    public var gamma: Int? {
+        get { return storage[.gamma] as? Int }
+        set { storage[.gamma] = newValue?.clamped(to: -100...100) }
+    }
+
+    /// Adjusts the highlight tonal mapping of an image while preserving spatial
+    /// detail. Values are clamped to the range `-100...100`.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/adjustment#param-high)
+    public var highlight: Int? {
+        get { return storage[.highlight] as? Int }
+        set { storage[.highlight] = newValue?.clamped(to: -100...100) }
+    }
+
+    /// Changes the overall hue, or tint, of the source pixels. Values are
+    /// clamped to the range `0...359`.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/adjustment#param-hue)
+    public var hue: Int? {
+        get { return storage[.hue] as? Int }
+        set { storage[.hue] = newValue?.clamped(to: 0...359) }
+    }
+
+    /// Inverts all the pixel colors and brightness values within the image
+    /// producing a negative of the image.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/adjustment#param-invert)
+    public var invert: Bool? {
+        get { return storage[.invert] as? Bool }
+        set { storage[.invert] = newValue }
+    }
+
+    /// Adjusts the saturation of the image. Values are clamped to the range
+    /// `-100...100`.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/adjustment#param-sat)
+    public var saturation: Int? {
+        get { return storage[.saturation] as? Int }
+        set { storage[.saturation] = newValue?.clamped(to: -100...100) }
+    }
+
+    /// Adjusts the shadow tonal mapping of an image while preserving spatial
+    /// detail. Values are clamped to the range `-100...100`.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/adjustment#param-shad)
+    public var shadow: Int? {
+        get { return storage[.shadow] as? Int }
+        set { storage[.shadow] = newValue?.clamped(to: -100...100) }
+    }
+
+    /// Sharpens the image details using luminance sharpening. Values are
+    /// clamped to the range `0...100`.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/adjustment#param-sharp)
+    public var sharpen: Int? {
+        get { return storage[.sharpen] as? Int }
+        set { storage[.sharpen] = newValue?.clamped(to: 0...100) }
+    }
+
+    /// Adjusts the vibrance of an image while keeping pleasing skin tones.
+    /// Values are clamped to the range `-100...100`.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/adjustment#param-vib)
+    public var vibrance: Int? {
+        get { return storage[.vibrance] as? Int }
+        set { storage[.vibrance] = newValue?.clamped(to: -100...100) }
+    }
+}
+
+// MARK: - Size Options
+
+extension ImageOptions {
+
+    /// The width of the output image.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/size#param-w)
+    public var width: CGFloat? {
+        get { return storage[.width] as? CGFloat }
+        set { storage[.width] = newValue }
+    }
+
+    /// The height of the output image.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/size#param-h)
+    public var height: CGFloat? {
+        get { return storage[.height] as? CGFloat }
+        set { storage[.height] = newValue }
+    }
+
+    /// The device pixel ratio to be used.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/pixeldensity)
+    public var scale: CGFloat? {
+        get { return storage[.scale] as? CGFloat }
+        set { storage[.scale] = newValue }
+    }
+
+    /// Controls how the output image is fit to its target dimensions.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/size#param-fit)
+    public var fit: FitMode? {
+        get { return storage[.fit] as? FitMode }
+        set { storage[.fit] = newValue }
+    }
+
+    /// Controls how the input image is aligned when the `fit` property is set
+    /// to `FitMode.crop`
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/size#param-crop)
+    public var crop: [CropMode]? {
+        get { return storage[.crop] as? [CropMode] }
+        set { storage[.crop] = newValue }
+    }
+
+    /// Selects a sub-region of the source image to use for processing. The
+    /// value is set to `nil` if the rect is null, empty, or infinite.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/size#param-rect)
+    public var cropRect: CGRect? {
+        get { return storage[.cropRect] as? CGRect }
+        set {
+            if let rect = newValue, !rect.isNull, !rect.isEmpty, !rect.isInfinite {
+                storage[.cropRect] = rect
+            }
+            else {
+                storage[.cropRect] = nil
+            }
+        }
+    }
+}
+
+// MARK: - Format Options
+
+extension ImageOptions {
+
+    /// The output format to convert the image to.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/format#param-fm)
+    public var format: Format? {
+        get { return storage[.format] as? Format }
+        set { storage[.format] = newValue }
+    }
+
+    /// The DPI value in the Exif header of the resulting image.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/format#param-dpi)
+    public var dpi: Int? {
+        get { return storage[.dpi] as? Int }
+        set { storage[.dpi] = newValue }
+    }
+
+    /// Enables or disables lossless compression. Only available when using
+    /// certain formats.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/format#param-lossless)
+    public var lossless: Bool? {
+        get { return storage[.lossless] as? Bool }
+        set { storage[.lossless] = newValue }
+    }
+
+    /// Controls the output quality of lossy file formats. Values are clamped to
+    /// the range `0...100`.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/format#param-q)
+    public var quality: Int? {
+        get { return storage[.quality] as? Int }
+        set { storage[.quality] = newValue?.clamped(to: 0...100) }
+    }
+
+    /// Limits the amount of colors in a picture using color quantization, which
+    /// is a process that reduces the amount of distinct colors in an image
+    /// while maintaining a visually-similar image.
+    ///
+    /// - seealso: [Imgix Reference](https://www.imgix.com/docs/reference/format#param-colorquant)
+    public var colorQuantization: Int? {
+        get { return storage[.colorQuantization] as? Int }
+        set { storage[.colorQuantization] = newValue?.clamped(to: 2...256) }
+    }
+}
+
+// MARK: - Background Options
+
+extension ImageOptions {
+
+    /// The background color to use when transparency is encountered. This color
+    /// is also used when using `FitMode.fill`.
+    ///
+    /// - seealso: [Imgix API Reference](https://www.imgix.com/docs/reference/background#param-bg)
+    public var backgroundColor: Color? {
+        get { return storage[.backgroundColor] as? Color }
+        set { storage[.backgroundColor] = newValue }
+    }
+}
+
+// MARK: - Text Options
+
+extension ImageOptions {
+
+    /// Sets the color of the text.
+    ///
+    /// - seealso: [Imgix Reference](https://docs.imgix.com/apis/url/text/txtclr)
+    public var textColor: Color? {
+        get { return storage[.textColor] as? Color }
+        set { storage[.textColor] = newValue }
+    }
+
+    /// Sets the font size of the text.
+    ///
+    /// - seealso: [Imgix Reference](https://docs.imgix.com/apis/url/text/txtsize)
+    public var textSize: CGFloat? {
+        get { return storage[.textSize] as? CGFloat }
+        set { storage[.textSize] = newValue }
+    }
+}
+
+// MARK: - Equatable
+
+extension ImageOptions: Equatable {
+    public static func == (lhs: ImageOptions, rhs: ImageOptions) -> Bool {
+        return lhs.queryItems == rhs.queryItems
+    }
 }

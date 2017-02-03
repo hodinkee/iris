@@ -63,3 +63,7 @@ matrix:
     # Carthage
     - script:
       - carthage build --no-skip-current
+
+    # CocoaPods
+    - script:
+      - pod lib lint
