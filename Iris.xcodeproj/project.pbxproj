@@ -766,7 +766,7 @@
 			baseConfigurationReference = 4E71BDC31CA9A6E000725B30 /* tvOS-Framework.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 11;
+				DYLIB_CURRENT_VERSION = 12;
 				INFOPLIST_FILE = Iris/Platforms/tvOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
@@ -779,7 +779,7 @@
 			baseConfigurationReference = 4E71BDC31CA9A6E000725B30 /* tvOS-Framework.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 11;
+				DYLIB_CURRENT_VERSION = 12;
 				INFOPLIST_FILE = Iris/Platforms/tvOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
@@ -814,7 +814,7 @@
 			baseConfigurationReference = 4E71BDBD1CA9A6E000725B30 /* Mac-Framework.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 11;
+				DYLIB_CURRENT_VERSION = 12;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Iris/Platforms/macOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
@@ -828,7 +828,7 @@
 			baseConfigurationReference = 4E71BDBD1CA9A6E000725B30 /* Mac-Framework.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 11;
+				DYLIB_CURRENT_VERSION = 12;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Iris/Platforms/macOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
@@ -863,7 +863,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E71BDAA1CA9A6E000725B30 /* Debug.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -876,7 +876,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E71BDAC1CA9A6E000725B30 /* Release.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -890,7 +890,7 @@
 			baseConfigurationReference = 4E71BDB71CA9A6E000725B30 /* iOS-Framework.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 11;
+				DYLIB_CURRENT_VERSION = 12;
 				INFOPLIST_FILE = Iris/Platforms/iOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
@@ -903,7 +903,7 @@
 			baseConfigurationReference = 4E71BDB71CA9A6E000725B30 /* iOS-Framework.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 11;
+				DYLIB_CURRENT_VERSION = 12;
 				INFOPLIST_FILE = Iris/Platforms/iOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hodinkee.Iris;
 				PRODUCT_NAME = Iris;
