@@ -17,13 +17,13 @@ A Swift framework for working with Imgix.
 ### [Carthage](https://github.com/carthage/carthage)
 
 ```
-github "hodinkee/Iris" ~> 2.1
+github "hodinkee/Iris" ~> 3.0
 ```
 
 ### [CocoaPods](https://github.com/cocoapods/cocoapods)
 
 ```
-pod "Iris", "~> 2.1"
+pod "Iris", "~> 3.0"
 ```
 
 ## Usage
